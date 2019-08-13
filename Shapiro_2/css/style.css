@@ -8,17 +8,22 @@
 	        box-sizing: border-box;
 }
 
+body {
+	font-family: 'Montserrat', sans-serif;	
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
 .d-flex {
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
-}
-.d-flex-cv {
 	-webkit-box-align: center;
 	    -ms-flex-align: center;
 	        align-items: center;
-}
-.d-flex-ch {
 	-webkit-box-pack: center;
 	    -ms-flex-pack: center;
 	        justify-content: center;
@@ -27,3 +32,316 @@
 .t-center {text-align: center;}
 .t-left {text-align: left;}
 .t-right {text-align: right;}
+
+.svg-icon {
+  	display: inline-block;
+  	vertical-align: middle;
+}
+
+.center {
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 0 15px;
+}
+
+/* --- select ---- */
+.select {position: relative;}
+.select .drop {
+	position: absolute;
+	top: 100%;
+	left: 0;
+	z-index: 9999;
+	display: none;
+}
+.select.active .drop {
+	display: block;
+}
+
+/* -------------------------------------------------------
+	01.	HEADER 
+-------------------------------------------------------- */
+
+#header {
+	background: #4D3A49;
+	height: 100px;
+}
+#header .center {height: 100%;}
+#header .logo svg {
+	width: 292px;
+	height: 45px;
+}
+
+/* -------------------------------------------------------
+	02.	CONTENT 
+-------------------------------------------------------- */
+
+#content.bg-orange {
+	position: relative;
+}
+#content.bg-orange .bg {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 1;
+}
+#content.bg-orange .bg div {
+	position: relative;
+	min-height: 440px;
+	width: 100%;
+	background: linear-gradient(191.3deg, #FFB581 -8.06%, #EFCBB1 99.05%);	
+}
+#content.bg-orange .bg div:before {
+	content: '';
+	display: block;
+	width: 100%;
+	height: 3px;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	background: -webkit-gradient(linear, left top, left bottom, from(rgba(218, 189, 162, 0)), to(rgba(218, 189, 162, 0.47)));
+	background: linear-gradient(180deg, rgba(218, 189, 162, 0) 0%, rgba(218, 189, 162, 0.47) 100%);
+}
+#content.bg-orange .bg:after {
+	content: '';
+	display: block;
+	min-height: 440px;
+	background: #F1D1BA;
+}
+#content.bg-orange > .center {
+	position: relative;
+	z-index: 2;
+}
+
+.page-home {overflow: hidden;}
+
+.home-form h1 {
+	font-weight: bold;
+	font-size: 50px;
+	line-height: 130%;
+	color: #A1468E;
+}
+.home-form h1 span {color: #4D3A49;}
+
+.home-form > p {
+	font-weight: 500;
+	font-size: 18px;
+	line-height: 150%;
+	color: #4D3A49;
+	margin-top: 20px;
+}
+
+.home-form {
+	max-width: 690px;	
+	padding-top: 166px;
+	padding-bottom: 110px;
+	position: relative;
+}
+
+.home-form form {
+	background: #DAB499 url(../img/bg-form.png) repeat 0 0;
+	border-radius: 5px;
+	padding: 30px;
+	margin-top: 80px;
+	max-width: 590px;
+	position: relative;
+	z-index: 2;
+}
+.home-form form > p {
+	font-weight: 600;
+	font-size: 18px;
+	line-height: 120%;
+	color: #FFFFFF;
+	margin-bottom: 10px;
+}
+
+.home-form form .group-input {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+}
+
+.home-form form .select {
+	width: 100%;
+}
+.home-form form .select .view {
+	background: #FFFFFF;
+	border-radius: 2px;
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 50px;
+	color: #7B7B7B;
+	height: 50px;
+	padding: 0 10px;
+	position: relative;
+}
+.home-form form .select .view:after {
+	content: '';
+	width: 20px;
+	height: 20px;
+	display: block;
+	position: absolute;
+	right: 10px;
+	top: 50%;
+	margin-top: -10px;
+	border-radius: 50%;
+	background: #A1468E url(../img/ic-arr-down.png) no-repeat center;
+}
+.home-form form .select.active .view {
+	border: 1px solid #A1468E;	
+}
+.home-form form .select.active .view:after {
+	background: #A1468E url(../img/ic-arr-up.png) no-repeat center;
+}
+.home-form form .select.active .drop {
+	background: #FFFFFF;
+	-webkit-box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.2);
+	        box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.2);
+	border-radius: 2px;
+	padding: 10px;
+	margin-top: 10px;
+	right: 0;
+}
+.home-form form .select.active .drop li {
+	padding: 10px;
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 100%;
+	color: #4B4B4B;
+	cursor: pointer;
+	-webkit-transition: all 0.3s ease;
+	transition: all 0.3s ease;
+}
+.home-form form .select.active .drop li:hover {color: #A1468E;}
+
+.home-form form button {
+	background: #A1468E;
+	height: 50px;
+	min-width: 160px;
+	border-radius: 2px;
+	font-weight: 600;
+	font-size: 16px;
+	text-align: center;
+	text-transform: uppercase;
+	color: #FFFFFF;
+	margin-left: 20px;
+	-webkit-transition: all 0.3s ease;
+	transition: all 0.3s ease;
+	cursor: pointer;
+}
+.home-form form button span {
+	display: inline-block;
+	vertical-align: middle;
+}
+.home-form form button:hover {
+	background: #AD2F93;
+}
+.home-form form button:hover:before {
+	content: '';
+	display: inline-block;
+	vertical-align: middle;
+	margin-right: 10px;
+	width: 14px;
+	height: 14px;
+	border-radius: 50%;
+	background: #833472;
+	position: relative;
+	top: -1px;
+}
+
+.home-thumb {
+	position: absolute;
+    right: -263px;
+    top: 30px;
+    max-width: 100%;
+}
+
+.home-reviews {
+	padding: 35px;
+	position: relative;
+	z-index: 3;
+	background: -webkit-gradient(linear, left top, left bottom, from(#4D3A49), to(#462740));
+	background: linear-gradient(180deg, #4D3A49 0%, #462740 100%);
+}
+.home-reviews .reviews {
+	background-image: url(../img/ic-quotes-left.png), url(../img/ic-quotes-right.png);
+	background-repeat: no-repeat;
+	background-position: left top, right bottom;
+	padding: 0 35px;
+	max-width: 790px;
+	margin-right: 72px;
+}
+.home-reviews .reviews p {
+	font-style: italic;
+	font-weight: 500;
+	font-size: 18px;
+	line-height: 150%;
+	color: #FFFFFF;
+}
+.home-reviews .user-reviews {
+	height: 124px;
+	background: #66375C;
+	border-radius: 200px;
+	padding: 40px 27px;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+}
+.home-reviews .user-reviews .name {
+	font-weight: bold;
+	font-size: 16px;
+	line-height: 130%;
+	color: #FFFFFF;
+	margin-left: 15px;
+}
+
+/* -------------------------------------------------------
+	03.	FOOTER 
+-------------------------------------------------------- */
+
+#footer .line {
+	background: #fff;
+	padding: 35px 0; 
+}
+#footer .line .center {
+	background: #F2F2F2;
+	border-radius: 2px;
+	padding: 15px;
+	text-align: center;
+}
+#footer .line .center p {
+	font-weight: 500;
+	font-size: 14px;
+	line-height: 150%;
+	color: #4B4B4B;	
+	display: inline-block;
+	vertical-align: middle;
+}
+#footer .line .center:before {
+	content: '';
+	display: inline-block;
+	vertical-align: middle;
+	width: 24px;
+	height: 24px;
+	background: url(../img/ic-mark.png) no-repeat center;
+	margin-right: 8px;
+}
+
+#footer .copy {
+	background: #4D3A49;
+	text-align: center;
+	padding: 18px 0;
+}
+#footer .copy p {
+	font-size: 12px;
+	line-height: 120%;
+	text-align: center;
+	color: #FFFFFF;
+}
