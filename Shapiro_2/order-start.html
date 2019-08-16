@@ -7,6 +7,7 @@
 
     <!-- CSS -->
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/slick.css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700&display=swap" rel="stylesheet">
 
     <title>Shapiro</title>
@@ -72,9 +73,182 @@
 
 				<div class="user-reviews">
 					<img src="img/user-reviews.png" alt="">
-					<p class="name hidden-iphone">Dr. Steven D.<br> Shapiro, M.D.</p>
-					<p class="name hidden-desktop visible-mobile">Dr. Steven D. Shapiro, M.D.</p>
+					<p class="name">Dr. Steven D.<br> Shapiro, M.D.</p>
 				</div>
+			</div>
+		</div>
+
+		<div class="shapiro-chose">
+			<div class="center">
+				<h3 class="title">Choose a Shapiro MD Package</h3>
+				
+				<form action="#">
+					<div class="shapiro-wrap d-flex">
+						<div class="shapiro-item">
+							<div class="thumb">
+								<img src="img/shapiro-1.png" alt="">
+							</div>
+
+							<div class="name-wrap">
+								<p class="name">Buy 1 & Try It Out</p>
+								<p class="month">1 Month Supply</p>
+							</div>
+
+							<div class="bottom">
+								<p>4 Systems of Shapiro MD</p>
+								<p>60 Day Money-Back Guarantee</p>
+								<div class="price">
+									<p class="new-price">$ 186.99</p>
+									<p class="old-price">$ 210.99</p>
+									<p class="text">Includes Free Fhipping!</p>
+								</div>
+								<label class="radio">
+									<input type="radio" name="shapiro">
+									<div class="check-radio">
+										<span class="circle"></span>
+										<p>get this</p>
+									</div>
+								</label>
+							</div>
+						</div>
+						<div class="shapiro-item">
+							<div class="thumb">
+								<img src="img/shapiro-2.png" alt="">
+							</div>
+
+							<div class="name-wrap">
+								<p class="name">Get 3 For the Price of 2!</p>
+								<p class="month">3 Month Supply</p>
+							</div>
+
+							<div class="bottom">
+								<p>4 Systems of Shapiro MD</p>
+								<p>60 Day Money-Back Guarantee</p>
+								<div class="price">
+									<p class="new-price">$ 200.99</p>
+									<p class="old-price">$ 210.99</p>
+									<p class="text">Includes Free Fhipping!</p>
+								</div>
+								<label class="radio">
+									<input type="radio" name="shapiro" checked>
+									<div class="check-radio">
+										<span class="circle"></span>
+										<p>get this</p>
+									</div>
+								</label>
+							</div>
+						</div>
+						<div class="shapiro-item">
+							<div class="thumb">
+								<img src="img/shapiro-3.png" alt="">
+							</div>
+
+							<div class="name-wrap">
+								<p class="name">Get 5 For the Price of 3!</p>
+								<p class="month">5 Month Supply</p>
+							</div>
+
+							<div class="bottom">
+								<p>4 Systems of Shapiro MD</p>
+								<p>60 Day Money-Back Guarantee</p>
+								<div class="price">
+									<p class="new-price">$ 260.99</p>
+									<p class="old-price">$ 210.99</p>
+									<p class="text">Includes Free Fhipping!</p>
+								</div>
+								<label class="radio">
+									<input type="radio" name="shapiro">
+									<div class="check-radio">
+										<span class="circle"></span>
+										<p>get this</p>
+									</div>
+								</label>
+							</div>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+
+		<div class="shapiro-order home-form">
+			<div class="center">
+				<h4 class="title">Order a Set While a Discount!</h4>
+
+				<div class="wrap">
+					<div class="thumb">
+						<img src="img/thumb-order.png" alt="">
+					</div>
+					<h5 class="subtitle">Tell Us Where to Send Your Shapiro Package:</h5>
+				</div>
+
+				<form action="#" class="form-shapiro-order">
+					<label class="group">
+						<p class="for">Your Country</p>
+						<div class="select">
+							<p class="view">--- <i>›</i></p>
+							<ul class="drop">
+								<li class="selected">United States</li>
+								<li>USA</li>
+								<li>Ukraine</li>
+								<li>Germani</li>
+							</ul>
+							<input type="hidden">
+						</div>
+					</label>
+					
+					<div class="group">
+						<label>
+							<p class="for">Name</p>
+							<input type="text" placeholder="John">
+						</label>
+
+						<label>
+							<p class="for">Surname</p>
+							<input type="text" placeholder="Doe">
+						</label>
+					</div>
+
+					<div class="group">
+						<label>
+							<p class="for">Phone Number</p>
+							<input type="tel" placeholder="+_(___) ___-____">
+						</label>
+
+						<label>
+							<p class="for">Email</p>
+							<input type="email" placeholder="johndoe@email.com">
+						</label>
+					</div>
+
+					<div class="group">
+						<label>
+							<p class="for">State/Country/Province</p>
+							<input type="email" placeholder="Alabama">
+						</label>
+
+						<label>
+							<p class="for">City/Town</p>
+							<input type="email" placeholder="Montgomery">
+						</label>
+
+						<label>
+							<p class="for">Postcode</p>
+							<input type="email" placeholder="13201">
+						</label>
+
+						<label>
+							<p class="for">Street Address 1</p>
+							<input type="email" placeholder="1301 Stuart St">
+						</label>
+
+						<label>
+							<p class="for">Street Address 2 (optional)</p>
+							<input type="email" placeholder="">
+						</label>
+
+						<input type="submit" value="buy now">
+					</div>					
+				</form>
 			</div>
 		</div>
 	</div>
@@ -109,6 +283,9 @@
 	<!-- // SVG SPRITE -->
 
     <!-- JavaScript -->
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/slick.min.js"></script>
     <script src="js/main.js"></script>
+
 </body>
 </html>

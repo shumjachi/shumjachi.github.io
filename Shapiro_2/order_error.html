@@ -25,55 +25,166 @@
 	<!-- // HEADER -->
 
 	<!-- COTNENT -->
-	<div id="content" class="bg-orange page-home">
-		<div class="home-thumb-mobile visible-iphone hidden-desktop">
-			<img src="img/bg-home-mobile.png" alt="">
-		</div>
-
-		<div class="bg">
-			<div></div>
-		</div>
+	<div class="checkout-page">
 		<div class="center">
-			<div class="home-form">
-				<h1>Win the fight <span>against<br>hair loss</span> with Shapiro MD!</h1>
-				
-				<p class="hidden-desktop visible-iphone">Shapiro MD contains powerful ingredients that have been clinically tested and proven to increase hair growth and provide fuller hair.</p>
-				<p class="hidden-iphone">Shapiro MD contains powerful ingredients that<br> have been clinically tested and proven to increase<br> hair growth and provide fuller hair.</p>
+			<h1 class="title btn-back">
+				<a href="order-start.html">
+					<svg class="svg-icon">
+						<use xlink:href="#svg-arrow"></use>
+					</svg>
+				</a>
+				<span>Secure Checkout</span>
+			</h1>
 
-				<form action="#">
-					<p class="title">Сhoose your country to proceed:</p>
-					<div class="group-input">
-						<div class="select">
-							<p class="view">--- <i>›</i></p>
-							<ul class="drop">
-								<li class="selected">Country</li>
-								<li>USA</li>
-								<li>Ukraine</li>
-								<li>Germani</li>
-							</ul>
-							<input type="hidden">
+			<div class="box-checkout yout-order">
+				<div class="title-checkout">Your Order</div>
+				<div class="inner">
+					<div class="product d-flex">
+						<div class="thumb">
+							<p class="gray">Product</p>
+							<img src="img/shapiro-checkout.png" alt="">
 						</div>
 
-						<button type="submit"><span>Proceed</span><span class="hidden">GET THIS</span></button>
+						<div class="amout t-right">
+							<p class="gray">Amount</p>
+							<p class="black"><strong>3</strong></p>
+						</div>
+
+						<div class="price t-right">
+							<p class="gray">Price</p>
+							<p class="black"><strong>$ 200.99</strong></p>
+						</div>
 					</div>
-				</form>
-			</div>
 
-			<div class="home-thumb hidden-iphone">
-				<img src="img/bg-home.png" alt="">
-			</div>
-		</div>
-
-		<div class="home-reviews">
-			<div class="center d-flex">
-				<div class="reviews">
-					<p>As a medical professional I am confident to say that Shapiro MD is my honest recommendation to everyone looking for a high quality hair growth supplement.</p>
+					<div class="info">
+						<ul>
+							<li class="d-flex">
+								<p class="gray t-left">Subtotal</p>
+								<p class="gray t-right">$ 200.99</p>
+							</li>
+							<li class="d-flex">
+								<p class="gray t-left">VAT</p>
+								<p class="gray t-right">Included</p>
+							</li>
+							<li class="d-flex">
+								<p class="gray t-left">Shipping</p>
+								<p class="purple t-right">FREE</p>
+							</li>
+							<li class="d-flex">
+								<p class="black t-left"><strong>Total</strong></p>
+								<p class="purple t-right"><strong>$ 200.99</strong></p>
+							</li>
+						</ul>
+					</div>
 				</div>
+			</div>
 
-				<div class="user-reviews">
-					<img src="img/user-reviews.png" alt="">
-					<p class="name hidden-iphone">Dr. Steven D.<br> Shapiro, M.D.</p>
-					<p class="name hidden-desktop visible-mobile">Dr. Steven D. Shapiro, M.D.</p>
+			<div class="box-checkout shipping-data">
+				<div class="title-checkout">Shipping Data</div>
+				<div class="inenr">
+					<ul>
+						<li class="d-flex">
+							<p class="t-left">Name, Surname</p>
+							<p class="t-right">Alexande Show</p>
+						</li>
+						<li class="d-flex">
+							<p class="t-left">Phone Number</p>
+							<p class="t-right">+1(443) 329-1919</p>
+						</li>
+						<li class="d-flex">
+							<p class="t-left">Email</p>
+							<p class="t-right">alexander_show@gmail.com</p>
+						</li>
+						<li class="d-flex">
+							<p class="t-left">Country</p>
+							<p class="t-right">United States</p>
+						</li>
+						<li class="d-flex">
+							<p class="t-left">State</p>
+							<p class="t-right">Virginia</p>
+						</li>
+						<li class="d-flex">
+							<p class="t-left">City</p>
+							<p class="t-right">Richmond</p>
+						</li>
+						<li class="d-flex">
+							<p class="t-left">Postcode</p>
+							<p class="t-right">90753</p>
+						</li>
+						<li class="d-flex">
+							<p class="t-left">Street</p>
+							<p class="t-right">90 St 12th Street</p>
+						</li>
+						<li class="t-right">
+							<a href="#" class="ic-edit"><i></i><span>Edit</span></a>
+						</li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="box-checkout payment-method">
+				<div class="title-checkout">Payment Method</div>
+				<div class="inner">
+					<ul class="tabs-control d-flex">
+						<li class="active"><a href="#tab-credit">Credit Card</a></li>
+						<li><a href="#tab-pay">Pay Pal</a></li>
+					</ul>
+
+					<div class="tabs-content">
+						<div id="tab-credit" class="tab active">
+							<div class="ic-company">
+								<img src="img/visa.png" alt="">
+								<img src="img/mastercard.png" alt="">
+								<img src="img/ames.png" alt="">
+								<img src="img/jsb.png" alt="">
+							</div>
+
+							<form action="#">
+								<label class="error">
+									<p class="for">Name</p>
+									<input type="text" placeholder="John">
+									<p class="error-text">Required field</p>
+								</label>
+
+								<label class="error">
+									<p class="for">Surname</p>
+									<input type="text" placeholder="Doe">
+									<p class="error-text">Required field</p>
+								</label>
+
+								<label class="error">
+									<p class="for">Card Number</p>
+									<input type="text" placeholder="1234 5678 1011 1213">
+									<p class="error-text">Enter a valid credit card number</p>
+								</label>
+
+								<div class="d-flex">
+									<label class="error">
+										<p class="for">MM/YY</p>
+										<input type="text" placeholder="01/19">
+										<p class="error-text">Invalid expiry date</p>
+									</label>
+
+									<label class="error">
+										<p class="for">CVC2/CVV2</p>
+										<input type="text" placeholder="777">
+										<p class="error-text">Invalid expiry date</p>
+									</label>
+								</div>
+
+								<input type="submit" value="order">
+							</form>
+						</div>
+						<div id="tab-pay" class="tab">
+							<div class="thumb">
+								<img src="img/paypal.png" alt="">
+							</div>
+
+							<form action="#">
+								<input type="submit" value="order">
+							</form>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -81,13 +192,7 @@
 	<!-- // CONTENT -->
 
 	<!-- FOOTER -->
-	<div id="footer">
-		<div class="line">
-			<div class="center">
-				<p>These statements have not been evaluated by the European Medicines Agency. This product is not intended to diagnose, treat, cure or prevent any disease.</p>
-			</div>			
-		</div>
-			
+	<div id="footer">			
 		<div class="copy">
 			<div class="center">
 				<p>Copyright &copy; 2019 Shapiro MD</p>
