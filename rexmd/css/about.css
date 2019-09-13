@@ -61,20 +61,42 @@
 	-webkit-box-align: center;
 	    -ms-flex-align: center;
 	        align-items: center;
+	-webkit-box-pack: justify;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
 }
-.section-promo__about .promo {padding: 0;}
-.section-promo__about .promo:before {display: none;}
-.section-promo__about .list-check {
+.section-promo__about .promo__wrap {
+	max-width: 100%;
+    padding: 70px 0 50px 9%;
+    background: url(../img/bg-list.png) no-repeat left 48% top 82%;
+    background-size: 125%;
+}
+
+.section-promo__about .promo__wrap > div {
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
+	-webkit-box-align: start;
+	    -ms-flex-align: start;
+	        align-items: flex-start;
 	-ms-flex-wrap: wrap;
 	    flex-wrap: wrap;
 }
-.section-promo__about .promo__wrap {max-width: 100%;}
+.section-promo__about .promo__wrap > div ul {
+	width: 50%;
+	min-width: 50%;
+}
+.section-promo__about .promo__wrap > div ul:first-child {padding-right: 5px;}
+.section-promo__about .promo {
+	padding: 0 0 0 65%;
+	background: url(../img/promo-thumb.png) no-repeat left center;
+	margin-left: -30%;
+}
+.section-promo__about .promo .section__title {font-weight: 400;}
+.section-promo__about .promo:before {display: none;}
 .section-promo__about .list-check li {
-	width: 100%;
-	max-width: 50%;
+	font-size: 18px;
+	line-height: 30px;
 }
 /* -------- // section promo about ----------- */
 
