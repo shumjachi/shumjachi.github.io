@@ -47,3 +47,37 @@
 }
 .process-about .process__item:after {display: none;}
 /* -------- // section dark ----------- */
+
+/* -------- section promo about ----------- */
+.section-promo__about {
+	background: url(../img/promo-bg_about.jpg) no-repeat center;
+	background-size: cover;
+	padding: 0;
+}
+.section-promo__about .wrapper {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+}
+.section-promo__about .promo {padding: 0;}
+.section-promo__about .promo:before {display: none;}
+.section-promo__about .list-check {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-wrap: wrap;
+	    flex-wrap: wrap;
+}
+.section-promo__about .promo__wrap {max-width: 100%;}
+.section-promo__about .list-check li {
+	width: 100%;
+	max-width: 50%;
+}
+/* -------- // section promo about ----------- */
+
+/* -------- section dc----------- */
+
+/* -------- // section dc ----------- */
