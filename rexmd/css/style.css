@@ -177,6 +177,9 @@ body {
 
 .text-right {
   text-align: right !important; }
+.text-italic {
+  font-style: italic !important;
+}
 
   .ul-list {
       margin-top: 20px;
