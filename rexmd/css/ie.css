@@ -1,0 +1,9 @@
+.product__info {
+	min-width: 66% !important;
+}
+.section-promo__about .promo {
+	padding: 0 0 0 60%;
+}
+.section-promo__about .promo__wrap > div ul {
+	max-width: 50%;
+}

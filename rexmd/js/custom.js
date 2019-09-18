@@ -1,7 +1,17 @@
+var isIE = false || !!document.documentMode;
+
+if (isIE) {
+    var head  = document.getElementsByTagName("head")[0];
+    var link  = document.createElement("link");
+    link.rel  = "stylesheet";
+    link.href = "css/ie.css";
+    head.appendChild(link);
+}
+
 $(window).on('load', function(){
-	if( /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) ) {
-		$('html').addClass('ios');
-	};
+	// if( /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) ) {
+	// 	$('html').addClass('ios');
+	// };
 	$('body').removeClass('loaded');
 });
 
