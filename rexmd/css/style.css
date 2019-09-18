@@ -180,6 +180,7 @@ body {
 .text-italic {
   font-style: italic !important;
 }
+.hidden-desktop {display: none !important;}
 
   .ul-list {
       margin-top: 20px;
@@ -953,7 +954,11 @@ label {
     text-decoration: underline;
     font-size: 1.8rem;
     display: inline-block; }
-
+.d-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
 .ds-part {
   margin-left: 51.2%;
   max-width: 32rem;
@@ -1499,6 +1504,8 @@ label {
     width: 75rem; } }
 
 @media screen and (max-width: 767px) {
+  .visible-mobile {display: block !important;}
+  .hidden-mobile {display: none !important;}
   .wrapper {
     width: auto; }
   .listing-preview__img {
