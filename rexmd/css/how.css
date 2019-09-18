@@ -215,6 +215,7 @@
 	color: #808080;
 }
 
+.save-time__table {padding-left: 35px;}
 .save-time__table--item.first {
 	-webkit-box-pack: justify;
 	    -ms-flex-pack: justify;
@@ -290,5 +291,19 @@
 }
 .save-time__table--item.content:hover div {
 	border-top: 1px solid #e6e6e6;
+}
+.save-time__table p.text-italic {
+	font-size: 20px;
+	line-height: 36px;
+	color: #b31f24;
+	font-weight: italic;
+	margin-bottom: 30px;
+}
+.save-time__table p.gray {
+	font-weight: 500;
+	font-size: 14px;
+	line-height: 24px;
+	color: #808080;
+	margin-top: 20px;
 }
 /* -------- // save time ----------- */
