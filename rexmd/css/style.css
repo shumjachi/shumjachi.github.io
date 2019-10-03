@@ -1705,7 +1705,11 @@ label {
     width: 34.9rem;
     height: 31.2rem; }
   .footer {
-    background-image: url("../img/footer-bg-mobile.jpg"); }
+    background-color: #272d3f;
+    background-image: url("../img/footer-bg-mobile.jpg");
+    background-position: center bottom; 
+    background-size: 100%;
+  }
   .footer-menu-horizontal {
     width: 100%; }
     .footer-menu-horizontal li {

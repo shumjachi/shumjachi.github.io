@@ -266,8 +266,6 @@
 	padding: 13px;
 	border-bottom: 1px solid #e6e6e6;
 	border-right: 1px solid #e6e6e6;
-	-webkit-transition: all 0.3s ease;
-	transition: all 0.3s ease;
 }
 .save-time__table--item.heading {
 	background: #2d3345;
@@ -278,19 +276,11 @@
 	background: #f7f7f7;
 }
 .save-time__table--item.content:hover {
-	font-size: 16px;
-	font-weight: 600;
 	color: #b31f24;
-	margin-left: -5px;
-	margin-right: -5px;
-	margin-top: -1px;
 	position: relative;
 	z-index: 9999;
 	-webkit-box-shadow: 0 3px 8px rgba(21,23,24,.15);
 	        box-shadow: 0 3px 8px rgba(21,23,24,.15);
-}
-.save-time__table--item.content:hover div {
-	border-top: 1px solid #e6e6e6;
 }
 .save-time__table p.text-italic {
 	font-size: 20px;
@@ -356,7 +346,7 @@
 	    display: -ms-flexbox;
 	    display: flex;
 	}
-	.first-screen__thumb .visible-mobile,
+	.first-screen__thumb .visible-mobile.cont,
 	.first-screen__thumb--img {
 		width: 50%;
 		min-width: 50%;
@@ -365,11 +355,15 @@
 		display: -webkit-box;
 		display: -ms-flexbox;
 		display: flex;
+	    -webkit-box-pack: end;
+	        -ms-flex-pack: end;
+	            justify-content: flex-end;
 		-webkit-box-align: end;
 		    -ms-flex-align: end;
 		        align-items: flex-end;
 	}
-	.first-screen__thumb .visible-mobile {padding-top: 0;}
+	.first-screen__thumb .visible-mobile.cont {padding-top: 20px;}
+	.first-screen__thumb--img div {margin-right: -10%;}
 
 	.speak-wrap {
 		padding: 20px;
@@ -386,9 +380,13 @@
 	    line-height: 26px;
 	    margin-bottom: 10px;
 	}
+	.speak .wrapper {
+		background: url(../img/speak-blue-mobile.jpg) no-repeat center;
+		background-size: cover;
+	}
 
 	.days .wrapper {
-		padding: 20px 30px 30px 30px;
+		padding: 20px 30px 30px 30px;		
 		-webkit-box-orient: vertical;
 		-webkit-box-direction: normal;
 		    -ms-flex-direction: column;
@@ -414,8 +412,7 @@
 		padding-right: 10px;
 	}
 	.days-thumb > div {
-		max-width: 50%;
-		padding-left: 10px;
+		max-width: 60%;
 	}
 	.days-cont h3 {
 	    font-size: 24px;
@@ -432,6 +429,10 @@
 	    font-size: 17px;
 	    line-height: 26px;
 	    margin-bottom: 10px;
+	}
+	.enjoy .wrapper {
+		background: url(../img/bg-enjoy-mobile.jpg) no-repeat center;
+		background-size: cover;
 	}
 	
 	.process-how .process {
@@ -488,4 +489,18 @@
 	.save-time__cont {margin-bottom: 20px;}
 
 	.save-time__table--item.first div {font-size: 12px;}
+}
+
+@media screen and (max-width: 415px) {
+	.save-time__table--item.first div {
+	    font-size: 11px;
+	    line-height: 15px;
+	    display: -webkit-box;
+	    display: -ms-flexbox;
+	    display: flex;
+	    -webkit-box-align: center;
+	        -ms-flex-align: center;
+	            align-items: center;
+	    padding: 0 10px;
+	}
 }
