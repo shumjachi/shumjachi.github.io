@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="413" height="179" viewBox="0 0 413 179">
+    <defs>
+        <path id="a" d="M95 135H72.325l-1.872 20.09C69.981 159.5 67.83 162.805 64 165h62c-3.83-2.195-5.981-5.499-6.453-9.91L117.675 135H95z"/>
+        <rect id="b" width="200" height="138" rx="8"/>
+        <circle id="c" cx="93.5" cy="128.5" r="3.5"/>
+        <rect id="d" width="67" height="7" x="61" y="162" rx="3.5"/>
+        <path id="e" d="M12 8h8c6.627 0 12 5.373 12 12v6c0 6.627-5.373 12-12 12h-8C5.373 38 0 32.627 0 26v-6C0 13.373 5.373 8 12 8z"/>
+        <path id="f" d="M12 16h3a5 5 0 0 1 5 5v4a5 5 0 0 1-5 5h-3a5 5 0 0 1-5-5v-4a5 5 0 0 1 5-5z"/>
+        <path id="g" d="M61 0v46c0 5.523-4.477 10-10 10H25c-5.523 0-10-4.477-10-10V0h46z"/>
+        <rect id="h" width="28" height="96" rx="4"/>
+        <rect id="i" width="28" height="96" rx="4"/>
+        <rect id="j" width="10" height="96" x="368.99" y="72.26" rx="4"/>
+    </defs>
+    <g fill="none" fill-rule="evenodd" transform="translate(1)">
+        <g transform="translate(100)">
+            <use fill="#FFF" xlink:href="#a"/>
+            <path stroke="#DEE1E2" stroke-width="2" d="M73.175 136.66l-1.258 13.5-.47 5.036c-.386 3.616-1.843 6.564-4.343 8.804h55.792c-2.5-2.24-3.957-5.191-4.345-8.817l-.468-5.023-1.258-13.5-43.589-.66-.061.66z"/>
+        </g>
+        <g transform="translate(100)">
+            <use fill="#FFF" xlink:href="#b"/>
+            <rect width="198" height="136" x="1" y="1" stroke="#DEE1E2" stroke-width="2" rx="8"/>
+        </g>
+        <g transform="translate(100)">
+            <use fill="#FFF" xlink:href="#c"/>
+            <circle cx="93.5" cy="128.5" r="2.5" stroke="#DEE1E2" stroke-width="2"/>
+        </g>
+        <path stroke="#DEE1E2" stroke-width="2" d="M110 11h181v100H110z"/>
+        <path stroke="#DEE1E2" stroke-linecap="square" stroke-width="2" d="M101.5 119h196.09"/>
+        <g transform="translate(100)">
+            <use fill="#FFF" xlink:href="#d"/>
+            <rect width="65" height="5" x="62" y="163" stroke="#DEE1E2" stroke-width="2" rx="2.5"/>
+        </g>
+        <path stroke="#DEE1E2" stroke-linecap="square" stroke-width="2" d="M157 11.5v98.184"/>
+        <g transform="translate(20 113)">
+            <use fill="#FFF" xlink:href="#e"/>
+            <path stroke="#DEE1E2" stroke-width="2" d="M12 9C5.925 9 1 13.925 1 20v6c0 6.075 4.925 11 11 11h8c6.075 0 11-4.925 11-11v-6c0-6.075-4.925-11-11-11h-8z"/>
+        </g>
+        <g transform="translate(20 113)">
+            <use fill="#FFF" xlink:href="#f"/>
+            <path stroke="#DEE1E2" stroke-width="2" d="M12 17a4 4 0 0 0-4 4v4a4 4 0 0 0 4 4h3a4 4 0 0 0 4-4v-4a4 4 0 0 0-4-4h-3z"/>
+        </g>
+        <g transform="translate(20 113)">
+            <use fill="#FFF" xlink:href="#g"/>
+            <path stroke="#DEE1E2" stroke-width="2" d="M60 1H16v45a9 9 0 0 0 9 9h26a9 9 0 0 0 9-9V1z"/>
+        </g>
+        <path stroke="#DEE1E2" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M73.5 120.5v22M73.5 148.5v5.759M104 168h186M20 168h74M10 168H0M411 168h-10M90 178h74M300 168h94M177 178h145M80 178H70M340 178h-10M52.485 106.5c-2.02-3.72-2.02-7.263 0-10.627 2.02-3.365 2.02-6.907 0-10.628M62.144 106.5c-2.9-5.339-2.9-10.422 0-15.25 2.9-4.828 2.9-9.911 0-15.25"/>
+        <g transform="translate(311 73)">
+            <use fill="#FFF" xlink:href="#h"/>
+            <rect width="26" height="94" x="1" y="1" stroke="#DEE1E2" stroke-width="2" rx="4"/>
+        </g>
+        <path stroke="#DEE1E2" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M312.5 81.5h25.02M312.5 160.5h25.02M318.5 90.5H331M318.5 94.5H331"/>
+        <g transform="translate(337 73)">
+            <use fill="#FFF" xlink:href="#i"/>
+            <rect width="26" height="94" x="1" y="1" stroke="#DEE1E2" stroke-width="2" rx="4"/>
+        </g>
+        <path stroke="#DEE1E2" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M338.5 81.5h25.02M338.5 160.5h25.02M344.5 90.5H357M344.5 94.5H357"/>
+        <g transform="rotate(-6 373.99 120.26)">
+            <use fill="#FFF" xlink:href="#j"/>
+            <rect width="8" height="94" x="369.99" y="73.26" stroke="#DEE1E2" stroke-width="2" rx="4"/>
+        </g>
+        <rect width="17" height="3" x="170" y="43" fill="#FF9000" rx="1.5"/>
+        <rect width="70" height="3" x="170" y="23" fill="#003485" rx="1.5"/>
+        <rect width="45" height="3" x="170" y="30" fill="#003485" rx="1.5"/>
+        <rect width="21" height="3" x="123" y="97" fill="#FF9000" rx="1.5"/>
+        <rect width="21" height="3" x="123" y="91" fill="#FF9000" rx="1.5"/>
+        <rect width="17" height="3" x="190" y="43" fill="#FF9000" rx="1.5"/>
+        <rect width="21" height="3" x="123" y="50" fill="#003485" rx="1.5"/>
+        <rect width="21" height="3" x="123" y="57" fill="#003485" rx="1.5"/>
+        <rect width="21" height="3" x="123" y="64" fill="#003485" rx="1.5"/>
+        <rect width="21" height="3" x="123" y="71" fill="#003485" rx="1.5"/>
+        <rect width="17" height="3" x="210" y="43" fill="#FF9000" rx="1.5"/>
+        <g fill="#D8D8D8" transform="translate(170 55)">
+            <rect width="70" height="3" rx="1.5"/>
+            <rect width="73" height="3" x="24" y="7" rx="1.5"/>
+            <rect width="21" height="3" y="7" rx="1.5"/>
+            <rect width="70" height="3" y="14" rx="1.5"/>
+            <rect width="24" height="3" x="73" y="14" rx="1.5"/>
+            <rect width="73" height="3" x="24" y="21" rx="1.5"/>
+            <rect width="21" height="3" y="21" rx="1.5"/>
+            <rect width="70" height="3" y="28" rx="1.5"/>
+            <rect width="24" height="3" x="73" y="28" rx="1.5"/>
+            <rect width="73" height="3" x="24" y="35" rx="1.5"/>
+            <rect width="21" height="3" y="35" rx="1.5"/>
+            <rect width="70" height="3" y="42" rx="1.5"/>
+        </g>
+        <rect width="17" height="3" x="230" y="43" fill="#FF9000" rx="1.5"/>
+        <rect width="17" height="3" x="250" y="43" fill="#FF9000" rx="1.5"/>
+        <g fill="#003485" transform="translate(126 23)">
+            <ellipse cx="6.5" cy="4" rx="3.5" ry="4"/>
+            <path d="M6.5 9c-1.849.056-3.349.389-4.5.997C.707 10.68.04 11.68 0 13c.002.654.169 1.154.5 1.5.331.346.831.513 1.5.501h9c.667.002 1.167-.165 1.5-.501.333-.336.5-.836.5-1.5-.14-1.397-.806-2.398-2-3.003C9.78 9.378 8.28 9.046 6.5 9z"/>
+        </g>
+    </g>
+</svg>
