@@ -75,22 +75,97 @@ var sliderRange = new SliderRange({
 	range: '.range-slider__value' 
 });
 
-// var rangeSlider = function(){
-//   var slider = $('.range-slider'),
-//       range = $('.range-slider__range'),
-//       value = $('.range-slider__value');
-    
-//   slider.each(function(){
+/* ------------------------------------------------------------------------------------------ 
+	03.	TABS 
+------------------------------------------------------------------------------------------ */
+function Tabs(options) {
+	var tabs = document.querySelectorAll(options.wrap),
+		_this = this;
 
-//     value.each(function(){
-//       var value = $(this).prev().attr('value');
-//       $(this).html(value);
-//     });
+	for (var i = 0; i < tabs.length; i++) {
+		var controls = tabs[i].querySelectorAll(options.nav + ' li'),
+			cont = tabs[i].querySelector(options.cont);
 
-//     range.on('input', function(){
-//       $(this).next(value).html(this.value);
-//     });
-//   });
-// };
+		for (var j = 0; j < controls.length; j++) {
+			var a = controls[j].querySelector('a');
 
-// rangeSlider();
+			a.addEventListener('click', function(e) {
+				e.preventDefault();
+				
+				var href = this.getAttribute('href'),
+					contActive = cont.querySelector(href);
+
+				_this.reset(cont);
+				contActive.classList.add('active');
+
+				return false;
+			}, false);
+		}
+	}
+
+
+	this.reset = function(cont) {
+		var item  = cont.querySelectorAll('.item');
+
+		for (var i = 0; i < item.length; i++) {
+			item[i].classList.remove('active');
+		}
+	}
+}
+
+var tabs = new Tabs({wrap: '.tabs', nav: '.tabs-navigation', cont: '.tabs-content'});
+
+var tabsItem = document.querySelectorAll('.tabs-content__item');
+
+for (var i = 0; i < tabsItem.length; i++) {
+	var h3 = tabsItem[i].querySelector('h3');
+
+	h3.onclick = function() {
+		for (var i = 0; i < tabsItem.length; i++) {
+			var contInner = tabsItem[i].querySelector('.inner-cont');
+			contInner.classList.add('hidden');
+		}
+
+		var parent = this.closest('.tabs-content__item');
+		parent.querySelector('.inner-cont').classList.remove('hidden');
+	}
+}
+
+/* ------------------------------------------------------------------------------------------ 
+	04.	TABS 
+------------------------------------------------------------------------------------------ */
+function Accorderon(options) {
+	var _this = this,
+		accordeon = document.querySelectorAll(options.wrap);
+
+	for (var i = 0; i < accordeon.length; i++) {
+		var controls = accordeon[i].querySelectorAll(options.control);
+
+		for (var j = 0; j < controls.length; j++) {
+			controls[j].addEventListener('click', function() {
+				_this.activeAccordeon(this, controls);
+			}, false);
+		}
+	}
+
+	this.activeAccordeon = function(btn, controls) {
+		var parent = btn.closest('li'),
+			contAccordeon = parent.querySelector(options.cont);
+
+
+		contAccordeon.classList.toggle('hidden');
+		
+		// _this.accordeonReset(controls);
+	}
+
+	this.accordeonReset = function(controls) {
+		for (var i = 0; i < controls.length; i++) {
+			var parent = controls[i].closest('li'),
+				contAccordeon = parent.querySelector(options.cont);
+
+			contAccordeon.classList.add('hidden');
+		}
+	}
+}
+
+var accordeon = new Accorderon({wrap: '.accordeon', control: '.accordeon-btn', cont: '.item'});

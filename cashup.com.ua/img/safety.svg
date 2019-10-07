@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="328" height="197" viewBox="0 0 328 197">
+    <defs>
+        <path id="a" d="M149.6 22H52c-5.523 0-10 4.477-10 10v117c0 5.523 4.477 10 10 10h175c5.523 0 10-4.477 10-10v-20.636c.64-1.319 1-2.8 1-4.364V10c0-5.523-4.477-10-10-10h-52c-5.523 0-8.192.999-10.708 4.323L149.601 22z"/>
+        <path id="b" d="M34 37h211l-10 134H44z"/>
+        <path id="c" d="M38.855 68h203.29c6.627 0 12 5.373 12 12a12 12 0 0 1-.123 1.713l-11.538 80A12 12 0 0 1 230.607 172H50.393a12 12 0 0 1-11.877-10.287l-11.538-80c-.946-6.56 3.604-12.644 10.164-13.59A12 12 0 0 1 38.855 68z"/>
+        <path id="d" d="M89 68V40C89 17.909 71.091 0 49 0S9 17.909 9 40v26h15V41c0-13.807 11.193-25 25-25s25 11.193 25 25v27h15z"/>
+        <rect id="e" width="25" height="13" x="4" y="53" rx="4"/>
+        <rect id="f" width="25" height="13" x="69" y="53" rx="4"/>
+        <path id="g" d="M7 65h84v80H7z"/>
+        <rect id="h" width="96" height="24" y="64" rx="4"/>
+        <rect id="i" width="96" height="24" y="93" rx="4"/>
+        <rect id="j" width="96" height="24" y="122" rx="4"/>
+    </defs>
+    <g fill="none" fill-rule="evenodd">
+        <g>
+            <use fill="#FFF" xlink:href="#a"/>
+            <path stroke="#DEE1E2" stroke-width="2" d="M166.04 4.987L150.05 23H52a9 9 0 0 0-9 9v117a9 9 0 0 0 9 9h175a9 9 0 0 0 9-9v-20.866l.1-.207A8.96 8.96 0 0 0 237 124V10a9 9 0 0 0-9-9h-52c-5.313 0-7.639.925-9.96 3.987z"/>
+        </g>
+        <g>
+            <use fill="#FFF" xlink:href="#b"/>
+            <path stroke="#DEE1E2" stroke-width="2" d="M35.077 38l9.851 132h189.144l9.85-132H35.078z"/>
+        </g>
+        <path fill="#DEE1E2" d="M64 53h69a1 1 0 1 1 0 2H64a1 1 0 0 1 0-2zm77 0h21a1 1 0 1 1 0 2h-21a1 1 0 1 1 0-2zm28 0h39a1 1 0 1 1 0 2h-39a1 1 0 1 1 0-2zm-1 10h39a1 1 0 1 1 0 2h-39a1 1 0 1 1 0-2zm-74-5h113.5a1 1 0 1 1 0 2H94a1 1 0 0 1 0-2zm-29.5 0h21a1 1 0 0 1 0 2h-21a1 1 0 0 1 0-2zm.5 5h69a1 1 0 1 1 0 2H65a1 1 0 0 1 0-2zm77 0h21a1 1 0 1 1 0 2h-21a1 1 0 1 1 0-2z"/>
+        <g>
+            <use fill="#FFF" xlink:href="#c"/>
+            <path stroke="#DEE1E2" stroke-width="2" d="M38.855 69a11 11 0 0 0-1.57.113c-6.013.867-10.185 6.444-9.317 12.457l11.538 80A11 11 0 0 0 50.393 171h180.214a11 11 0 0 0 10.887-9.43l11.538-80a11 11 0 0 0 .113-1.57c0-6.075-4.925-11-11-11H38.855z"/>
+        </g>
+        <g transform="translate(210 31)">
+            <use fill="#FFF" xlink:href="#d"/>
+            <path stroke="#003485" stroke-width="2" d="M88 67V40C88 18.46 70.54 1 49 1S10 18.46 10 40v25h13V41c0-14.36 11.64-26 26-26s26 11.64 26 26v26h13z"/>
+        </g>
+        <g transform="translate(210 31)">
+            <use fill="#FFF" xlink:href="#e"/>
+            <rect width="23" height="11" x="5" y="54" stroke="#003485" stroke-width="2" rx="4"/>
+        </g>
+        <g transform="translate(210 31)">
+            <use fill="#FFF" xlink:href="#f"/>
+            <rect width="23" height="11" x="70" y="54" stroke="#003485" stroke-width="2" rx="4"/>
+        </g>
+        <g transform="translate(210 31)">
+            <use fill="#FFF" xlink:href="#g"/>
+            <path stroke="#FF9000" stroke-width="2" d="M8 66h82v78H8z"/>
+        </g>
+        <g transform="translate(210 31)">
+            <use fill="#FFF" xlink:href="#h"/>
+            <rect width="94" height="22" x="1" y="65" stroke="#FF9000" stroke-width="2" rx="4"/>
+        </g>
+        <g transform="translate(210 31)">
+            <use fill="#FFF" xlink:href="#i"/>
+            <rect width="94" height="22" x="1" y="94" stroke="#FF9000" stroke-width="2" rx="4"/>
+        </g>
+        <g transform="translate(210 31)">
+            <use fill="#FFF" xlink:href="#j"/>
+            <rect width="94" height="22" x="1" y="123" stroke="#FF9000" stroke-width="2" rx="4"/>
+        </g>
+        <g fill="#DEE1E2" fill-rule="nonzero">
+            <path d="M115.715 187h188.58c.592 0 1.071-.448 1.071-1s-.48-1-1.071-1h-188.58c-.592 0-1.072.448-1.072 1s.48 1 1.072 1zM35 172h136.003a1 1 0 1 0 0-2H35a1 1 0 0 0 0 2zM91.44 197h185.702c1.386 0 1.438-.448 1.438-1s-.052-1-1.438-1H91.44c-1.386 0-1.438.448-1.438 1s.052 1 1.438 1zM79.917 195H69.083c-.598 0-1.083.448-1.083 1s.485 1 1.083 1h10.834c.598 0 1.083-.448 1.083-1s-.485-1-1.083-1zM300.917 195h-10.834c-.598 0-1.083.448-1.083 1s.485 1 1.083 1h10.834c.598 0 1.083-.448 1.083-1s-.485-1-1.083-1zM22.066 187h78.868c.589 0 1.066-.448 1.066-1s-.477-1-1.066-1H22.066c-.589 0-1.066.448-1.066 1s.477 1 1.066 1zM11.917 185H1.083C.485 185 0 185.448 0 186s.485 1 1.083 1h10.834c.598 0 1.083-.448 1.083-1s-.485-1-1.083-1zM24 170H14a1 1 0 0 0 0 2h10a1 1 0 0 0 0-2zM326.917 185h-10.834c-.598 0-1.083.448-1.083 1s.485 1 1.083 1h10.834c.598 0 1.083-.448 1.083-1s-.485-1-1.083-1z"/>
+        </g>
+        <text fill="#FF9000" font-family="HelveticaNeue-Bold, Helvetica Neue" font-size="16" font-weight="bold" letter-spacing="-.571">
+            <tspan x="82" y="98">u</tspan> <tspan x="90.917" y="98" letter-spacing="-.508">p</tspan>
+        </text>
+        <text fill="#003485" font-family="HelveticaNeue-Bold, Helvetica Neue" font-size="16" font-weight="bold" letter-spacing="-.571">
+            <tspan x="48" y="98">cash</tspan>
+        </text>
+    </g>
+</svg>
