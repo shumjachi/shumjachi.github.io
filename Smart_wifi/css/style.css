@@ -1,0 +1,161 @@
+@font-face {
+    font-family: 'Avenir Next';
+    src: url('../fonts/AvenirNext-DemiBold.eot');
+    src: url('../fonts/AvenirNext-DemiBold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/AvenirNext-DemiBold.woff2') format('woff2'),
+        url('../fonts/AvenirNext-DemiBold.woff') format('woff'),
+        url('../fonts/AvenirNext-DemiBold.ttf') format('truetype'),
+        url('../fonts/AvenirNext-DemiBold.svg#AvenirNext-DemiBold') format('svg');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Avenir Next';
+    src: url('../fonts/AvenirNext-Bold.eot');
+    src: url('../fonts/AvenirNext-Bold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/AvenirNext-Bold.woff2') format('woff2'),
+        url('../fonts/AvenirNext-Bold.woff') format('woff'),
+        url('../fonts/AvenirNext-Bold.ttf') format('truetype'),
+        url('../fonts/AvenirNext-Bold.svg#AvenirNext-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Avenir Next';
+    src: url('../fonts/AvenirNext-Regular.eot');
+    src: url('../fonts/AvenirNext-Regular.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/AvenirNext-Regular.woff2') format('woff2'),
+        url('../fonts/AvenirNext-Regular.woff') format('woff'),
+        url('../fonts/AvenirNext-Regular.ttf') format('truetype'),
+        url('../fonts/AvenirNext-Regular.svg#AvenirNext-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+* {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	border: none;
+	outline: none;
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
+}
+
+body {
+	font-family: 'Avenir Next', sans-serif;	
+	font-weight: normal;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+.d-flex {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+}
+
+.t-center {text-align: center;}
+.t-left {text-align: left;}
+.t-right {text-align: right;}
+
+.hidden-desktop {display: none;}
+.visible-desktop {display: block;}
+.hidden {display: none !important;}
+
+.center {
+	max-width: 460px;
+	margin: 0 auto;
+	padding: 0 15px;
+}
+
+/* -------------------------------------------------------
+	01.	HEADER 
+-------------------------------------------------------- */
+
+#header .center {
+	flex-direction: column;
+	padding-top: 63px;
+}
+
+#header .logo {
+	position: relative;
+	left: 1.5rem;
+}
+
+.header-title {
+  font-size: 45px;
+  font-weight: normal;
+  letter-spacing: 0.2px;
+  color: #58c1eb;
+  margin-bottom: 70px;
+}
+
+/* -------------------------------------------------------
+	02.	CONTENT 
+-------------------------------------------------------- */
+
+.content {
+	text-align: center;
+	box-shadow: 0 4px 16px 4px rgba(0, 0, 0, 0.04);
+	background-color: #2c3235;
+	color: #fff;
+	padding: 35px 0 50px;
+}
+.content .content-top {border-bottom: 1px solid #343a3c;}
+.content .content-top .center {max-width: 600px;}
+.content .content-bottom .center {
+	padding-top: 50px;
+	max-width: 490px;
+}
+.content .content-bottom .center p:last-child {margin-bottom: 0;}
+.content h3 {
+	font-size: 16px;
+	font-weight: 600;
+	margin-bottom: 20px;
+}
+.content p {
+	font-size: 12px;
+	line-height: 24px;
+	letter-spacing: 0.2px;
+	margin-bottom: 30px;
+}
+.content p a {color: #fff;}
+.content p a:hover {text-decoration: none;}
+.content .content-bottom h3 {font-size: 12px;}
+.content-bottom__img {margin-bottom: 50px;}
+
+@media screen and (max-width: 500px) {
+	#header {overflow: hidden;}
+	.header-title {
+		text-align: center;
+		font-size: 30px;
+	}
+}
+
+@media screen and (min-width: 1500px) {
+	.center {max-width: 800px;}
+	.header-title {font-size: 80px;}
+	#header .logo {width: 100%;}
+	#header .logo img {width: 100%;}
+	.content .content-top .center,
+	.content .content-bottom .center {max-width: 1000px;}
+	.content h3 {font-size: 22px;}
+	.content p {
+	    font-size: 17px;
+	    line-height: 30px;
+	}
+	#header .logo {left: 2.7rem;}
+}

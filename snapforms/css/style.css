@@ -1,0 +1,1696 @@
+@font-face {
+    font-family: 'Sequel Sans Medium Disp';
+    src: url('../fonts/SequelSans-MediumDisp.eot');
+    src: url('../fonts/SequelSans-MediumDisp.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/SequelSans-MediumDisp.woff2') format('woff2'),
+        url('../fonts/SequelSans-MediumDisp.woff') format('woff'),
+        url('../fonts/SequelSans-MediumDisp.ttf') format('truetype'),
+        url('../fonts/SequelSans-MediumDisp.svg#SequelSans-MediumDisp') format('svg');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Sequel Sans Roman Body';
+    src: url('../fonts/SequelSans-RomanBody.eot');
+    src: url('../fonts/SequelSans-RomanBody.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/SequelSans-RomanBody.woff2') format('woff2'),
+        url('../fonts/SequelSans-RomanBody.woff') format('woff'),
+        url('../fonts/SequelSans-RomanBody.ttf') format('truetype'),
+        url('../fonts/SequelSans-RomanBody.svg#SequelSans-RomanBody') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Sequel Sans Bold Head';
+    src: url('../fonts/SequelSans-BoldHead.eot');
+    src: url('../fonts/SequelSans-BoldHead.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/SequelSans-BoldHead.woff2') format('woff2'),
+        url('../fonts/SequelSans-BoldHead.woff') format('woff'),
+        url('../fonts/SequelSans-BoldHead.ttf') format('truetype'),
+        url('../fonts/SequelSans-BoldHead.svg#SequelSans-BoldHead') format('svg');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Sequel Sans Roman Disp';
+    src: url('../fonts/SequelSans-RomanDisp.eot');
+    src: url('../fonts/SequelSans-RomanDisp.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/SequelSans-RomanDisp.woff2') format('woff2'),
+        url('../fonts/SequelSans-RomanDisp.woff') format('woff'),
+        url('../fonts/SequelSans-RomanDisp.ttf') format('truetype'),
+        url('../fonts/SequelSans-RomanDisp.svg#SequelSans-RomanDisp') format('svg');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Sequel Sans Semi Bold Head';
+    src: url('../fonts/SequelSans-SemiBoldHead.eot');
+    src: url('../fonts/SequelSans-SemiBoldHead.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/SequelSans-SemiBoldHead.woff2') format('woff2'),
+        url('../fonts/SequelSans-SemiBoldHead.woff') format('woff'),
+        url('../fonts/SequelSans-SemiBoldHead.ttf') format('truetype'),
+        url('../fonts/SequelSans-SemiBoldHead.svg#SequelSans-SemiBoldHead') format('svg');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Sequel Sans Book Disp';
+    src: url('../fonts/SequelSans-BookDisp.eot');
+    src: url('../fonts/SequelSans-BookDisp.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/SequelSans-BookDisp.woff2') format('woff2'),
+        url('../fonts/SequelSans-BookDisp.woff') format('woff'),
+        url('../fonts/SequelSans-BookDisp.ttf') format('truetype'),
+        url('../fonts/SequelSans-BookDisp.svg#SequelSans-BookDisp') format('svg');
+    font-weight: 500;
+    font-style: normal;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+body {
+    font: 16px/26px 'Sequel Sans Roman Disp', sans-serif;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+a {text-decoration: none;}
+
+h1.title {
+    font: 56px/64px 'Sequel Sans Bold Head', sans-serif;
+    color: #212b35;
+    margin-bottom: 22px;
+}
+h2.title {
+    font: 40px/50px 'Sequel Sans Bold Head', sans-serif;
+    color: #212b35;
+    margin-bottom: 60px;
+}
+h3.title {
+    font: 24px/32px 'Sequel Sans Semi Bold Head', sans-serif;
+    color: #212b35;
+    margin-bottom: 16px;
+}
+
+p.descr-title {
+    font: 18px/24px 'Sequel Sans Medium Disp', sans-serif;
+    color: #818f9a;
+    margin-bottom: 0;
+}
+
+.center {
+    width: 100%;
+    max-width: 1366px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+.d-flex {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.df-right {
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+}
+
+.w-100 {width: 100%;}
+
+/* background color */
+.bg-orange {background: #fcf7ef !important;}
+.bg-purple {background: #ebf7ff !important;}
+
+
+.t-center {text-align: center;}
+
+.svg-icon {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.main-formated h2.title {
+    font: 40px/50px 'Sequel Sans Bold Head', sans-serif;
+    color: #212b35;
+    margin-bottom: 24px;
+}
+.main-formated p {
+    font: 16px/26px 'Sequel Sans Roman Body', sans-serif;
+    color: #5b6b79;
+    margin-bottom: 24px;
+}
+
+.main-formated a {
+    font: 16px/26px 'Sequel Sans Roman Body', sans-serif;
+    text-decoration: underline;
+    color: #5c6ac4;
+}
+.main-formated a:hover {text-decoration: none;}
+
+.main-formated ul li {
+    font: 16px/26px 'Sequel Sans Roman Body', sans-serif;
+    color: #5b6b79;
+    position: relative;
+    margin-bottom: 12px;
+    padding-left: 18px;
+}
+.main-formated ul li:before {
+    content: '';
+    width: 6px;
+    height: 6px;
+    background-color: #000000;
+    display: block;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+}
+
+.main-formated .video-box {
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+.main-formated .video-box img {width: 100%;}
+
+.video-excerpt {
+    border-radius: 8px;
+    background-color: #e6fafa;   
+    padding: 38px; 
+}
+.video-excerpt h3 {
+    font: 24px/32px 'Sequel Sans Bold Head', sans-serif;
+    color: #016e75;
+}
+.video-excerpt h3 svg {
+    width: 12.7px;
+    height: 10px;
+    fill: #016e75;
+}
+.video-excerpt p {
+    font: 16px/26px 'Sequel Sans Roman Body', sans-serif;
+    color: #5b6b79;
+    margin-top: 11px;
+    margin-bottom: 0;
+}
+
+.box-checkmark li {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 24px;
+}
+.box-checkmark li:last-child {margin-bottom: 0;}
+.box-checkmark li p {
+    font: 16px/26px 'Sequel Sans Roman Disp', sans-serif !important;
+    color: #637381 !important;
+    margin-left: 16px;
+    margin-bottom: 0 !important;
+}
+
+.hidden {display: none;}
+
+.c-blue {color: #5c6ac4 !important;}
+
+/* BUTTON */
+.btn {
+    display: inline-block;
+    padding: 14px 32px;
+    color: #fff;
+    text-align: center;
+    font: 14px/20px 'Sequel Sans Bold Head', sans-serif;
+    transition: all 0.3s ease;
+}
+.btn-blue {
+    border-radius: 5px;
+    box-shadow: 0 3px 10px 0 rgba(17, 10, 37, 0.15);
+    background-color: #5c6ac4;    
+}
+.btn-blue:hover {
+    box-shadow: none;
+}
+.btn-opacity {
+    border-radius: 5px;
+    border: solid 1px #DEE1F3;
+    color: #5c6ac4;
+}
+.btn-opacity:hover {border: 1px solid transparent;}
+.btn-more {
+    border-radius: 5px;
+    border: solid 1px #DFD3C5;
+    color: #6e451e;
+}
+.btn-more:hover {border: 1px solid transparent;}
+.btn-link {
+    font: 14px/20px 'Sequel Sans Bold Head', sans-serif;
+    color: #497bce;
+}
+.btn-link span {
+    display: inline-block;
+    vertical-align: middle;
+}
+.btn-link svg {
+    width: 12.7px;
+    height: 10px;
+    fill: #497bce;
+    transition: all 0.3s ease;
+}
+.btn-link:hover svg {margin-left: 20px;}
+
+/* icon */
+.icon {
+    display: inline-block;
+    vertical-align: middle;
+}
+.ic-checkmark {
+    width: 19px;
+    height: 16px;
+    background: url(../img/ic-checkmark.png) no-repeat;
+}
+.ic-minus {
+    position: relative;
+    width: 16px;
+    height: 3px;
+    background: #5c6ac4;
+}
+
+.ic-plus {
+    position: relative;
+    width: 16px;
+    height: 16px;
+}
+.ic-plus:before,
+.ic-plus:after {
+    position: absolute;
+    top: 50%;
+    margin-top: -1.5px;
+}
+.ic-plus:before {
+    content: '';
+    display: block;
+    width: 16px;
+    height: 3px;
+    background: #5c6ac4;
+}
+.ic-plus:after {
+    content: '';
+    display: block;
+    width: 16px;
+    height: 3px;
+    background: #5c6ac4;
+    transform: rotate(90deg);
+}
+
+/* style guide */
+.radio-select {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 160px;
+    min-width: 160px;
+}
+.radio-select .checked {
+    width: 32px;
+    height: 16px;
+    border-radius: 12px;
+    background-color: #98c93c;
+    position: relative;
+    transition: all 0.3s ease;
+}
+.radio-select span {
+    font: 16px/20px 'Sequel Sans Medium Disp', sans-serif;
+    color: #cacccc;
+    transition: all 0.3s ease;
+}
+.radio-select span.active {
+    color: #212b35;
+}
+.radio-select .checked:after {
+    content: '';
+    display: block;
+    width: 8px;
+    height: 8px;
+    background: #f5fbff;
+    position: absolute;
+    top: 4px;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+.radio-select .checked.left:after {
+    left: 4px;
+}
+.radio-select .checked.right:after {
+    right: 4px;
+}
+
+/* --------------- HEADER ----------------*/
+.header {
+    padding: 47px 0;
+}
+.header-mini {
+    padding: 25px 0;
+}
+.header .center {
+    align-items: center;
+}
+.nav {
+    margin-left: auto;
+    margin-right: 64px;
+}
+.nav > ul > li > a {
+    display: inline-block;
+    vertical-align: middle;
+    font: 16px/24px 'Sequel Sans Medium Disp', sans-serif;
+    color: #637381;
+    transition: all 0.3s ease;
+    padding: 13px 0;
+}
+.nav > ul > li > a:hover {color: #212b35;}
+.nav ul li svg {
+    width: 9px;
+    height: 6px;
+    margin-left: 5px;
+}
+.nav > ul {
+    display: flex;
+    align-items: center;
+}
+.nav > ul > li {position: relative;}
+.nav > ul > li + li {margin-left: 40px;}
+.nav > ul .drop {
+    min-width: 180px;
+    opacity: 0;
+    visibility: hidden;
+    padding: 8px 0;
+    transition: all 0.5s ease;
+    transform: translateX(-50%);
+    left: 50%;
+    position: absolute;
+    top: 100%;
+    border-radius: 8px;
+    box-shadow: 0 4px 19px 0 rgba(17, 10, 37, 0.04);
+    border: solid 1px rgba(179, 179, 179, 0.16);
+    background-color: #ffffff;    
+}
+.nav > ul > li:nth-child(2) .drop {
+    display: flex;
+    justify-content: space-between;
+    min-width: 440px;
+}
+.nav > ul > li:nth-child(2) .drop > li {
+    width: 48%;
+}
+.nav > ul > li:nth-child(2) .drop > li > ul > li:first-child {
+    padding: 0 24px;
+    margin-bottom: 10px;
+}
+.nav > ul > li:nth-child(2) .drop > li > ul > li:first-child a {
+    font: 16px/24px 'Sequel Sans Roman Disp', sans-serif;
+    color: #000000;
+    padding: 16px 0;
+    display: block;
+    border-bottom: 1px solid rgba(179,179,179,0.16);
+}
+
+.nav > ul .drop li a {
+    display: block;
+    padding: 8px 24px;
+    font: 16px/24px 'Sequel Sans Roman Disp', sans-serif;
+    color: #637381;
+    border-left: 1px solid transparent;
+}
+.nav > ul .drop li a:hover {
+    background-color: #f6f6f6;
+    color: #212b35;
+    border-left: 1px solid #5c6ac4;
+}
+.nav ul > li:hover > .drop {
+    opacity: 1;
+    visibility: visible;
+}
+.nav > ul > li:nth-child(2) .drop > li > ul > li:first-child a:hover {
+    background: none;
+    border-left: 1px solid transparent;
+    color: #000000;
+}
+/* --------------- // HEADER ----------------*/
+
+/* --------------- FIRST SCREEN ----------------*/
+.first-screen__desc {
+    width: 48%;
+    padding: 110px 0;
+}
+.first-screen p {
+    font: 17px/24px 'Sequel Sans Medium Disp', sans-serif;
+    color: #637381;
+    margin-bottom: 38px;
+    opacity: 0.8;
+}
+.first-screen .group-btn .btn-blue  {
+    margin-right: 24px;
+} 
+.first-screen_thumb {
+    width: 52%;
+    background: url(../img/bg-home.png) no-repeat center;
+    background-size: cover;
+}
+.first-screen_thumb img {
+    display: block;
+    width: 100%;
+}
+/* --------------- // FIRST SCREEN ----------------*/
+
+/* --------------- BRANDS ----------------*/
+.brands {
+    padding: 50px 0 98px 0;
+}
+.brands h3 {
+    text-align: center;
+    font: 18px/24px 'Sequel Sans Bold Head', sans-serif;
+    color: #637381;
+    text-align: center;
+    margin-bottom: 50px;
+    opacity: 0.8;
+}
+.brands .wrap {
+    padding: 0 56px;
+}
+/* --------------- // BRANDS ----------------*/
+
+/* --------------- ONLY FORM ----------------*/
+.only-form {
+    padding: 60px 0 50px 0;
+}
+.only-form .t-center {margin-top: 15px;}
+.only-form__item {
+    width: 31.95%;
+    margin-right: 2%;
+    padding: 40px;
+    background: #fff;
+    border-radius: 8px;
+    margin-bottom: 2%;
+}
+.only-form__item:nth-child(3n) {
+    margin-right: 0;
+}
+.only-form__item .icon {margin-bottom: 10px;}
+.only-form__item h3 {
+    font: 24px/32px 'Sequel Sans Bold Head', sans-serif;
+    color: #212b35;
+    margin-bottom: 12px;
+}
+.only-form__item p {
+    color: #637381;
+}
+.only-form__item p:last-child {margin-bottom: 0;}
+/* --------------- // ONLY FORM ----------------*/
+
+/* --------------- STORIES ----------------*/
+.stories {padding: 120px 0 138px 0;}
+.stories .wrap {
+    justify-content: flex-start;
+}
+.stories-item {
+    max-width: 470px;
+    margin-bottom: 64px;
+}
+.stories-item:first-child {margin-right: 93px;}
+.stories .icon {margin-bottom: 10px;}
+.stories-item p {color: #637381;}
+.stories-item p:last-child {margin-bottom: 0;}
+.stories-item .more {
+    color: #5c6ac4;
+    display: inline-block;
+    margin-top: 24px;
+    font: 14px/20px 'Sequel Sans Bold Head', sans-serif;
+}
+.stories .group-btn {
+    max-width: 225px;
+}
+.stories .group-btn .btn {
+    width: 100%;
+}
+.stories .group-btn > div {
+    display: flex;
+    align-items: center;
+    margin-top: 14px;
+    justify-content: space-between;
+}
+.stories .group-btn > div img {max-width: 20%;}
+/* --------------- // STORIES ----------------*/
+
+/* --------------- PRIVACY ----------------*/
+.privacy {
+    background: #ebf7ff;
+    background-size: 50%;    
+}
+.privacy .center {
+    position: relative;
+    padding: 79px 15px 82px 15px;
+}
+.privacy-descr {
+    width: 37%;
+}
+.privacy-descr h3.title svg {
+    width: 20px;
+    height: 26px;
+    margin-right: 20px;
+}
+.privacy-descr h3.title span {
+    display: inline-block;
+    vertical-align: middle;
+}
+.privacy-descr p {
+    color: #637381;
+}
+.privacy-descr p:last-child {margin-bottom: 0;}
+.privacy-descr .btn-link {margin-top: 12px;}
+
+.privacy-descr_item + .privacy-descr_item {margin-top: 50px;}
+
+.privacy-thumb {
+    width: 63%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    background: url(../img/bg-privicy.png) no-repeat center;
+    background-size: 90%;
+}
+/* --------------- // PRIVACY ----------------*/
+
+/* --------------- FORMS TYPE ----------------*/
+.forms-type {
+    padding: 133px 0 142px 0;
+}
+.forms-type .wrap {
+    justify-content: flex-start;
+}
+.forms-type__item {
+    border-radius: 8px;
+    background-color: #ebf7ff;
+    padding: 40px;
+    width: 31.95%;
+    margin-right: 2%;
+    margin-bottom: 2%;
+}
+.forms-type__item:nth-child(3n) {margin-right: 0;}
+.forms-type__item .icon {margin-bottom: 27px;}
+.forms-type__item .icon svg {
+    width: 40px;
+    height: 30px;
+}
+.forms-type__item h3 {
+    font: 24px/32px 'Sequel Sans Bold Head', sans-serif;
+    color: #497bce;
+    margin-bottom: 13px;
+}
+.forms-type__item h3 span {
+    display: inline-block;
+    vertical-align: middle;
+}
+.forms-type__item h3 svg {
+    width: 12px;
+    height: 10px;
+    fill: #497bce;
+}
+.forms-type__item  p {
+    color: #5b6b79;
+    font: 16px/26px 'Sequel Sans Roman Body', sans-serif;
+}
+.forms-type__item  p:last-child {margin-bottom: 0;}
+
+.forms-type__item .features:nth-child(4) {margin-top: 48px;}
+.forms-type__item .features {margin-bottom: 24px;}
+.forms-type__item .features h3 {
+    font: 18px/34px 'Sequel Sans Bold Head', sans-serif;
+    color: #212b35;
+    margin-bottom: 8px;
+}
+.forms-type__item .features p {
+    font: 16px/24px 'Sequel Sans Roman Disp', sans-serif;
+    color: #637381;
+    opacity: 0.7;
+}
+.forms-type__item .features:last-child {margin-bottom: 0;}
+/* --------------- // FORMS TYPE ----------------*/
+
+/* --------------- EXPERIANCE ----------------*/
+.experiance {padding-bottom: 127px;}
+.experiance .wrap {
+    justify-content: flex-start;
+}
+.experiance-item {
+    width: 23.5%;
+    margin-right: 2%;
+    margin-bottom: 2%;
+    border-radius: 8px;
+    padding: 25px;
+    background-color: #e6fafa;
+}
+.experiance-item:nth-child(4n) {margin-right: 0;}
+.experiance-item .icon {margin-bottom: 20px;}
+.experiance-item .icon svg {
+    width: 30px;
+    height: 25px;
+    fill: #1b6d6b;
+}
+.experiance-item h3 {
+    font: 18px/34px 'Sequel Sans Bold Head', sans-serif;
+    color: #1b6d6b;
+}
+.experiance-item h3 span {
+    display: inline-block;
+    vertical-align: middle;
+}
+.experiance-item h3 svg.svg-icon {
+    width: 13px;
+    height: 10px;
+    margin-left: 4px;
+    stroke: #1b6d6b;
+}
+.experiance-blue .btn-link {color: #5c6ac4 !important;}
+.experiance-blue .btn-link svg {fill: #5c6ac4 !important;}
+.experiance-blue .experiance-item {
+    background: #edf0ff;
+}
+.experiance-blue .experiance-item .svg-icon {
+    fill: #5c6ac4;
+}
+
+.page-pricing__shapforms .experiance {
+    padding: 130px 0 140px 0;
+}
+.page-pricing__shapforms .experiance h2.title {
+    margin-bottom: 25px;
+}
+.page-pricing__shapforms .experiance .btn-link {
+    font: 18px/34px 'Sequel Sans Bold Head', sans-serif;
+    color: #016e75;
+    margin-bottom: 40px;
+    display: inline-block;
+}
+.page-pricing__shapforms .experiance .btn-link svg {
+    fill: #016e75;
+    width: 13px;
+    height: 10px;
+}
+.page-pricing__shapforms .experiance-item h3 {
+    color: #212b35;
+}
+.page-pricing__shapforms .experiance-item p {
+    font: 16px/24px 'Sequel Sans Roman Disp', sans-serif;
+    color: #637381;
+    opacity: 0.7;
+}
+/* --------------- // EXPERIANCE ----------------*/
+
+/* --------------- FORM BILDING ----------------*/
+.wrap-form__bilding {
+    padding: 130px 0;
+}
+.form-bilding {
+    padding: 0 15px;
+    margin-bottom: -110px;
+    position: relative;
+    z-index: 1;
+}
+.wrap-form__bilding .form-bilding {
+    margin-bottom: 0;
+    background: #edf0ff;
+    border-radius: 10px;
+    padding: 58px 180px 65px 180px;
+    text-align: center;
+}
+.form-bilding .center {
+    border-radius: 10px;
+    background-color: #f8f9fe;
+    background: #f8f9fe;
+    padding: 58px 180px 65px 180px;
+    text-align: center;
+}
+.form-bilding h2.title {
+    font-size: 40px;
+    line-height: 50px;
+    color: #212b35;
+    margin-bottom: 50px;
+}
+.form-bilding h2.title span {color: #5c6ac4;}
+.form-bilding .btn-group a:first-child {margin-right: 24px;}
+.form-bilding p {
+    font: 18px/32px 'Sequel Sans Roman Body', sans-serif;
+    color: #5b6b79;
+    margin-bottom: 32px;
+}
+.wrap-form__bilding .form-bilding h2.title {
+    margin-bottom: 13px;
+}
+/* --------------- // FORM BILDING ----------------*/
+
+/* --------------- PLANS ----------------*/
+.plans {
+    padding-bottom: 120px;
+    padding-top: 58px;
+    border-top: 1px solid #F4F5FA;
+}
+
+.plans h1.title {
+    font: 40px/50px 'Sequel Sans Bold Head', sans-serif;
+    color: #212b35;
+    margin-bottom: 13px;
+}
+
+.plans h3 {
+    font: 24px/32px 'Sequel Sans Bold Head', sans-serif;
+    color: #212b35;
+    margin-bottom: 25px;
+}
+
+.plans .wrap {
+    margin-top: 60px;
+}
+
+.plans-item:first-child {
+    min-width: 30%;
+    margin-right: 3%;
+    padding: 35px 0;
+}
+.plans-item:first-child li:first-child {
+    margin-bottom: 120px;
+}
+.plans-link_hidden {
+    border-bottom: 1px solid #E3E6E9;
+}
+.plans-link_hidden.active a svg {
+    width: 9px;
+    height: 9px;
+}
+.plans-link_hidden a {
+    display: block;
+    font: 16px/20px 'Sequel Sans Medium Disp', sans-serif;
+    color: #212b35;
+    min-height: 52px;
+    display: flex;
+    align-items: center;
+}
+.plans-link_hidden a span {
+    display: inline-block;
+    vertical-align: middle;
+}
+.plans-link_hidden a svg {
+    width: 16px;
+    height: 16px;
+    margin-left: 8px;
+}
+.plans-link_hidden p {
+    font: 16px/22px 'Sequel Sans Roman Disp', sans-serif;
+    color: #637381;
+    margin-bottom: 11px;
+}
+
+.plans-select {
+    border-radius: 8px;
+    box-shadow: 0 4px 19px 0 rgba(17, 10, 37, 0.06);
+    background-color: #fdfdfd;
+    padding: 35px 24px;
+    min-width: 20%;
+}
+.plans-select li:not(:first-child) {
+    border-top: 1px solid #F0F1F3;
+    min-height: 52px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font: 16px/20px 'Sequel Sans Medium Disp', sans-serif;
+    color: #637381;
+}
+.plans-select li.email-support {
+    min-height: 104px;
+}
+.plans-select li:last-child .btn-blue {margin-top: 40px;}
+.plans-select .price {
+    font: 14px/32px 'Sequel Sans Roman Disp', sans-serif;
+    color: #212b35;
+    margin-bottom: 20px;
+}
+.plans-select .price span {
+    font: 24px/32px 'Sequel Sans Bold Head', sans-serif;
+    color: #212b35;
+}
+.plans-select .btn-opacity {margin-bottom: 35px;}
+/* --------------- // PLANS ----------------*/
+
+/* --------------- ENTERPRISE ----------------*/
+.enterprise {
+    padding: 80px 0;
+    background: #edf0ff;
+}
+.enterprise .descr-section,
+.enterprise .info-section {
+    width: 50%;
+}
+.enterprise .descr-section h2 {
+    margin-bottom: 16px;
+}
+.enterprise .descr-section p {
+    font: 18px/28px 'Sequel Sans Medium Disp', sans-serif;
+    color: #637381;
+    opacity: 0.8;
+    margin-bottom: 32px;
+}
+.enterprise .info-section li {
+    width: 50%;
+    display: flex;
+    align-items: flex-start;
+}
+.enterprise .info-section li i {margin-top: 5px;}
+.enterprise .info-section li p {
+    font: 18px/28px 'Sequel Sans Medium Disp', sans-serif;
+    color: #212b35;
+    margin-left: 17px;
+}
+/* --------------- // ENTERPRISE ----------------*/
+
+/* --------------- MAIN SCREEN ----------------*/
+.main-screen {
+    background-color: #edf0ff;
+    padding: 125px 0;
+}
+.main-screen .descr {
+    max-width: 50%;
+}
+.main-screen h1.title {
+    font: 40px/55px 'Sequel Sans Bold Head', sans-serif;
+    color: #212b35;
+    margin-bottom: 10px;
+}
+.main-screen p {
+    font: 16px/26px 'Sequel Sans Roman Disp', sans-serif;
+    color: #637381;
+}
+.main-screen p:nth-child(2) {
+    font: 18px/24px 'Sequel Sans Medium Disp', sans-serif;
+    color: #637381;
+    opacity: 0.8;
+    margin-bottom: 23px;
+}
+.main-screen .group-btn .btn:first-child {margin-right: 24px;}
+.main-screen .thumb {
+    width: 35%;
+}
+.main-screen .thumb img {width: 100%;}
+.main-screen .box-checkmark {width: 34%;}
+
+.main-screen ul.list li {
+    width: 45%;
+    margin-bottom: 32px;
+}
+.main-screen ul.list li a {
+    font: 18px/34px 'Sequel Sans Bold Head', sans-serif;
+    color: #497bce;
+    margin-bottom: 6px;
+    transition: all 0.3s ease;
+}
+.main-screen ul.list li a:hover {color: #3a61a2;}
+.main-screen ul.list li a svg {
+    fill: #497bce;
+    width: 12px;
+    height: 10px;
+    margin-left: 12px;
+}
+.main-screen ul.list li a:hover svg {fill: #3a61a2;}
+.main-screen ul.list li p {
+    font: 16px/26px 'Sequel Sans Roman Disp', sans-serif;
+    color: #637381;
+    opacity: 0.7;
+}
+/* --------------- // MAIN SCREEN ----------------*/
+
+.content {
+    padding: 112px 0 133px 0;
+}
+
+/* --------------- SIDEBAR ----------------*/
+.sidebar {
+    width: 25%;
+    padding-right: 70px;
+}
+.sidebar h4 {
+    font: 24px/32px 'Sequel Sans Bold Head', sans-serif;
+    color: #212b35;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #ECECEC;
+    margin-bottom: 32px;
+}
+.sidebar ul li {margin-bottom: 16px;}
+.sidebar ul li.js-show.active a {color: #5c6ac4;}
+.sidebar ul li.js-show.active svg {
+    transform: rotate(180deg);
+}
+.sidebar ul li.js-show ul {
+    margin: 24px 0 32px 12px;
+}
+.sidebar ul li.js-show ul a {
+    color: #4d555d !important;
+}
+.sidebar ul li a {
+    font: 18px/24px 'Sequel Sans Book Disp', sans-serif;
+    color: #212b35;
+    opacity: 0.8;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+.sidebar ul li a:hover {color: #5c6ac4;}
+.sidebar ul li a span {
+    direction: inline-block
+    vertical-align: middle;
+}
+.sidebar ul li a svg {
+    width: 6px;
+    height: 6px;
+    fill: #4d555d;
+}
+.sidebar-item {margin-bottom: 110px;}
+/* --------------- // SIDEBAR ----------------*/
+
+/* --------------- MAIN ----------------*/
+.main {width: 75%;}
+
+.article-item {
+    width: 31.6%;
+    margin-right: 2.5%;
+    margin-bottom: 2.5%;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 19px 0 rgba(17, 10, 37, 0.04);
+    border: solid 1px rgba(179, 179, 179, 0.16);
+    background-color: #ffffff;
+    position: relative;
+    transition: all 0.3s ease;
+}
+.article-item:hover {box-shadow: none;}
+.article-item:nth-child(3n) {margin-right: 0;}
+.article-item .thumb img {
+    width: 100%;
+    display: block;
+}
+.article-item .inner {
+    padding: 24px 24px 30px 24px;
+}
+.article-item h5.title {
+    font: 18px/24px 'Sequel Sans Bold Head', sans-serif;
+    color: #212b35;
+    margin-bottom: 6px;
+}
+.article-item p {
+    font: 14px/24px 'Sequel Sans Roman Disp', sans-serif;
+    color: #637381;
+    min-height: 75px;
+    padding-bottom: 25px;
+}
+.article-item .btn-link {
+    position: absolute;
+    left: 24px;
+    bottom: 30px;
+}
+/* --------------- // MAIN ----------------*/
+
+/* --------------- PAGE THEMES ----------------*/
+.page-themes .box-link {margin-top: 130px;}
+.page-themes .box-link li {
+    width: 33.33%;
+    padding-left: 0;
+}
+.page-themes .box-link li:before {display: none;}
+/* --------------- // PAGE THEMES ----------------*/
+
+/* --------------- PAGE TEMPLATE ----------------*/
+.page-template .wrap-checkmark .center {
+    justify-content: center;
+}
+.page-template .wrap-checkmark {
+    background-color: #edf0ff;
+    padding: 55px 0 31px 0;    
+    margin-bottom: 110px;
+}
+.page-template .box-checkmark {max-width: 80%;}
+.page-template .wrap-checkmark li {
+    width: 33.33%;
+}
+/* --------------- // PAGE TEMPLATE ----------------*/
+
+/* --------------- ONLY FORMS ----------------*/
+.only-forms {
+    border-top: 1px solid #F6F7FC;
+    padding: 125px 0;
+}
+.only-forms h1.title {
+    font-size: 40px;
+    margin-bottom: 8px;
+}
+.only-forms p {
+    max-width: 723px;
+    color: #637381;
+    line-height: 28px;
+    margin: 0 auto 60px auto;
+}
+.only-forms  .btn {margin-bottom: 73px;}
+/* --------------- // ONLY FORMS ----------------*/
+
+/* --------------- NEXT ARTICLE ----------------*/
+.next-article {padding: 130px 0;}
+.next-article .video-excerpt {width: 48.6%;}
+/* --------------- // NEXT ARTICLE ----------------*/
+
+/* --------------- PAGE OWERVIEW ----------------*/
+.page-owerview .main-screen {
+    padding: 30px 0;
+    background: #ebf7ff;
+}
+.page-owerview .main-screen .center {
+    align-items: center;
+}
+.page-owerview .main-screen  p {
+    font: 18px/32px 'Sequel Sans Roman Disp', sans-serif;
+    color: #637381;
+}
+.page-owerview .experiance .da-bottom {
+    align-items: flex-end;
+}
+.page-owerview .experiance .da-bottom .btn-link {margin-bottom: 40px;}
+.page-owerview .experiance {
+    padding: 130px 0 0 0;
+}
+.page-owerview .experiance h2.title {
+    margin-bottom: 12px;
+}
+.page-owerview .experiance .descr-title {
+    font: 18px/32px 'Sequel Sans Roman Disp', sans-serif;
+    color: #637381;
+    margin-bottom: 40px;
+}
+.page-owerview .experiance-item svg {
+    width: 30px;
+    height: 25px;
+    fill: #1b6d6b;
+}
+.page-owerview  .experiance-item h3 {
+    color: #212b35;
+}
+.page-owerview .experiance-item p {
+    font: 16px/24px 'Sequel Sans Roman Disp', sans-serif;
+    color: #637381;
+    opacity: 0.7;
+}
+.page-owerview .experiance .btn-link {
+    font: 18px/34px 'Sequel Sans Bold Head', sans-serif;
+    color: #016e75;
+    display: inline-block;
+}
+.page-owerview .experiance .btn-link svg {
+    fill: #016e75;
+    width: 13px;
+    height: 10px;
+}
+
+.page-owerview .brands {
+    padding: 90px 0 130px 0;
+}
+.page-owerview .brands h3 {
+    opacity: 0.8;
+}
+.page-owerview .brands .wrap .d-flex:last-child {
+    max-width: 530px;
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 60px;
+}
+.page-owerview .brands p {
+    font: 16px/26px 'Sequel Sans Roman Disp', sans-serif;
+    color: #637381;
+    max-width: 822px;
+    margin: 0 auto 40px auto;
+    text-align: center;
+}
+.page-owerview .brands .btn-link {
+    font: 18px/34px 'Sequel Sans Bold Head', sans-serif;
+    color: #016e75;
+    display: inline-block;
+}
+.page-owerview .brands .btn-link svg {fill: #016e75;}
+
+.page-owerview .experiance-blue {padding-bottom: 90px;}
+.page-owerview .experiance-blue .btn-link {
+    margin-bottom: 96px;
+}
+
+.page-owerview .articles {
+    padding: 80px 0;
+}
+.page-owerview .articles .d-flex {
+    justify-content: center;
+}
+.page-owerview .article-item {
+    max-width: 280px;
+}
+/* --------------- // PAGE OWERVIEW ----------------*/
+
+/* --------------- TEXT LINK ----------------*/
+.text-link {
+    padding: 30px 0;
+}
+.text-link h2.title {
+    font: 24px/32px 'Sequel Sans Bold Head', sans-serif;
+    color: #5c6ac4;
+    margin-bottom: 12px;
+    text-transform: uppercase;
+}
+.text-link p {
+    font: 18px/32px 'Sequel Sans Roman Disp', sans-serif;
+    color: #637381;
+    margin-bottom: 32px;
+}
+/* --------------- // TEXT LINK ----------------*/
+
+/* --------------- QUESTION ----------------*/
+.question li {
+    padding: 23px 0;
+    border-top: 1px solid #E5E8EB;
+}
+.question li:last-child {border-bottom: 1px solid #E5E8EB;}
+.question li a {
+    justify-content: flex-start;
+    align-items: center;
+    font: 18px/34px 'Sequel Sans Bold Head', sans-serif;
+    color: #212b35;
+}
+.question li a .icon {
+    margin-right: 20px;
+}
+.question li p {
+    font: 16px/26px 'Sequel Sans Roman Body', sans-serif;
+    color: #5b6b79;
+    padding-left: 36px;
+}
+/* --------------- // QUESTION ----------------*/
+
+/* --------------- MORE INFORMATION ----------------*/
+.more-information {
+    padding-top: 55px;
+    padding-bottom: 207px;
+}
+.more-information h2.title {
+    font: 24px/34px 'Sequel Sans Bold Head', sans-serif;
+    color: #212b35;
+    margin-bottom: 12px;
+}
+.more-information p {
+    font: 18px/32px 'Sequel Sans Roman Body', sans-serif;
+    color: #5b6b79;
+    margin-bottom: 24px;
+    max-width: 330px;
+}
+.more-information .btn-link {
+    font: 18px/34px 'Sequel Sans Bold Head', sans-serif;
+    color: #016e75;
+}
+.more-information .btn-link svg {
+    width: 13px;
+    height: 10px;
+    fill: #016e75;
+    margin-left: 12px;
+}
+/* --------------- // MORE INFORMATION ----------------*/
+
+/* --------------- SECURITY PAGE ----------------*/
+.page-security .descr-title {
+    font: 18px/32px 'Sequel Sans Bold Head', sans-serif;
+    color: #637381;
+    opacity: 0.8;
+    margin-bottom: 80px;
+}   
+.page-security .forms-type__item {
+    background: none;
+}
+.page-security .forms-type .center > .t-center .descr-title {
+    margin-bottom: 35px;
+}
+.page-security .forms-type .btn-link {
+    font: 18px/34px 'Sequel Sans Bold Head', sans-serif;
+    color: #016e75;
+    display: inline-block;
+}
+.page-security .forms-type .btn-link svg {
+    fill: #016e75;
+}
+.page-security .form-bilding h2.title {
+    margin-bottom: 12px;
+}
+/* --------------- // SECURITY PAGE ----------------*/
+
+/* --------------- SOLUTION PAGE ----------------*/
+.page-solution .brands {
+    padding: 130px 0;
+}
+.page-solution .only-forms p {
+    max-width: 1000px;
+}
+.page-solution .experiance-blue {
+    padding: 130px 0;
+}
+.page-solution .experiance-blue h2.title {
+    margin-bottom: 14px;
+}
+.page-solution .experiance-blue .descr-title {
+    margin-bottom: 38px;
+}
+.page-solution .experiance-blue .experiance-item h3 {
+    color: #212b35;
+    line-height: 26px;
+}
+.page-solution .experiance-blue .experiance-item p {
+    font: 16px/26px 'Sequel Sans Roman Disp', sans-serif;
+    color: #637381;
+    opacity: 0.7;
+}
+.page-solution .forms-type {
+    padding: 80px 0 20px 0;
+}
+.page-solution .forms-type .forms-type__item {
+    background: #fff;
+}
+
+.page-solution .articles {
+    padding: 80px 0;
+}
+.page-solution .article-item {
+    max-width: 280px;
+} 
+.page-solution .articles .d-flex {
+    justify-content: center;
+} 
+.page-solution .form-bilding h2.title {
+    margin-bottom: 12px;
+}
+/* --------------- // SOLUTION PAGE ----------------*/
+
+/* --------------- DATA ANALITICS ----------------- */
+.data-analitics {
+    padding: 130px 0 98px 0;
+}
+.data-analitics h2.title {margin-bottom: 14px;}
+.data-analitics .thumb {
+    margin-top: 34px;
+}
+.data-analitics .thumb img {
+    display: block;
+    width: 100%;
+}
+.data-analitics .wrap {
+    margin-top: 80px;
+    justify-content: flex-start;
+}
+.data-analitics .data-analitics__item {
+    width: 25%;
+    padding-right: 45px;
+    margin-bottom: 32px;
+}
+.data-analitics .data-analitics__item h3 {
+    font: 18px/34px 'Sequel Sans Bold Head', sans-serif;
+    color: #212b35;
+    margin-bottom: 3px;
+}
+.data-analitics .data-analitics__item p {
+    font: 16px/26px 'Sequel Sans Roman Disp', sans-serif;
+    color: #637381;
+    opacity: 0.7;
+}
+/* --------------- // DATA ANALITICS ----------------- */
+
+/* --------------- TERMS ----------------- */
+.terms {padding: 40px 0;}
+.terms .terms-item {
+    width: 14.28%;
+    text-align: center;
+}
+.terms .terms-item svg {
+    width: 55px;
+    height: 30px;
+}
+.terms .terms-item h3 {
+    font: 16px/24px 'Sequel Sans Medium Disp', sans-serif;
+    color: #637381;
+    opacity: 0.8;
+    margin-top: 14px;
+}
+/* --------------- // TERMS ----------------- */
+
+/* --------------- FEATURES ----------------- */
+.video {
+    padding: 63px 0;
+}
+.video h2.title {
+    margin-bottom: 14px;
+}
+.video .left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+/* --------------- // FEATURES ----------------- */
+
+/* --------------- VIEW INTEGRATION ----------------- */
+.view-integration {
+    padding: 165px 0;
+}
+.view-integration h5 {
+    font: 18px/24px 'Sequel Sans Bold Head', sans-serif;
+    color: #637381;
+    margin-bottom: 23px;
+    opacity: 0.8;
+}
+.view-integration p {
+    font: 16px/24px 'Sequel Sans Roman Disp', sans-serif;
+    color: #637381;
+    margin-bottom: 41px;
+}
+.view-integration .btn-link {color: #016e75;}
+.view-integration .btn-link svg {fill: #016e75;}
+/* --------------- // VIEW INTEGRATION ----------------- */
+
+/* --------------- FEATURES ----------------- */
+.page-features .form-bilding h2.title {
+    margin-bottom: 12px;
+}
+/* --------------- // FEATURES ----------------- */
+
+/* --------------- FOOTER ----------------*/
+.footer {
+    background-color: #2b2e42;
+    padding-top: 219px;
+}
+.footer-mini {
+    padding-top: 60px;
+}
+.footer .center {
+    align-items: flex-start;
+}
+.footer-logo svg {
+    max-width: 133px;
+    height: 26px;
+}
+.footer-title {
+    font: 13px/20px 'Sequel Sans Bold Head', sans-serif;
+    color: #fff;
+    margin-bottom: 11px;
+    text-transform: uppercase;
+}
+.footer ul li a {
+    display: block;
+    font: 300 14px/26px 'Sequel Sans Medium Disp', sans-serif;
+    color: #fff;
+    opacity: 0.6;
+    padding: 3px 0;
+    transition: all 0.3s ease;
+}
+.footer ul li a:hover {opacity: 1;}
+
+.footer .copy {
+    margin-top: 92px;
+    text-align: center;
+    font: 12px/22px 'Sequel Sans Roman Body', sans-serif;
+    color: #fff;
+    opacity: 0.6;
+    padding-bottom: 28px;
+}
+/* --------------- // FOOTER ----------------*/
+
+@media screen and (max-width: 1200px) {
+    .nav {margin-right: 30px;}
+    .nav > ul > li + li {margin-left: 15px;}
+
+    .first-screen_thumb {
+        background-size: 100%;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .first-screen__desc {
+        width: 48%;
+        padding: 50px 0;
+    }
+
+    h1.title {
+        font: 40px/45px 'Sequel Sans Bold Head', sans-serif;
+    }
+
+    .nav {display: none;}
+    
+    .only-form__item,
+    .forms-type__item {width: 49%;}
+    .only-form__item:nth-child(2n),
+    .forms-type__item:nth-child(2n) {margin-right: 0;}
+    .forms-type__item:nth-child(3n) {margin-right: 2%;}
+    
+    .experiance-item {width: 32%;}
+    .experiance-item:nth-child(3n) {margin-right: 0;}
+    .experiance-item:nth-child(4n) {margin-right: 2%;}
+
+    .form-bilding .center {
+        padding: 58px 50px 65px 50px;
+    }
+    .form-bilding h2.title {
+        font-size: 30px;
+        line-height: 40px;
+    }
+
+    .plans-item:first-child {
+        min-width: 100%;
+        margin-right: 0;
+    }
+
+    .plans-select {min-width: 31%;}
+
+    .sidebar {
+        width: 100%;
+        padding-right: 0;
+        margin-bottom: 30px;
+    }
+
+    .main {
+        width: 100%;
+    }
+
+    .footer-item:first-child {
+        min-width: 100%;
+        text-align: center;
+        margin-bottom: 50px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    h1.title {text-align: center;}
+    h2.title {
+        font: 30px/40px 'Sequel Sans Bold Head', sans-serif;
+        text-align: center;
+    }
+    .first-screen .center {
+        flex-direction: column;
+    }
+    .first-screen__desc {
+        width: 100%;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .first-screen_thumb {
+        background-size: contain;
+        min-height: 300px;
+        width: 100%;
+        margin-top: 30px;
+    }
+
+    .brands .wrap {
+        justify-content: center;
+    }
+    .brands .wrap img {
+        margin: 10px;
+    }
+
+    .privacy .wrap {
+        flex-direction: column;
+    }
+    .privacy-descr {
+        width: 100%;
+    }
+    .privacy-thumb {
+        width: 100%;
+        position: static;
+        min-height: 300px;background-size: contain;
+    }
+
+    .experiance-item {width: 49%;}
+    .experiance-item:nth-child(2n) {margin-right: 0 !important;}
+    .experiance-item:nth-child(3n) {margin-right: 2%;}
+
+    .enterprise .descr-section, .enterprise .info-section {
+        width: 100%;
+    }
+    .enterprise .descr-section {margin-bottom: 30px;}
+
+    .plans-select {
+        min-width: 100%;
+        margin-bottom: 30px;
+    }
+
+    .main-screen .descr {
+        max-width: 100%;
+        margin-bottom: 30px;
+    }
+
+    .main-screen .thumb {
+        width: 100%;
+    }
+    
+    .article-item {width: 48.7%;}
+    .article-item:nth-child(2n) {margin-right: 0;}
+
+    .main-screen .box-checkmark {
+        width: 100%;
+    }
+
+    .page-template .wrap-checkmark li {
+        width: 100%;
+    }
+
+    .page-owerview .brands .d-flex {
+        justify-content: center;
+    }
+
+    .next-article .center {
+        flex-direction: column;
+    }
+    .next-article .video-excerpt {
+        width: 100%;
+    }
+    .next-article .video-excerpt:first-child {margin-bottom: 20px;}
+
+    .wrap-form__bilding .form-bilding {
+        padding: 58px 15px 65px 15px;
+    }
+
+    .terms .terms-item {
+        width: 25%;
+    }
+    .data-analitics .data-analitics__item {
+        width: 33.33%;
+    }
+
+    .video .d-flex {
+        flex-direction: column;
+        text-align: center;
+    }
+    .video .video-box {margin-top: 30px;}
+}
+
+@media screen and (max-width: 600px) {
+    .only-form__item, .forms-type__item, .experiance-item {
+        width: 100%;
+        margin-right: 0 !important;
+    }
+    
+    .stories-item {
+        max-width: 100%;
+    }
+    .stories-item:first-child {
+        margin-right: 0;
+    }
+
+    .forms-type__item h3 {
+        font: 20px/25px 'Sequel Sans Bold Head', sans-serif;
+    }
+
+    .form-bilding .center {
+        padding: 58px 15px 65px 15px;
+    }
+
+    .form-bilding .btn-group a:first-child {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .page-themes .box-link li {width: 100%;}
+
+    .page-template .box-checkmark {
+        max-width: 100%;
+    }
+
+    .terms .terms-item {
+        width: 33.33%;
+    }
+    .data-analitics .data-analitics__item {
+        width: 100%;
+    }
+
+    .footer .center {
+        flex-direction: column;
+    }
+    .footer-item {margin-bottom: 30px;}
+}
+
+@media screen and (max-width: 500px) {
+    .article-item {
+        width: 100%;
+        margin-right: 0 !important;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .header .logo {max-width: 140px;}
+    .btn {padding: 14px 15px;}
+
+    .first-screen .group-btn .btn-blue {
+        margin-right: 0;
+    }
+
+    h1.title {
+        font: 30px/35px 'Sequel Sans Bold Head', sans-serif;
+    }
+    h2.title {
+        font: 25px/30px 'Sequel Sans Bold Head', sans-serif;
+    }
+
+    .first-screen_thumb {min-height: 200px;}
+
+    .enterprise .info-section li {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .terms .terms-item {
+        width: 100%;
+    }
+    .main-screen ul.list li {
+        width: 100%;
+        margin-bottom: 32px;
+        padding-right: 0;
+    }
+}
