@@ -311,7 +311,7 @@ p.descr-title {
     bottom: 0;
     opacity: 0;
     background: #497bce;
-    transition: all 0.2s 0.5s ease;
+    transition: all 0.2s ease;
 }
 .btn-link svg {
     width: 12.7px;
@@ -701,12 +701,14 @@ p.descr-title {
 .forms-type__item {
     border-radius: 8px;
     background-color: #ebf7ff;
-    padding: 40px;
     width: 31.95%;
     margin-right: 2%;
     margin-bottom: 2%;
 }
-.forms-type__item a {display: block;}
+.forms-type__item a {
+    display: block;
+    padding: 40px;
+}
 .forms-type__item:nth-child(3n) {margin-right: 0;}
 .forms-type__item .icon {margin-bottom: 27px;}
 .forms-type__item .icon svg {
@@ -723,11 +725,15 @@ p.descr-title {
     display: inline-block;
     vertical-align: middle;
 }
+.forms-type__item:hover h3 span:after {
+    opacity: 1;
+}
 .forms-type__item h3 svg {
     width: 12px;
     height: 10px;
     fill: #497bce;
 }
+.forms-type__item:hover h3 svg {margin-left: 5px;}
 .forms-type__item  p {
     color: #5b6b79;
     font: 16px/26px 'Sequel Sans Roman Body', sans-serif;
@@ -758,9 +764,12 @@ p.descr-title {
     width: 23.5%;
     margin-right: 2%;
     margin-bottom: 2%;
-    border-radius: 8px;
-    padding: 25px;
+    border-radius: 8px;    
     background-color: #e6fafa;
+}
+.experiance-item a {
+    display: block;
+    padding: 25px;
 }
 .experiance-item:nth-child(4n) {margin-right: 0;}
 .experiance-item .icon {margin-bottom: 20px;}
@@ -777,8 +786,9 @@ p.descr-title {
     display: inline-block;
     vertical-align: middle;
 }
-.experiance-item h3 span:after {
+.experiance-item:hover h3 span:after {
     background: #1b6d6b;
+    opacity: 1;
 }
 .experiance-item h3 svg.svg-icon {
     width: 13px;
@@ -786,7 +796,7 @@ p.descr-title {
     margin-left: 4px;
     stroke: #1b6d6b;
 }
-.experiance-item h3:hover svg {
+.experiance-item:hover h3 svg {
     margin-left: 8px;
 }
 .experiance-blue .btn-link {color: #5c6ac4 !important;}
@@ -1349,6 +1359,7 @@ p.descr-title {
     align-items: center;
     font: 18px/34px 'Sequel Sans Bold Head', sans-serif;
     color: #212b35;
+    flex-wrap: initial;
 }
 .question li a .icon {
     margin-right: 20px;
@@ -1988,18 +1999,82 @@ p.descr-title {
         line-height: 40px;
     }
 
-    .plans-item:first-child {
+    .hidden-ipad {display: none;}
+    .visible-ipad {display: block;}
+
+    .plans .tabs-controls {
+        width: 100%;
+        border-left: 1px solid #e3e6e9;
+        border-right: 1px solid #e3e6e9;
+        margin-bottom: 30px;
+    }
+    .plans .tabs-controls li {
+        border-bottom: 1px solid #e3e6e9;
+    }
+    .plans .tabs-controls li.active {
+        background: #f1f1f1;
+    }
+    .plans .tabs-controls li:first-child {
+        border-top: 1px solid #e3e6e9;
+    }
+    .plans .tabs-controls li a {
+        display: block;
+        padding: 15px 0;
+        text-align: center;
+        font: 16px/20px 'Sequel Sans Medium Disp', sans-serif;
+        color: #212b35;
+    }
+    .plans-select {
+        height: 0;
+        overflow: hidden;
+        opacity: 0;
+        transition: opacity 0.5s ease;
+        padding: 0;
+        margin: 0;
         min-width: 100%;
-        margin-right: 0;
+    }
+    .plans-select.active {
+        opacity: 1;
+        height: auto;
+        padding: 35px 24px;
     }
 
-    .plans-select {min-width: 31%;}
+    .plans-link {margin-top: 30px;}
+    
+    .plans-select li {
+        justify-content: space-between !important;
+    }
+    .plans-select li .plans-link_hidden {
+        border-bottom: 0;
+        border-right: 1px solid #F0F1F3;
+        width: 80%;
+        text-align: left;
+    }
+    .plans-select li .plans-link_hidden {
+        padding-right: 20px;
+    }
+    .plans-select li svg,
+    .plans-select li span {
+        width: 20%;
+    }
+    .plans-select li .plans-link_hidden span {
+        width: 100%;
+    }
+    .plans-select li .plans-link_hidden svg {
+        width: 16px;
+    }
+    .plans-select li.email-support {
+        min-height: auto;
+    }
 
     .sidebar {
         width: 100%;
         padding-right: 0;
         margin-bottom: 30px;
+        display: flex;
+        justify-content: space-between;
     }
+    .sidebar .sidebar-item {width: 47%;}
 
     .main {
         width: 100%;
@@ -2030,9 +2105,13 @@ p.descr-title {
         padding-left: 0;
         margin-top: 10px;
     }
+
+
 }
 
 @media screen and (max-width: 768px) {
+    .header {padding: 20px 0;}
+
     .hidden-mobile {display: none;}
     .visible-mobile {display: block;}
 
@@ -2096,11 +2175,13 @@ p.descr-title {
 
     .main-screen .descr {
         max-width: 100%;
+        width: 100%;
+        text-align: center;
         margin-bottom: 30px;
     }
 
     .main-screen .thumb {
-        width: 100%;
+        width: 100% !important;
     }
     
     .article-item {width: 48.7%;}
@@ -2157,43 +2238,7 @@ p.descr-title {
         display: none;
     }
     
-    .plans .tabs-controls {
-        width: 100%;
-        border-left: 1px solid #e3e6e9;
-        border-right: 1px solid #e3e6e9;
-        margin-bottom: 30px;
-    }
-    .plans .tabs-controls li {
-        border-bottom: 1px solid #e3e6e9;
-    }
-    .plans .tabs-controls li.active {
-        background: #f1f1f1;
-    }
-    .plans .tabs-controls li:first-child {
-        border-top: 1px solid #e3e6e9;
-    }
-    .plans .tabs-controls li a {
-        display: block;
-        padding: 15px 0;
-        text-align: center;
-        font: 16px/20px 'Sequel Sans Medium Disp', sans-serif;
-        color: #212b35;
-    }
-    .plans-select {
-        height: 0;
-        overflow: hidden;
-        opacity: 0;
-        transition: opacity 0.5s ease;
-        padding: 0;
-        margin: 0;
-    }
-    .plans-select.active {
-        opacity: 1;
-        height: auto;
-        padding: 35px 24px;
-    }
-
-    .plans-link {margin-top: 30px;}
+    
 
     .enterprise .btn-blue {
         padding: 14px 40px;
@@ -2203,13 +2248,13 @@ p.descr-title {
     }
 
     .togle-menu {
-        width: 40px;
+        width: 20px;
         cursor: pointer;
     }
     .togle-menu span {
         width: 100%;
         display: block;
-        height: 3px;
+        height: 2px;
         background: #5c6ac4;
     }
     .togle-menu span + span {margin-top: 4px;}
@@ -2219,7 +2264,6 @@ p.descr-title {
         height: 25px;
         position: relative;
         display: block;
-        float: right;
     }
     .close-menu span {
         position: absolute;
@@ -2242,9 +2286,9 @@ p.descr-title {
         position: fixed;
         top: 0;
         bottom: 0;
-        right: -280px;
+        right: -350px;
         width: 100%;
-        max-width: 280px;
+        max-width: 350px;
         z-index: 99999;
         margin-right: 0;
         background: #fff;
@@ -2296,6 +2340,48 @@ p.descr-title {
         height: auto;
         opacity: 1;
     }
+
+    .nav-mobile .btn {
+        display: inline-block;
+        width: 100%;
+    }
+
+    .nav-mobile > .d-flex {
+        border-bottom: 1px solid #eaeaea;
+        padding-bottom: 20px;
+    }
+
+    .main-screen {
+        padding: 50px 0 !important;
+    }
+
+    .box-form {padding: 30px 0 30px 0;}
+
+    .only-forms {padding: 50px 0;}
+
+    .single {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+    .single h1.title {margin-bottom: 50px;}
+
+    .box-form .text {text-align: center;}
+
+    .page-template .box-checkmark {
+        max-width: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .page-template .wrap-checkmark .box-checkmark {
+        flex-direction: row;
+        justify-content: flex-start;
+    }
+    .page-template .wrap-checkmark li {
+        width: 50%;
+    }
 }
 
 @media screen and (max-width: 600px) {
@@ -2342,9 +2428,17 @@ p.descr-title {
     }
     
     .brands .wrap {padding: 0;}
-    .brands .wrap > div {
+    .brands .wrap div {
         width: 50%;
         text-align: center;
+    }
+
+    .page-owerview .brands .d-flex {
+        width: 100%;
+    }
+
+    .main-screen h1.title {
+        font: 30px/40px 'Sequel Sans Bold Head', sans-serif;
     }
 }
 
@@ -2375,6 +2469,13 @@ p.descr-title {
 
 
     .header .btn-blue {padding: 14px 15px !important;}
+    
+    .sidebar {
+        flex-direction: column;
+    }
+    .sidebar .sidebar-item {
+        width: 100%;
+    }
 }
 
 @media screen and (max-width: 400px) {
@@ -2406,7 +2507,7 @@ p.descr-title {
     }
 
     .terms .terms-item {
-        width: 100%;
+        width: 50%;
     }
     .main-screen ul.list li {
         width: 100%;
