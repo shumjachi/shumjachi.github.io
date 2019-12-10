@@ -67,3 +67,100 @@ function RarioSelect() {
 }	
 
 var radioSelect = new RarioSelect();
+
+/* FORM
+----------------------------------- */
+var boxForm = document.querySelectorAll('.box-form');
+
+if (boxForm.length) {
+	for (var i = 0; i < boxForm.length; i++) {
+		var inputs = boxForm[i].querySelectorAll('input'),
+			textareas = boxForm[i].querySelectorAll('textarea');
+
+		for (var i = 0; i < inputs.length; i++) {
+			inputs[i].addEventListener('keydown', function() {
+				if (this.value.length > 2) {
+					this.closest('label').classList.add('focus');
+				} else if (this.value.length < 2) {
+					this.closest('label').classList.remove('focus');
+				}
+			});
+		}
+
+		for (var i = 0; i < textareas.length; i++) {
+			textareas[i].addEventListener('keydown', function() {
+				if (this.value.length > 2) {
+					this.closest('label').classList.add('focus');
+				} else if (this.value.length < 2) {
+					this.closest('label').classList.remove('focus');
+				}
+			});
+		}
+	}
+}
+
+/* PLANS
+----------------------------------- */
+function plans() {
+	var plans = document.querySelector('.plans');
+
+	if (plans != null) {
+		var	control = plans.querySelectorAll('.tabs-controls li a'),
+			contents = plans.querySelectorAll('.plans-select');
+
+		for (var i = 0; i < control.length; i++) {
+			control[i].addEventListener('click', function(e) {
+				e.preventDefault();
+
+				for (var j = 0; j < control.length; j++) {
+					control[j].closest('li').classList.remove('active');
+				}
+
+				this.closest('li').classList.add('active');
+
+				var data = this.getAttribute('data-tab');
+
+				for (var j = 0; j < contents.length; j++) {
+					contents[j].classList.remove('active');
+				}
+
+				document.querySelector('.' + data).classList.add('active');
+			});
+		}
+	}	
+}
+
+plans();
+
+/* NAV MOBILE
+----------------------------------- */
+function NavMobile() {
+	var nav = document.querySelector('.nav-mobile'),
+		close = nav.querySelector('.close-menu'),
+		toggle = document.querySelector('.togle-menu'),
+		link = document.querySelectorAll('.nav-mobile > ul > li > a');
+
+	toggle.addEventListener('click', function(e) {
+		e.preventDefault();
+
+		nav.classList.add('active');
+	});
+
+	close.addEventListener('click', function(e) {
+		e.preventDefault();
+
+		nav.classList.remove('active');
+	});
+
+	for (var i = 0; i < link.length; i++) {
+		link[i].addEventListener('click', function(e) {
+			e.preventDefault();
+
+			if (this.closest('li').querySelector('.svg-icon') != null) {
+				this.closest('li').classList.toggle('active-drop');
+			}
+		});
+	}
+}
+
+var navMobile = new NavMobile();

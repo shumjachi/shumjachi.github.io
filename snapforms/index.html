@@ -20,7 +20,7 @@
 				<img src="img/logo.jpg" alt="">
 			</a>
 
-			<nav class="nav">
+			<nav class="nav hidden-mobile">
 				<ul>
 					<li>
 						<a href="#">Platform</a>
@@ -69,6 +69,65 @@
 				</ul>
 			</nav>
 
+			<nav class="nav nav-mobile hidden-desktop visible-mobile">
+				<a href="#" class="close-menu">
+					<span></span>
+					<span></span>
+				</a>
+				<ul>
+					<li>
+						<a href="#">Platform</a>
+						<svg class="svg-icon">
+							<use xlink:href="#arr-down-svg"></use>
+						</svg>
+						<ul class="drop">
+							<li><a href="#">Overview</a></li>
+							<li><a href="#">Features</a></li>
+							<li><a href="#">Security & Privacy</a></li>
+							<li><a href="#">Add - ons</a></li>
+							<li><a href="#">Custom work</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="#">Solutions</a>
+						<svg class="svg-icon">
+							<use xlink:href="#arr-down-svg"></use>
+						</svg>
+						<ul class="drop">
+							<li>
+								<ul>
+									<li><a href="#">Industry</a></li>
+									<li><a href="#">Overview</a></li>
+									<li><a href="#">Features</a></li>
+									<li><a href="#">Security & Privacy</a></li>
+									<li><a href="#">Add - ons</a></li>
+									<li><a href="#">Custom work</a></li>
+								</ul>
+							</li>
+							<li>
+								<ul>
+									<li><a href="#">Role</a></li>
+									<li><a href="#">Finance</a></li>
+									<li><a href="#">HR</a></li>
+									<li><a href="#">Marketing</a></li>
+									<li><a href="#">IT</a></li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+					<li><a href="#">Templates</a></li>
+					<li><a href="#">Resources</a></li>
+					<li><a href="#">Pricing</a></li>
+					<li><a href="#">Log in</a></li>
+				</ul>
+			</nav>
+
+			<a href="#" class="togle-menu visible-mobile hidden-desktop">
+				<span></span>
+				<span></span>
+				<span></span>
+			</a>
+
 			<a href="#" class="btn btn-blue">Start free trial</a>
 		</div>
 	</header>
@@ -98,11 +157,11 @@
 			<h3>Trusted by Australian organisations of all sizes</h3>
 			
 			<div class="wrap d-flex">
-				<img src="img/crown.png" alt="">
-				<img src="img/jeep.png" alt="">
-				<img src="img/bendigo.png" alt="">
-				<img src="img/afl.png" alt="">
-				<img src="img/latrobe.png" alt="">
+				<div><img src="img/crown.png" alt=""></div>
+				<div><img src="img/jeep.png" alt=""></div>
+				<div><img src="img/bendigo.png" alt=""></div>
+				<div><img src="img/afl.png" alt=""></div>
+				<div><img src="img/latrobe.png" alt=""></div>
 			</div>
 		</div>
 	</section>
@@ -271,78 +330,88 @@
 
 			<div class="wrap d-flex">
 				<div class="forms-type__item">
-					<div class="icon">
-						<svg class="svg-icon">
-							<use xlink:href="#koma-svg"></use>
-						</svg>
-					</div>
-					<h3>
-						<span>Quote form</span>
-						<svg class="svg-icon">
-							<use xlink:href="#arr-svg"></use>
-						</svg>
-					</h3>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+					<a href="#">
+						<div class="icon">
+							<svg class="svg-icon">
+								<use xlink:href="#koma-svg"></use>
+							</svg>
+						</div>
+						<h3 class="btn-link">
+							<span>Quote form</span>
+							<svg class="svg-icon">
+								<use xlink:href="#arr-svg"></use>
+							</svg>
+						</h3>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+					</a>
 				</div>
 
 				<div class="forms-type__item">
-					<div class="icon">
-						<svg class="svg-icon">
-							<use xlink:href="#book-svg"></use>
-						</svg>
-					</div>
-					<h3>
-						<span>Booking form</span>
-						<svg class="svg-icon">
-							<use xlink:href="#arr-svg"></use>
-						</svg>
-					</h3>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+					<a href="#">
+						<div class="icon">
+							<svg class="svg-icon">
+								<use xlink:href="#book-svg"></use>
+							</svg>
+						</div>
+						<h3 class="btn-link">
+							<span>Booking form</span>
+							<svg class="svg-icon">
+								<use xlink:href="#arr-svg"></use>
+							</svg>
+						</h3>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+					</a>
 				</div>
 
 				<div class="forms-type__item">
-					<div class="icon">
-						<svg class="svg-icon">
-							<use xlink:href="#vaza-svg"></use>
-						</svg>
-					</div>
-					<h3>
-						<span>Competition form</span>
-						<svg class="svg-icon">
-							<use xlink:href="#arr-svg"></use>
-						</svg>
-					</h3>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+					<a href="#">
+						<div class="icon">
+							<svg class="svg-icon">
+								<use xlink:href="#vaza-svg"></use>
+							</svg>
+						</div>
+						<h3 class="btn-link">
+							<span>Competition form</span>
+							<svg class="svg-icon">
+								<use xlink:href="#arr-svg"></use>
+							</svg>
+						</h3>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+					</a>
 				</div>
 
 				<div class="forms-type__item">
-					<div class="icon">
-						<svg class="svg-icon">
-							<use xlink:href="#avatar-svg"></use>
-						</svg>
-					</div>
-					<h3>
-						<span>Membership form</span>
-						<svg class="svg-icon">
-							<use xlink:href="#arr-svg"></use>
-						</svg>
-					</h3>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+					<a href="#">
+						<div class="icon">
+							<svg class="svg-icon">
+								<use xlink:href="#avatar-svg"></use>
+							</svg>
+						</div>
+						<h3 class="btn-link">
+							<span>Membership form</span>
+							<svg class="svg-icon">
+								<use xlink:href="#arr-svg"></use>
+							</svg>
+						</h3>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+					</a>
 				</div>
 
 				<div class="forms-type__item">
-					<div class="icon">
-						<svg class="svg-icon">
-							<use xlink:href="#question-svg"></use>
-						</svg>
-					</div>
-					<h3>
-						<span>Survey form</span>
-						<svg class="svg-icon">
-							<use xlink:href="#arr-svg"></use>
-						</svg>
-					</h3>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+					<a href="#">
+						<div class="icon">
+							<svg class="svg-icon">
+								<use xlink:href="#question-svg"></use>
+							</svg>
+						</div>
+						<h3 class="btn-link">
+							<span>Survey form</span>
+							<svg class="svg-icon">
+								<use xlink:href="#arr-svg"></use>
+							</svg>
+						</h3>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+					</a>
 				</div>
 			</div>
 		</div>
@@ -361,7 +430,7 @@
 							<use xlink:href="#users-svg"></use>
 						</svg>
 					</div>
-					<h3>
+					<h3 class="btn-link">
 						<span>Human Resources</span>
 						<svg class="svg-icon">
 							<use xlink:href="#arr-svg"></use>
@@ -375,7 +444,7 @@
 							<use xlink:href="#education-svg"></use>
 						</svg>
 					</div>
-					<h3>
+					<h3 class="btn-link">
 						<span>Education</span>
 						<svg class="svg-icon">
 							<use xlink:href="#arr-svg"></use>
@@ -389,7 +458,7 @@
 							<use xlink:href="#shopping-svg"></use>
 						</svg>
 					</div>
-					<h3>
+					<h3 class="btn-link">
 						<span>E-commerce</span>
 						<svg class="svg-icon">
 							<use xlink:href="#arr-svg"></use>
@@ -403,7 +472,7 @@
 							<use xlink:href="#shield-plus-svg"></use>
 						</svg>
 					</div>
-					<h3>
+					<h3 class="btn-link">
 						<span>Insurance</span>
 						<svg class="svg-icon">
 							<use xlink:href="#arr-svg"></use>
@@ -417,7 +486,7 @@
 							<use xlink:href="#party-svg"></use>
 						</svg>
 					</div>
-					<h3>
+					<h3 class="btn-link">
 						<span>Event organising</span>
 						<svg class="svg-icon">
 							<use xlink:href="#arr-svg"></use>
@@ -431,7 +500,7 @@
 							<use xlink:href="#medical-svg"></use>
 						</svg>
 					</div>
-					<h3>
+					<h3 class="btn-link">
 						<span>Healthcare</span>
 						<svg class="svg-icon">
 							<use xlink:href="#arr-svg"></use>
@@ -445,7 +514,7 @@
 							<use xlink:href="#shape-svg"></use>
 						</svg>
 					</div>
-					<h3>
+					<h3 class="btn-link">
 						<span>Finance</span>
 						<svg class="svg-icon">
 							<use xlink:href="#arr-svg"></use>
@@ -459,7 +528,7 @@
 							<use xlink:href="#favorite-svg"></use>
 						</svg>
 					</div>
-					<h3>
+					<h3 class="btn-link">
 						<span>Health</span>
 						<svg class="svg-icon">
 							<use xlink:href="#arr-svg"></use>
