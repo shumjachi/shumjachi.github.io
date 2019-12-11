@@ -230,7 +230,9 @@ p.descr-title {
 }
 .video-excerpt h3 svg {
     width: 12.7px;
+    min-width: 12.7px;
     height: 10px;
+    min-height: 10px;
     fill: #016e75;
 }
 .video-excerpt:hover h3 svg {
@@ -261,7 +263,9 @@ p.descr-title {
 }
 .box-checkmark li svg {
     width: 19px;
+    min-width: 19px;
     height: 16px;
+    min-height: 19px;
     margin-top: 5px;
 }
 
@@ -1910,6 +1914,12 @@ p.descr-title {
     border: solid 0.7px #5c6ac4;
 }
 
+.box-form__form input[type="text"]::-ms-clear,
+.box-form__form input[type="email"]::-ms-clear,
+.box-form__form input[type="tel"]::-ms-clear {
+    display: none;
+}
+
 .box-form__form button[type="submit"] {
     width: 100%;
 }
@@ -2111,6 +2121,8 @@ p.descr-title {
         padding: 50px 0;
     }
 
+    .first-screen__desc br {display: none;}
+
     h1.title {
         font: 40px/45px 'Sequel Sans Bold Head', sans-serif;
     }
@@ -2274,7 +2286,7 @@ p.descr-title {
     }
     .first-screen__desc {
         width: 100%;
-        padding: 0;
+        padding: 30px 0;
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
@@ -2311,12 +2323,15 @@ p.descr-title {
 
     .enterprise .info-section li {padding-left: 10%;}
 
+    .experiance br {display: none;}
+
     .first-screen p {text-align: center;}
 
     .brands .wrap {
         -webkit-box-pack: center;
         -ms-flex-pack: center;
         justify-content: center;
+        overflow: hidden;
     }
     .brands .wrap img {
         margin: 10px;
@@ -2392,6 +2407,20 @@ p.descr-title {
 
     .wrap-form__bilding .form-bilding {
         padding: 58px 15px 65px 15px;
+    }
+
+    .video-excerpt h3 {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: end;
+        -ms-flex-align: end;
+        align-items: flex-end;
+    }
+    .video-excerpt h3 svg {
+        position: relative;
+        top: -10px;
+        left: 10px;
     }
 
     .terms .terms-item {
@@ -2549,8 +2578,15 @@ p.descr-title {
         padding: 8px 0;
         height: auto;
         opacity: 1;
+        margin-left: 10px;
         border-left: 1px solid #eaeaea;
         border-radius: 0;
+        overflow: initial;
+    }
+    .nav-mobile li.active-drop .drop li {
+        position: relative;
+        left: -1px;
+        z-index: 1;
     }
 
     .nav-mobile .btn {
