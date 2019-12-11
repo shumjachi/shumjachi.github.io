@@ -1,0 +1,4 @@
+.plans-select li:not(:first-child),
+.plans-link_hidden a {
+	height: 52px;
+}
