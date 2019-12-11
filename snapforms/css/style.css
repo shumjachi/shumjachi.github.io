@@ -487,7 +487,8 @@ p.descr-title {
     align-items: center;
 }
 .header .logo {
-    min-width: 159px;
+    min-width: 160px;
+    max-width: 160px;
 }
 .header .logo img {
     display: block;
@@ -2409,19 +2410,7 @@ p.descr-title {
         padding: 58px 15px 65px 15px;
     }
 
-    .video-excerpt h3 {
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-align: end;
-        -ms-flex-align: end;
-        align-items: flex-end;
-    }
-    .video-excerpt h3 svg {
-        position: relative;
-        top: -10px;
-        left: 10px;
-    }
+
 
     .terms .terms-item {
         width: 25%;
@@ -2583,7 +2572,7 @@ p.descr-title {
         border-radius: 0;
         overflow: initial;
     }
-    .nav-mobile li.active-drop .drop li {
+    .nav-mobile li.active-drop .drop li a {
         position: relative;
         left: -1px;
         z-index: 1;
@@ -2651,6 +2640,59 @@ p.descr-title {
     .view-integration br,
     .video-excerpt br,
     .box-form__text br {display: none;}
+
+    .video-excerpt h3 {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: end;
+        -ms-flex-align: end;
+        align-items: flex-end;
+    }
+    .video-excerpt h3 span:before {
+        content: '';
+        display: block;
+        height: 2px;
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        opacity: 0;
+        background: #016e75;
+        -webkit-transition: all 0.2s ease;
+        transition: all 0.2s ease;
+    }
+    .video-excerpt:hover h3 span:before {
+        opacity: 1;
+    }
+    .video-excerpt h3 span:after {
+        content: '→';
+        display: inline-block;
+        vertical-align: middle;
+        opacity: 1;
+        position: static;
+        height: auto;
+        background: none;
+        font-size: 20px;
+        margin-left: 10px;
+        -webkit-transition: all 0.2s ease;
+        transition: all 0.2s ease;
+        margin-top: -3px;
+    }
+    .video-excerpt:hover h3 span:after {
+        margin-left: 15px;
+        background: none;
+    }
+    .video-excerpt h3 svg {
+        display: none;
+    }
+    
+    .page-solution__form .forms-type .video-excerpt h3 span:before {
+        background: #5c6ac4;
+    }
+    .page-solution__form .forms-type .video-excerpt h3 span:after {
+        background: none;
+    }
 }
 
 @media screen and (max-width: 600px) {
