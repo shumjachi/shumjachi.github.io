@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" id="prefix__Group_586" width="94.892" height="94.892" data-name="Group 586" viewBox="0 0 94.892 94.892">
+    <defs>
+        <style>
+            .prefix__cls-2{fill:#7075d8}
+        </style>
+    </defs>
+    <circle id="prefix__Ellipse_115" cx="47.446" cy="47.446" r="47.446" fill="#fff" data-name="Ellipse 115"/>
+    <g id="prefix__Group_511" data-name="Group 511" transform="translate(17.697 18.82)">
+        <path id="prefix__Path_513" d="M433.179 193.52H383.27a5 5 0 0 0-4.99 4.992v44.917a5 5 0 0 0 4.99 4.992h49.909a5 5 0 0 0 4.99-4.992v-44.917a5 5 0 0 0-4.99-4.992zm2.5 49.909a2.5 2.5 0 0 1-2.5 2.5H383.27a2.5 2.5 0 0 1-2.494-2.5v-34.935h54.9zm0-37.431h-54.9v-7.486a2.5 2.5 0 0 1 2.494-2.5h49.909a2.5 2.5 0 0 1 2.5 2.5z" class="prefix__cls-2" data-name="Path 513" transform="translate(-378.28 -193.52)"/>
+        <circle id="prefix__Ellipse_106" cx="1.872" cy="1.872" r="1.872" class="prefix__cls-2" data-name="Ellipse 106" transform="translate(5.615 5.615)"/>
+        <path id="prefix__Path_514" d="M388.561 235.08a4.969 4.969 0 0 0 3.71-8.3l4.639-6.97a4.807 4.807 0 0 0 4.73-.812l7.264 5.449a5 5 0 1 0 8.447-1.255l4.32-5.938a4.942 4.942 0 0 0 1.827.358 4.991 4.991 0 1 0-4.99-4.992 4.94 4.94 0 0 0 1.155 3.154l-4.32 5.938a4.865 4.865 0 0 0-4.924.751l-7.263-5.449a5 5 0 1 0-8.321 1.409l-4.641 6.971a4.884 4.884 0 0 0-1.633-.3 4.991 4.991 0 0 0 0 9.982zm34.939-24.954a2.5 2.5 0 1 1-2.5 2.494 2.5 2.5 0 0 1 2.5-2.494zm-9.982 13.724a2.5 2.5 0 1 1-2.494 2.5 2.5 2.5 0 0 1 2.492-2.5zm-14.972-11.23a2.5 2.5 0 1 1-2.5 2.5 2.5 2.5 0 0 1 2.497-2.5zm-9.982 14.974a2.5 2.5 0 1 1-2.494 2.494 2.5 2.5 0 0 1 2.491-2.494z" class="prefix__cls-2" data-name="Path 514" transform="translate(-376.085 -187.666)"/>
+        <circle id="prefix__Ellipse_107" cx="1.872" cy="1.872" r="1.872" class="prefix__cls-2" data-name="Ellipse 107" transform="translate(13.101 5.615)"/>
+    </g>
+</svg>

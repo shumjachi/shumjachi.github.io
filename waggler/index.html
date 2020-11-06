@@ -1,0 +1,1194 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <title>Document Name</title>
+</head>
+<body>
+	
+	<!-- HEADER -->
+	<header id="header">
+		<div class="center d-flex">
+			<a href="/" class="logo">Petsy</a>
+
+			<form action="#" class="form-search hidden-mobile style-form">
+				<svg class="ic-search"><use xlink:href="#ic-search"></use></svg>
+				<svg class="ic-arr-down"><use xlink:href="#ic-arr-down"></use></svg>
+				<input type="search" placeholder="Search Users and/or Posts">
+				<input type="submit">
+			</form>
+
+			<div class="account-menu d-flex">
+				<div class="hidden-desktop account-form js-show visible-mobile">
+					<svg class="ic-search js-btn__show"><use xlink:href="#ic-search"></use></svg>
+
+					<form action="#" class="form-search hidden-content hidden style-form">
+						<input type="search" placeholder="Search Users and/or Posts">
+						<input type="submit">
+					</form>
+				</div>
+				
+
+				<div class="notification">
+					<svg><use xlink:href="#ic-notification"></use></svg>
+					<span>3</span>
+				</div>
+
+				<div class="account-drop js-show">
+					<div class="inner js-btn__show d-flex">
+						<div class="avatar">
+							<img src="img/user-mini.jpg" alt="">
+						</div>
+						<span>Harriett Griffin</span>
+						<svg><use xlink:href="#ic-arr-down"></use></svg>
+					</div>
+
+					<ul class="drop box hidden hidden-content">
+						<li>
+							<a href="#">
+								<svg><use xlink:href="#ic-profile"></use></svg>
+								<span>My Profile</span>
+							</a>							
+						</li>
+						<li>
+							<a href="#">
+								<svg><use xlink:href="#ic-settings"></use></svg>
+								<span>Settings</span>
+							</a>							
+						</li>
+						<li>
+							<a href="#">
+								<svg><use xlink:href="#ic-logout"></use></svg>
+								<span>Logout</span>
+							</a>							
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</header>
+	<!-- // HEADER -->
+	
+	<!-- CATEGORIES -->
+	<div class="center">
+		<div class="categories box">
+			<h3 class="title">Categories</h3>
+			<ul class="d-flex hidden-mobile">
+				<li class="active c-pink"><a href="#">Pics, Vids, Stories</a></li>
+				<li class="c-green"><a href="#">Products</a></li>
+				<li class="c-violet"><a href="#">Recommendations</a></li>
+				<li class="c-yellow"><a href="#">Q&A</a></li>
+				<li class="active c-blue"><a href="#">Adoption Services</a></li>
+				<li><a href="#">All</a></li>
+				<li><a hef="#"><svg class="ic-arr-down"><use xlink:href="#ic-arr-down"></use></svg></a></li>
+			</ul>
+
+			<ul class="d-flex hidden-desktop visible-mobile">
+				<li class="active c-pink"><a href="#">Pics, Vids, Stories</a></li>
+				<li class="c-green"><a href="#">Products</a></li>
+				<li class="c-violet"><a href="#">Recommendations</a></li>
+				<li class="c-yellow"><a href="#">Q&A</a></li>
+				<li class="active c-blue"><a href="#">Adoption Services</a></li>
+			</ul>
+		</div>
+	</div>	
+	<!-- // CATEGORIES -->
+	
+	<!-- CONTENT -->
+	<div class="main-content">
+		<div class="center d-flex">
+			<!-- SIDEBAR -->
+			<aside class="sidebar box">
+				<form action="#" class="js-show active">
+					<div class="top-sidebar">
+						<div class="form-border">
+							<h3 class="title">Sort</h3>
+
+							<div class="select">						
+								<div class="view d-flex">
+									<span>most recent</span>
+									<svg class="ic-arr-down"><use xlink:href="#ic-arr-down"></use></svg>
+								</div>
+
+								<ul class="box">
+									<li>Item 1</li>
+									<li>Item 2</li>
+									<li>Item 3</li>
+								</ul>
+							</div>
+						</div>
+
+						<svg class="js-btn__show hidden-desktop visible-mobile"><use xlink:href="#ic-more"></use></svg>
+					</div>
+
+					<div class="sidebar-inner hidden-content">
+						<div class="form-border">
+							<h3 class="title">Tags e Keywords</h3>
+							<input type="text" placeholder="e.g. #cats or cat">
+						</div>
+
+						<div class="tags-box">
+							<div>
+								<a href="#" class="c-light-green">cats <span class="close">x</span></a>
+								<a href="#" class="c-light-green">dogs <span class="close">x</span></a>
+								<a href="#" class="c-light-green">Miau <span class="close">x</span></a>
+							</div>
+							
+							<div>
+								<a href="#" class="c-blue">#mycat <span class="close">x</span></a>
+								<a href="#" class="c-blue">#cats <span class="close">x</span></a>
+								<a href="#" class="c-blue">#dogs <span class="close">x</span></a>
+							</div>		
+
+							<div>
+								<a href="#" class="c-light-green">cats <span class="close">x</span></a>
+								<a href="#" class="c-light-green">dogs <span class="close">x</span></a>
+								<a href="#" class="c-light-green">Miau <span class="close">x</span></a>
+							</div>
+							
+							<div>
+								<a href="#" class="c-blue">#mycat <span class="close">x</span></a>
+								<a href="#" class="c-blue">#cats <span class="close">x</span></a>
+								<a href="#" class="c-blue">#dogs <span class="close">x</span></a>
+							</div>					
+						</div>
+
+						<div class="form-border">
+							<h3 class="title">Location</h3>
+							<input type="text" placeholder="e.g. manhattan">
+							<svg class="ic-location"><use xlink:href="#ic-location"></use></svg>
+						</div>
+
+						<div class="group-checkbox">
+							<label class="checkbox">
+								<input type="checkbox" checked>
+								<span></span>
+								<span class="text">My posts</span>
+							</label>
+
+							<label class="checkbox">
+								<input type="checkbox">
+								<span></span>
+								<span class="text">Posts I saved</span>
+							</label>
+
+							<label class="checkbox">
+								<input type="checkbox">
+								<span></span>
+								<span class="text">People l Follow</span>
+							</label>
+						</div>
+					</div>					
+				</form>
+			</aside>
+			<!-- // SIDEBAR -->
+			
+			<!-- MAIN -->
+			<main class="main">
+				<div class="user-post type-category box">
+					<div class="head d-flex">
+						<div class="avatar">
+							<img src="img/avatar.png" alt="">
+						</div>
+
+						<div class="form-border">
+							<h3 class="title">Categories</h3>
+
+							<div class="select">						
+								<div class="view d-flex">
+									<span>Products</span>
+									<svg><use xlink:href="#ic-arr-down"></use></svg>
+								</div>
+
+								<ul class="box">
+									<li>All</li>
+									<li>Adoption</li>
+									<li>Pics, Vids, Stories</li>
+									<li>Products</li>
+									<li>Q&A</li>
+									<li>Recommendations</li>
+									<li>Services</li>
+								</ul>
+							</div>
+						</div>
+
+						<div class="group-link">
+							<a href="#">
+								<svg><use xlink:href="#ic-img"></use></svg>
+							</a>
+							<a href="#">
+								<svg><use xlink:href="#ic-link"></use></svg>
+							</a>
+							<a href="#">
+								<svg><use xlink:href="#ic-telegram"></use></svg>
+							</a>
+						</div>
+					</div>
+
+					<p class="small-text hidden-desktop visible-mobile">Create a post</p>
+
+					<div class="inner-padding">
+						<div class="descr">
+							<p>Maui helicopter tours are a great way to see the island from a different perspective and have a fun adventure. If you have never been on a helicopter before, this is a great.</p>
+						</div>
+
+						<div class="stories d-flex box">
+							<div class="stories-thumb">
+								<img src="img/stories-thumb.jpg" alt="">
+							</div>
+							<div class="stories-descr">
+								<p>themanx.org</p>
+								<p>Lorem Stories</p>
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+							</div>
+						</div>
+
+						<div class="stories-slick">
+							<ul>
+								<li><img src="img/stories-1.jpg" alt=""></li>
+								<li><img src="img/stories-2.jpg" alt=""></li>
+								<li><img src="img/stories-2.jpg" alt=""></li>
+								<li><img src="img/stories-1.jpg" alt=""></li>
+								<li><img src="img/stories-2.jpg" alt=""></li>
+								<li><img src="img/stories-2.jpg" alt=""></li>
+							</ul>
+						</div>
+					</div>
+
+					<div class="user-footer d-flex">
+						<div class="select">						
+							<div class="view d-flex">
+								<svg><use xlink:href="#ic-clock"></use></svg>
+							</div>
+
+							<ul class="box">
+								<li>Public</li>
+								<li>Followers Only</li>
+							</ul>
+						</div>
+
+						<a href="#" class="btn-publish">publish</a>
+					</div>
+				</div>
+
+				<div class="user-post type-post m-top box">
+					<div class="head d-flex">
+						<div class="avatar">
+							<img src="img/user-avatar.png" alt="">
+						</div>
+
+						<div class="user-data">
+							<div class="select">						
+								<div class="view d-flex">
+									<span>Max Ward</span>
+									<svg><use xlink:href="#ic-arr-down"></use></svg>
+								</div>
+
+								<ul class="box sel-red">
+									<li>Messages User</li>
+									<li>Block User</li>
+								</ul>
+							</div>
+
+							<div class="time">October 30 at 11:59 pm</div>
+							<span class="info c-iblue hidden-desktop visible-mobile">Adoption Services</span>
+						</div>
+
+						<div class="select more">						
+							<div class="view d-flex">
+								<span>Adoption Services</span>
+								<svg><use xlink:href="#ic-more"></use></svg>
+							</div>
+
+							<ul class="box">
+								<li>Save post</li>
+								<li>Report post</li>
+							</ul>
+						</div>
+					</div>
+
+					<div class="text">
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+					</div>
+
+					<div class="gallery-post hidden-desktop visible-mobile">
+						<ul>
+							<li><img src="img/gallery-1.jpg" alt=""></li>
+							<li><img src="img/gallery-1.jpg" alt=""></li>
+							<li><img src="img/gallery-1.jpg" alt=""></li>
+						</ul>
+
+						<ul class="emotions">
+							<li><svg><use xlink:href="#ic-heart"></use></svg></li>
+							<li><svg><use xlink:href="#ic-like"></use></svg></li>
+							<li><svg><use xlink:href="#ic-emoci-1"></use></svg></li>
+							<li><svg><use xlink:href="#ic-emoci-2"></use></svg></li>
+							<li><svg><use xlink:href="#ic-emoci-3"></use></svg></li>
+							<li><svg><use xlink:href="#ic-dislike"></use></svg></li>
+						</ul>
+					</div>
+
+					<div class="post-gallery hidden-mobile">
+						<div class="big">
+							<img src="img/gallery-1.jpg" alt="">
+							<ul class="emotions">
+								<li><svg><use xlink:href="#ic-heart"></use></svg></li>
+								<li><svg><use xlink:href="#ic-like"></use></svg></li>
+								<li><svg><use xlink:href="#ic-emoci-1"></use></svg></li>
+								<li><svg><use xlink:href="#ic-emoci-2"></use></svg></li>
+								<li><svg><use xlink:href="#ic-emoci-3"></use></svg></li>
+								<li><svg><use xlink:href="#ic-dislike"></use></svg></li>
+							</ul>
+						</div>
+						<div class="right">
+							<div class="small">
+								<img src="img/gallery-2.jpg" alt="">
+								<span class="number">+13</span>
+							</div>
+							<div class="small">
+								<img src="img/gallery-3.jpg" alt="">
+								<span class="number">+25</span>
+							</div>
+						</div>						
+					</div>
+
+					<ul class="statistics d-flex">
+						<li>
+							<svg><use xlink:href="#ic-comment"></use></svg>
+							<span>247</span>
+						</li>
+						<li>
+							<svg><use xlink:href="#ic-like"></use></svg>
+							<span>3456</span>
+						</li>
+						<li>
+							<svg><use xlink:href="#ic-shool"></use></svg>
+							<span>34</span>
+						</li>
+						<li>
+							<svg><use xlink:href="#ic-share"></use></svg>
+							<span>123</span>
+						</li>
+					</ul>
+
+					<span class="border-blue"></span>
+
+					<div class="comments">
+						<div class="js-show active">
+							<div class="js-btn__show recent-post">
+								<span>most recent</span>
+								<svg><use xlink:href="#ic-arr-down"></use></svg>
+							</div>
+
+							<div class="hidden-content">
+								<div class="comments-head">
+									<div class="avatar">
+										<img src="img/avatar.png" alt="">
+									</div>
+
+									<form action="#" class="comment-form">
+										<label>
+											<input type="text" placeholder="type a comment…">
+											<div class="group-link">
+												<a href="#"><svg><use xlink:href="#ic-small"></use></svg></a>
+												<a href="#"><svg><use xlink:href="#ic-image"></use></svg></a>
+											</div>											
+										</label>
+									</form>
+								</div>
+
+								<div class="comments-item d-flex">
+									<div class="avatar">
+										<img src="img/avatar-1.jpg" alt="">
+									</div>
+
+									<div class="comment-text max-width">
+										<div class="inner">
+											<p><span>Lorem ipsum dolor</span> sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+										</div>
+										<div>
+											<a href="#">Like • Reply • Helpful</a>
+											<span>5h</span>
+										</div>
+
+										<a href="#">
+											<svg><use xlink:href="#ic-arr-right"></use></svg>
+											<span>3 Replies</span>
+										</a>
+									</div>
+								</div>
+
+								<div class="comments-item d-flex">
+									<div class="avatar">
+										<img src="img/avatar-2.jpg" alt="">
+									</div>
+
+									<div class="comment-text">
+										<div class="inner">
+											<p><span>Lorem ipsum dolor</span> sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+										</div>
+										<div>
+											<a href="#">Like • Reply • Helpful</a>
+											<span>5h</span>
+										</div>
+
+										<a href="#">
+											<svg><use xlink:href="#ic-arr-right"></use></svg>
+											<span>3 Replies</span>
+										</a>
+									</div>
+								</div>
+
+								<div class="comment-footer d-flex">
+									<a href="#">View more comments</a>
+									<ul class="comment-pagination d-flex">
+										<li><a href="#">2</a></li>
+										<li><a href="#">of</a></li>
+										<li><a href="#">247</a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="user-post type-post not-pb m-top box">
+					<div class="head d-flex">
+						<div class="avatar">
+							<img src="img/avatar-3.jpg" alt="">
+						</div>
+
+						<div class="user-data">
+							<div class="select">						
+								<div class="view d-flex">
+									<span>Dustin Moore</span>
+									<svg><use xlink:href="#ic-arr-down"></use></svg>
+								</div>
+
+								<ul class="box sel-red">
+									<li>Messages User</li>
+									<li>Block User</li>
+								</ul>
+							</div>
+
+							<div class="time">October 30 at 10:48 pm</div>
+							<span class="info c-red hidden-desktop visible-mobile">Pics, Vids, Stories</span>
+						</div>
+
+						<div class="select more">						
+							<div class="view d-flex">
+								<span class="c-red">Pics, Vids, Stories</span>
+								<svg><use xlink:href="#ic-more"></use></svg>
+							</div>
+
+							<ul class="box">
+								<li>Save post</li>
+								<li>Report post</li>
+							</ul>
+						</div>
+					</div>
+
+					<div class="text">
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+
+						<a class="link" href="https://youtube.com/24354698y20aa">https://youtube.com/24354698y20aa</a>
+					</div>
+
+					<div class="post-video">
+						<img src="img/video.jpg" alt="">						
+					</div>
+
+					<ul class="statistics d-flex">
+						<li>
+							<svg><use xlink:href="#ic-comment"></use></svg>
+							<span>247</span>
+						</li>
+						<li>
+							<svg><use xlink:href="#ic-like"></use></svg>
+							<span>3456</span>
+						</li>
+						<li>
+							<svg><use xlink:href="#ic-shool"></use></svg>
+							<span>34</span>
+						</li>
+						<li>
+							<svg><use xlink:href="#ic-share"></use></svg>
+							<span>123</span>
+						</li>
+					</ul>
+				</div>
+
+				<div class="user-post type-post not-pb m-top box">
+					<div class="head d-flex">
+						<div class="avatar">
+							<img src="img/avatar-3.jpg" alt="">
+						</div>
+
+						<div class="user-data">
+							<div class="select">						
+								<div class="view d-flex">
+									<span>Dustin Moore</span>
+									<svg><use xlink:href="#ic-arr-down"></use></svg>
+								</div>
+
+								<ul class="box sel-red">
+									<li>Messages User</li>
+									<li>Block User</li>
+								</ul>
+							</div>
+
+							<div class="time">October 30 at 10:48 pm</div>
+							<span class="info c-iblue hidden-desktop visible-mobile">Pics, Vids, Stories</span>
+						</div>
+
+						<div class="select more">						
+							<div class="view d-flex">
+								<span class="c-red">Pics, Vids, Stories</span>
+								<svg><use xlink:href="#ic-more"></use></svg>
+							</div>
+
+							<ul class="box">
+								<li>Save post</li>
+								<li>Report post</li>
+							</ul>
+						</div>
+					</div>
+
+					<div class="text">
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+
+						<a class="link" href="https://youtube.com/24354698y20aa">https://youtube.com/24354698y20aa</a>
+					</div>
+
+					<div class="stories d-flex box">
+						<div class="stories-thumb">
+							<img src="img/stories-4.jpg" alt="">
+						</div>
+						<div class="stories-descr">
+							<p>themanx.org</p>
+							<p>Lorem Stories</p>
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+						</div>
+					</div>
+
+					<span class="border-blue m-top"></span>
+
+					<ul class="statistics d-flex">
+						<li>
+							<svg><use xlink:href="#ic-comment"></use></svg>
+							<span>247</span>
+						</li>
+						<li>
+							<svg><use xlink:href="#ic-like"></use></svg>
+							<span>3456</span>
+						</li>
+						<li>
+							<svg><use xlink:href="#ic-shool"></use></svg>
+							<span>34</span>
+						</li>
+						<li>
+							<svg><use xlink:href="#ic-share"></use></svg>
+							<span>123</span>
+						</li>
+					</ul>
+				</div>
+
+				<div class="user-post type-post m-top box">
+					<div class="head d-flex">
+						<div class="avatar">
+							<img src="img/avatar-4.jpg" alt="">
+						</div>
+
+						<div class="user-data">
+							<div class="select">						
+								<div class="view d-flex">
+									<span>Mae Bowman</span>
+									<svg><use xlink:href="#ic-arr-down"></use></svg>
+								</div>
+
+								<ul class="box sel-red">
+									<li>Messages User</li>
+									<li>Block User</li>
+								</ul>
+							</div>
+
+							<div class="time">October 30 at 10:45 pm</div>
+							<span class="info c-red hidden-desktop visible-mobile">Pics, Vids, Stories</span>
+						</div>
+
+						<div class="select more">						
+							<div class="view d-flex">
+								<span class="c-red">Pics, Vids, Stories</span>
+								<svg><use xlink:href="#ic-more"></use></svg>
+							</div>
+
+							<ul class="box">
+								<li>Save post</li>
+								<li>Report post</li>
+							</ul>
+						</div>
+					</div>
+
+					<div class="text">
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. <a href="#" class="view-more">View more</a></p>
+					</div>
+
+					<span class="border-blue"></span>
+
+					<ul class="statistics d-flex">
+						<li>
+							<svg><use xlink:href="#ic-comment"></use></svg>
+							<span>247</span>
+						</li>
+						<li>
+							<svg><use xlink:href="#ic-like"></use></svg>
+							<span>3456</span>
+						</li>
+						<li>
+							<svg><use xlink:href="#ic-shool"></use></svg>
+							<span>34</span>
+						</li>
+						<li>
+							<svg><use xlink:href="#ic-share"></use></svg>
+							<span>123</span>
+						</li>
+					</ul>
+
+					<div class="comments">
+						<div class="comments-item not-mt d-flex">
+							<div class="avatar">
+								<img src="img/avatar-5.jpg" alt="">
+							</div>
+
+							<div class="comment-text max-width">
+								<div class="inner">
+									<p><span>Lorem ipsum dolor</span> sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+								</div>
+							</div>
+						</div>
+
+						<div class="comments-item d-flex">
+							<div class="avatar">
+								<img src="img/avatar-6.jpg" alt="">
+							</div>
+
+							<div class="comment-text max-width">
+								<div class="inner">
+									<p><span>Lorem ipsum dolor</span> sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+								</div>
+							</div>
+						</div>
+
+						<div class="comment-footer d-flex">
+							<a href="#">View more comments</a>
+							<ul class="comment-pagination d-flex">
+								<li><a href="#">2</a></li>
+								<li><a href="#">of</a></li>
+								<li><a href="#">247</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+
+				<div class="user-post type-post m-top not-pb box">
+					<div class="head d-flex">
+						<div class="avatar">
+							<img src="img/user-avatar.png" alt="">
+						</div>
+
+						<div class="user-data">
+							<div class="select">						
+								<div class="view d-flex">
+									<span>Agnes West</span>
+									<svg><use xlink:href="#ic-arr-down"></use></svg>
+								</div>
+
+								<ul class="box sel-red">
+									<li>Messages User</li>
+									<li>Block User</li>
+								</ul>
+							</div>
+
+							<div class="time">October 30 at 9:17 pm</div>
+							<span class="info c-iblue hidden-desktop visible-mobile">Pics, Vids, Stories</span>
+						</div>
+
+						<div class="select more">						
+							<div class="view d-flex">
+								<span>Adoption Services</span>
+								<svg><use xlink:href="#ic-more"></use></svg>
+							</div>
+
+							<ul class="box">
+								<li>Save post</li>
+								<li>Report post</li>
+							</ul>
+						</div>
+					</div>
+
+					<div class="text">
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+
+						<a href="#" class="link">https://youtube.com/24354698y20aa</a>
+					</div>
+
+					<div class="gallery-post hidden-desktop visible-mobile">
+						<ul>
+							<li><img src="img/video-2.jpg" alt=""></li>
+							<li><img src="img/video-2.jpg" alt=""></li>
+							<li><img src="img/video-2.jpg" alt=""></li>
+						</ul>
+
+						<ul class="emotions">
+							<li><svg><use xlink:href="#ic-heart"></use></svg></li>
+							<li><svg><use xlink:href="#ic-like"></use></svg></li>
+							<li><svg><use xlink:href="#ic-emoci-1"></use></svg></li>
+							<li><svg><use xlink:href="#ic-emoci-2"></use></svg></li>
+							<li><svg><use xlink:href="#ic-emoci-3"></use></svg></li>
+							<li><svg><use xlink:href="#ic-dislike"></use></svg></li>
+						</ul>
+					</div>
+
+					<div class="post-gallery hidden-mobile">
+						<div class="big">
+							<img src="img/video-2.jpg" alt="">
+							<ul class="emotions">
+								<li><svg><use xlink:href="#ic-heart"></use></svg></li>
+								<li><svg><use xlink:href="#ic-like"></use></svg></li>
+								<li><svg><use xlink:href="#ic-emoci-1"></use></svg></li>
+								<li><svg><use xlink:href="#ic-emoci-2"></use></svg></li>
+								<li><svg><use xlink:href="#ic-emoci-3"></use></svg></li>
+								<li><svg><use xlink:href="#ic-dislike"></use></svg></li>
+							</ul>
+						</div>
+						<div class="right">
+							<div class="small">
+								<img src="img/video-3.jpg" alt="">
+							</div>
+							<div class="small">
+								<img src="img/gallery-4.jpg" alt="">
+								<span class="number">+25</span>
+							</div>
+						</div>						
+					</div>
+
+					<ul class="statistics d-flex">
+						<li>
+							<svg><use xlink:href="#ic-comment"></use></svg>
+							<span>247</span>
+						</li>
+						<li>
+							<svg><use xlink:href="#ic-like"></use></svg>
+							<span>3456</span>
+						</li>
+						<li>
+							<svg><use xlink:href="#ic-shool"></use></svg>
+							<span>34</span>
+						</li>
+						<li>
+							<svg><use xlink:href="#ic-share"></use></svg>
+							<span>123</span>
+						</li>
+					</ul>
+				</div>
+
+				<div class="user-post type-post m-top box">
+					<div class="head d-flex">
+						<div class="avatar">
+							<img src="img/user-avatar.png" alt="">
+						</div>
+
+						<div class="user-data">
+							<div class="select">						
+								<div class="view d-flex">
+									<span>Max Ward</span>
+									<svg><use xlink:href="#ic-arr-down"></use></svg>
+								</div>
+
+								<ul class="box sel-red">
+									<li>Messages User</li>
+									<li>Block User</li>
+								</ul>
+							</div>
+
+							<div class="time">October 30 at 11:59 pm</div>
+							<span class="info c-red hidden-desktop visible-mobile">Pics, Vids, Stories</span>
+						</div>
+
+						<div class="select more">						
+							<div class="view d-flex">
+								<span>Adoption Services</span>
+								<svg><use xlink:href="#ic-more"></use></svg>
+							</div>
+
+							<ul class="box">
+								<li>Save post</li>
+								<li>Report post</li>
+							</ul>
+						</div>
+					</div>
+
+					<div class="text">
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+					</div>
+
+					<div class="gallery-post hidden-desktop visible-mobile">
+						<ul>
+							<li><img src="img/gallery-1.jpg" alt=""></li>
+							<li><img src="img/gallery-1.jpg" alt=""></li>
+							<li><img src="img/gallery-1.jpg" alt=""></li>
+						</ul>
+
+						<ul class="emotions">
+							<li><svg><use xlink:href="#ic-heart"></use></svg></li>
+							<li><svg><use xlink:href="#ic-like"></use></svg></li>
+							<li><svg><use xlink:href="#ic-emoci-1"></use></svg></li>
+							<li><svg><use xlink:href="#ic-emoci-2"></use></svg></li>
+							<li><svg><use xlink:href="#ic-emoci-3"></use></svg></li>
+							<li><svg><use xlink:href="#ic-dislike"></use></svg></li>
+						</ul>
+					</div>
+
+					<div class="post-gallery hidden-mobile">
+						<div class="big">
+							<img src="img/gallery-1.jpg" alt="">
+							<ul class="emotions">
+								<li><svg><use xlink:href="#ic-heart"></use></svg></li>
+								<li><svg><use xlink:href="#ic-like"></use></svg></li>
+								<li><svg><use xlink:href="#ic-emoci-1"></use></svg></li>
+								<li><svg><use xlink:href="#ic-emoci-2"></use></svg></li>
+								<li><svg><use xlink:href="#ic-emoci-3"></use></svg></li>
+								<li><svg><use xlink:href="#ic-dislike"></use></svg></li>
+							</ul>
+						</div>
+						<div class="right">
+							<div class="small">
+								<img src="img/gallery-2.jpg" alt="">
+								<span class="number">+13</span>
+							</div>
+							<div class="small">
+								<img src="img/gallery-3.jpg" alt="">
+								<span class="number">+25</span>
+							</div>
+						</div>						
+					</div>
+
+					<ul class="statistics d-flex">
+						<li>
+							<svg><use xlink:href="#ic-comment"></use></svg>
+							<span>247</span>
+						</li>
+						<li>
+							<svg><use xlink:href="#ic-like"></use></svg>
+							<span>3456</span>
+						</li>
+						<li>
+							<svg><use xlink:href="#ic-shool"></use></svg>
+							<span>34</span>
+						</li>
+						<li>
+							<svg><use xlink:href="#ic-share"></use></svg>
+							<span>123</span>
+						</li>
+					</ul>
+
+					<span class="border-blue"></span>
+
+					<div class="comments">
+						<div class="js-show active">
+							<div class="js-btn__show recent-post">
+								<span>most recent</span>
+								<svg><use xlink:href="#ic-arr-down"></use></svg>
+							</div>
+
+							<div class="hidden-content">
+								<div class="comments-head">
+									<div class="avatar">
+										<img src="img/avatar.png" alt="">
+									</div>
+
+									<form action="#" class="comment-form">
+										<label>
+											<input type="text" placeholder="type a comment…">
+											<div class="group-link">
+												<a href="#"><svg><use xlink:href="#ic-small"></use></svg></a>
+												<a href="#"><svg><use xlink:href="#ic-image"></use></svg></a>
+											</div>											
+										</label>
+									</form>
+								</div>
+
+								<div class="comments-item d-flex">
+									<div class="avatar">
+										<img src="img/avatar-1.jpg" alt="">
+									</div>
+
+									<div class="comment-text max-width">
+										<div class="inner">
+											<p><span>Lorem ipsum dolor</span> sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+										</div>
+										<div>
+											<a href="#">Like • Reply • Helpful</a>
+											<span>5h</span>
+										</div>
+
+										<a href="#">
+											<svg><use xlink:href="#ic-arr-right"></use></svg>
+											<span>3 Replies</span>
+										</a>
+									</div>
+								</div>
+
+								<div class="comments-item d-flex">
+									<div class="avatar">
+										<img src="img/avatar-2.jpg" alt="">
+									</div>
+
+									<div class="comment-text">
+										<div class="inner">
+											<p><span>Lorem ipsum dolor</span> sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+										</div>
+										<div>
+											<a href="#">Like • Reply • Helpful</a>
+											<span>5h</span>
+										</div>
+
+										<a href="#">
+											<svg><use xlink:href="#ic-arr-right"></use></svg>
+											<span>3 Replies</span>
+										</a>
+									</div>
+								</div>
+
+								<div class="comments-item d-flex">
+									<div class="avatar">
+										<img src="img/avatar-4.jpg" alt="">
+									</div>
+
+									<div class="comment-text max-width">
+										<div class="inner">
+											<p><span>Lorem ipsum dolor</span> sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+										</div>
+										<div>
+											<a href="#">Like • Reply • Helpful</a>
+											<span>5h</span>
+										</div>
+
+										<a href="#">
+											<svg><use xlink:href="#ic-arr-right"></use></svg>
+											<span>3 Replies</span>
+										</a>
+									</div>
+								</div>
+
+								<div class="comments-item d-flex">
+									<div class="avatar">
+										<img src="img/avatar-3.jpg" alt="">
+									</div>
+
+									<div class="comment-text">
+										<div class="inner">
+											<p><span>Lorem ipsum dolor</span> sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+										</div>
+										<div>
+											<a href="#">Like • Reply • Helpful</a>
+											<span>5h</span>
+										</div>
+
+										<a href="#">
+											<svg><use xlink:href="#ic-arr-right"></use></svg>
+											<span>3 Replies</span>
+										</a>
+									</div>
+								</div>
+
+								<div class="comments-item d-flex">
+									<div class="avatar">
+										<img src="img/avatar-4.jpg" alt="">
+									</div>
+
+									<div class="comment-text max-width">
+										<div class="inner">
+											<p><span>Lorem ipsum dolor</span> sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+										</div>
+										<div>
+											<a href="#">Like • Reply • Helpful</a>
+											<span>5h</span>
+										</div>
+
+										<a href="#">
+											<svg><use xlink:href="#ic-arr-right"></use></svg>
+											<span>3 Replies</span>
+										</a>
+									</div>
+								</div>
+
+								<div class="comments-item d-flex">
+									<div class="avatar">
+										<img src="img/avatar-3.jpg" alt="">
+									</div>
+
+									<div class="comment-text">
+										<div class="inner">
+											<p><span>Lorem ipsum dolor</span> sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+										</div>
+										<div>
+											<a href="#">Like • Reply • Helpful</a>
+											<span>5h</span>
+										</div>
+
+										<a href="#">
+											<svg><use xlink:href="#ic-arr-right"></use></svg>
+											<span>3 Replies</span>
+										</a>
+									</div>
+								</div>
+
+								<div class="comment-footer d-flex">
+									<span class="count-commnet">234 comments</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</main>
+			<!-- // MAIN -->
+		</div>
+	</div>
+	<!-- // CONTENT -->
+
+	<!-- Sprite -->
+	<svg class="icon-svg">
+		<symbol id="ic-slick-prev" viewBox="0 0 12 19">
+            <path d="M0.442383 16.3275L7.31238 9.4425L0.442383 2.5575L2.55738 0.442505L11.5574 9.4425L2.55738 18.4425L0.442383 16.3275Z" fill="white"/>
+        </symbol>
+
+        <symbol id="ic-slick-next" viewBox="0 0 12 19">
+            <path d="M11.5576 16.3275L4.68762 9.4425L11.5576 2.5575L9.44262 0.442505L0.442617 9.4425L9.44262 18.4425L11.5576 16.3275Z" fill="white"/>
+        </symbol>
+
+		<symbol id="ic-profile" viewBox="0 0 20 20">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M10 0C4.48 0 0 4.48 0 10C0 15.52 4.48 20 10 20C15.52 20 20 15.52 20 10C20 4.48 15.52 0 10 0ZM5.07 16.28C5.5 15.38 8.12 14.5 10 14.5C11.88 14.5 14.51 15.38 14.93 16.28C13.57 17.36 11.86 18 10 18C8.14 18 6.43 17.36 5.07 16.28ZM10 12.5C11.46 12.5 14.93 13.09 16.36 14.83C17.38 13.49 18 11.82 18 10C18 5.59 14.41 2 10 2C5.59 2 2 5.59 2 10C2 11.82 2.62 13.49 3.64 14.83C5.07 13.09 8.54 12.5 10 12.5ZM10 4C8.06 4 6.5 5.56 6.5 7.5C6.5 9.44 8.06 11 10 11C11.94 11 13.5 9.44 13.5 7.5C13.5 5.56 11.94 4 10 4ZM8.5 7.5C8.5 8.33 9.17 9 10 9C10.83 9 11.5 8.33 11.5 7.5C11.5 6.67 10.83 6 10 6C9.17 6 8.5 6.67 8.5 7.5Z"/>
+        </symbol>
+
+        <symbol id="ic-settings" viewBox="0 0 18 18">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M1.8678 15.06L0.0677974 11.955C-0.0522026 11.76 -0.00720266 11.52 0.157797 11.37L2.0628 9.885C2.06143 9.87134 2.06006 9.8577 2.0587 9.8441C2.03013 9.55901 2.0028 9.28633 2.0028 9C2.0028 8.7 2.0328 8.415 2.0778 8.115L0.172797 6.63C0.00779735 6.48 -0.0522026 6.24 0.0677974 6.045L1.8678 2.94C1.9878 2.745 2.2128 2.67 2.4228 2.745L4.6578 3.645C5.1078 3.285 5.6328 3 6.1728 2.775L6.5028 0.39C6.5478 0.165 6.7278 0 6.9528 0H10.5528C10.7778 0 10.9578 0.165 11.0028 0.375L11.3328 2.76C11.8878 2.985 12.3828 3.285 12.8478 3.645L15.0828 2.745C15.2928 2.67 15.5178 2.745 15.6378 2.94L17.4378 6.045C17.5578 6.24 17.4978 6.495 17.3328 6.63L15.4278 8.115C15.4292 8.12867 15.4305 8.14231 15.4319 8.15593C15.4605 8.44101 15.4878 8.71367 15.4878 9C15.4878 9.285 15.4728 9.585 15.4278 9.87L17.3328 11.355C17.4978 11.505 17.5578 11.745 17.4378 11.94L15.6378 15.045C15.5178 15.24 15.2928 15.315 15.0828 15.24L12.8478 14.34C12.3828 14.7 11.8728 15 11.3328 15.225L11.0028 17.61C10.9578 17.835 10.7778 18 10.5528 18H6.9528C6.7278 18 6.5478 17.835 6.5028 17.625L6.1728 15.24C5.6178 15.015 5.1228 14.715 4.6578 14.355L2.4228 15.255C2.2128 15.33 1.9878 15.255 1.8678 15.06ZM11.3178 9C11.3178 7.59 10.1628 6.435 8.7528 6.435C7.3428 6.435 6.1878 7.59 6.1878 9C6.1878 10.41 7.3428 11.565 8.7528 11.565C10.1628 11.565 11.3178 10.41 11.3178 9Z"/>
+        </symbol>
+
+        <symbol id="ic-logout" viewBox="0 0 18 18">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M8 0H10V10H8V0ZM13.41 3.59L14.83 2.17C16.77 3.82 18 6.26 18 9C18 13.97 13.97 18 9 18C4.03 18 0 13.97 0 9C0 6.26 1.23 3.82 3.17 2.17L4.58 3.58C3.01 4.86 2 6.81 2 9C2 12.87 5.13 16 9 16C12.87 16 16 12.87 16 9C16 6.81 14.99 4.86 13.41 3.59Z"/>
+        </symbol>
+
+		<symbol id="ic-notification" viewBox="0 0 16 20">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M14 14V9C14 5.93 12.37 3.36 9.5 2.68V2C9.5 1.17 8.83 0.5 8 0.5C7.17 0.5 6.5 1.17 6.5 2V2.68C3.64 3.36 2 5.92 2 9V14L0 16V17H16V16L14 14ZM8 20C9.1 20 10 19.1 10 18H6C6 19.1 6.9 20 8 20ZM4 15H12V9C12 6.52 10.49 4.5 8 4.5C5.51 4.5 4 6.52 4 9V15Z" fill="white"/>
+        </symbol>
+
+		<symbol id="ic-search" viewBox="0 0 14 14">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M9.0325 8.5H9.625L13.3675 12.25L12.25 13.3675L8.5 9.625V9.0325L8.2975 8.8225C7.4425 9.5575 6.3325 10 5.125 10C2.4325 10 0.25 7.8175 0.25 5.125C0.25 2.4325 2.4325 0.25 5.125 0.25C7.8175 0.25 10 2.4325 10 5.125C10 6.3325 9.5575 7.4425 8.8225 8.2975L9.0325 8.5ZM1.75 5.125C1.75 6.9925 3.2575 8.5 5.125 8.5C6.9925 8.5 8.5 6.9925 8.5 5.125C8.5 3.2575 6.9925 1.75 5.125 1.75C3.2575 1.75 1.75 3.2575 1.75 5.125Z"/>
+        </symbol>
+
+		<symbol id="ic-location" viewBox="0 0 18 18">
+            <path d="M15.75 2.25L2.25 7.8975V8.6325L7.38 10.62L9.36 15.75H10.095L15.75 2.25Z" fill="#4A90E2"/>
+        </symbol>
+
+		<symbol id="ic-add-photo" viewBox="0 0 40 40">
+            <path d="M17.0165 28.05L13.7498 24.1167L9.1665 30H27.4998L21.5998 22.15L17.0165 28.05Z" fill="#4A4A4A"/>
+			<path opacity="0.3" fill-rule="evenodd" clip-rule="evenodd" d="M23.3332 11.6667H28.3332V16.6667H29.9998V33.3333H6.6665V10H23.3332V11.6667ZM9.1665 30H27.4998L21.5998 22.15L17.0165 28.05L13.7498 24.1167L9.1665 30Z" fill="#4A4A4A"/>
+			<path fill-rule="evenodd" clip-rule="evenodd" d="M33.3335 1.66666V6.66666H38.3335V9.99999H33.3335V14.9833H30.0002V9.99999H25.0002V6.66666H30.0002V1.66666H33.3335ZM6.66683 33.3333H30.0002V16.6667H33.3335V33.3333C33.3335 35.1667 31.8335 36.6667 30.0002 36.6667H6.66683C4.8335 36.6667 3.3335 35.1667 3.3335 33.3333V9.99999C3.3335 8.16666 4.8335 6.66666 6.66683 6.66666H23.3335V9.99999H6.66683V33.3333Z" fill="#4A4A4A"/>
+        </symbol>
+
+		<symbol id="ic-arr-right" viewBox="0 0 18 18">
+            <path d="M14.25 11.25L9.75 15.75L8.685 14.685L11.3775 12H3V3H4.5V10.5H11.3775L8.685 7.815L9.75 6.75L14.25 11.25Z" fill="#4A90E2"/>
+        </symbol>
+
+		<symbol id="ic-small" viewBox="0 0 18 18">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M7.9925 0.5C3.8525 0.5 0.5 3.86 0.5 8C0.5 12.14 3.8525 15.5 7.9925 15.5C12.14 15.5 15.5 12.14 15.5 8C15.5 3.86 12.14 0.5 7.9925 0.5ZM8 14C4.685 14 2 11.315 2 8C2 4.685 4.685 2 8 2C11.315 2 14 4.685 14 8C14 11.315 11.315 14 8 14ZM11.75 6.125C11.75 6.7475 11.2475 7.25 10.625 7.25C10.0025 7.25 9.5 6.7475 9.5 6.125C9.5 5.5025 10.0025 5 10.625 5C11.2475 5 11.75 5.5025 11.75 6.125ZM5.375 7.25C5.9975 7.25 6.5 6.7475 6.5 6.125C6.5 5.5025 5.9975 5 5.375 5C4.7525 5 4.25 5.5025 4.25 6.125C4.25 6.7475 4.7525 7.25 5.375 7.25ZM11.8325 9.5C11.2325 11.03 9.7475 12.125 8 12.125C6.2525 12.125 4.7675 11.03 4.1675 9.5H11.8325Z"/>
+        </symbol>
+
+        <symbol id="ic-image" viewBox="0 0 18 18">
+            <g opacity="0.5">
+			<path fill-rule="evenodd" clip-rule="evenodd" d="M14.25 2.25H3.75C2.925 2.25 2.25 2.925 2.25 3.75V14.25C2.25 15.075 2.925 15.75 3.75 15.75H14.25C15.075 15.75 15.75 15.075 15.75 14.25V3.75C15.75 2.925 15.075 2.25 14.25 2.25ZM14.25 3.75V14.25H3.75V3.75H14.25ZM8.355 11.7975L10.605 8.895L13.5 12.75H4.5L6.75 9.855L8.355 11.7975Z"/>
+			</g>
+        </symbol>
+
+        <symbol id="ic-shool" viewBox="0 0 24 24">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M12 3L1 9L5 11.18V17.18L12 21L19 17.18V11.18L21 10.09V17H23V9L12 3ZM18.82 9L12 12.72L5.18 9L12 5.28L18.82 9ZM12 18.72L17 15.99V12.27L12 15L7 12.27V15.99L12 18.72Z"/>
+        </symbol>
+
+		<symbol id="ic-share" viewBox="0 0 18 18">
+            <path d="M13.5 12.06C12.93 12.06 12.42 12.285 12.03 12.6375L6.6825 9.525C6.72 9.3525 6.75 9.18 6.75 9C6.75 8.82 6.72 8.6475 6.6825 8.475L11.97 5.3925C12.375 5.7675 12.9075 6 13.5 6C14.745 6 15.75 4.995 15.75 3.75C15.75 2.505 14.745 1.5 13.5 1.5C12.255 1.5 11.25 2.505 11.25 3.75C11.25 3.93 11.28 4.1025 11.3175 4.275L6.03 7.3575C5.625 6.9825 5.0925 6.75 4.5 6.75C3.255 6.75 2.25 7.755 2.25 9C2.25 10.245 3.255 11.25 4.5 11.25C5.0925 11.25 5.625 11.0175 6.03 10.6425L11.37 13.7625C11.3325 13.92 11.31 14.085 11.31 14.25C11.31 15.4575 12.2925 16.44 13.5 16.44C14.7075 16.44 15.69 15.4575 15.69 14.25C15.69 13.0425 14.7075 12.06 13.5 12.06Z"/>
+        </symbol>
+
+		<symbol id="ic-shool" viewBox="0 0 24 24">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M12 3L1 9L5 11.18V17.18L12 21L19 17.18V11.18L21 10.09V17H23V9L12 3ZM18.82 9L12 12.72L5.18 9L12 5.28L18.82 9ZM12 18.72L17 15.99V12.27L12 15L7 12.27V15.99L12 18.72Z"/>
+        </symbol>
+
+		<symbol id="ic-comment" viewBox="0 0 18 18">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M3 1.5H15C15.825 1.5 16.5 2.175 16.5 3V16.5L13.5 13.5H3C2.175 13.5 1.5 12.825 1.5 12V3C1.5 2.175 2.175 1.5 3 1.5ZM14.1225 12L15 12.8775V3H3V12H14.1225Z"/>
+        </symbol>
+
+		<symbol id="ic-heart" viewBox="0 0 16 15">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M8 1.8175C8.8175 0.8575 10.07 0.25 11.375 0.25C13.685 0.25 15.5 2.065 15.5 4.375C15.5 7.20767 12.9542 9.51621 9.097 13.0139L9.0875 13.0225L8 14.0125L6.9125 13.03L6.88289 13.0031C3.03697 9.50818 0.5 7.20275 0.5 4.375C0.5 2.065 2.315 0.25 4.625 0.25C5.93 0.25 7.1825 0.8575 8 1.8175ZM8 11.9875L8.075 11.9125C11.645 8.68 14 6.5425 14 4.375C14 2.875 12.875 1.75 11.375 1.75C10.22 1.75 9.095 2.4925 8.705 3.52H7.3025C6.905 2.4925 5.78 1.75 4.625 1.75C3.125 1.75 2 2.875 2 4.375C2 6.5425 4.355 8.68 7.925 11.9125L8 11.9875Z"/>
+        </symbol>
+
+        <symbol id="ic-like" viewBox="0 0 24 24">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M20 7H13.69L14.64 2.43L14.67 2.11C14.67 1.7 14.5 1.32 14.23 1.05L13.17 0L6.59 6.59C6.22 6.95 6 7.45 6 8V18C6 19.1 6.9 20 8 20H17C17.83 20 18.54 19.5 18.84 18.78L21.86 11.73C21.95 11.5 22 11.26 22 11V9C22 7.9 21.1 7 20 7ZM20 11L17 18H8V8L12.34 3.66L11.23 9H20V11ZM4 8H0V20H4V8Z"/>
+        </symbol>
+
+        <symbol id="ic-emoci-1" viewBox="0 0 24 24">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M11.99 2C6.47 2 2 6.47 2 12C2 17.53 6.47 22 11.99 22C17.51 22 22 17.53 22 12C22 6.47 17.52 2 11.99 2ZM12 20C7.58 20 4 16.42 4 12C4 7.58 7.58 4 12 4C16.42 4 20 7.58 20 12C20 16.42 16.42 20 12 20ZM14.06 11L13 9.94L15.12 7.82L17.24 9.94L16.18 11L15.12 9.94L14.06 11ZM8.88 9.94L9.94 11L11 9.94L8.88 7.82L6.76 9.94L7.82 11L8.88 9.94ZM17.11 14C16.31 16.04 14.33 17.5 12 17.5C9.67 17.5 7.69 16.04 6.89 14H17.11Z"/>
+        </symbol>
+
+        <symbol id="ic-emoci-2" viewBox="0 0 24 24">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M11.99 2C6.47 2 2 6.48 2 12C2 17.52 6.47 22 11.99 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 11.99 2ZM12 20C7.58 20 4 16.42 4 12C4 7.58 7.58 4 12 4C16.42 4 20 7.58 20 12C20 16.42 16.42 20 12 20ZM17 9.5C17 10.33 16.33 11 15.5 11C14.67 11 14 10.33 14 9.5C14 8.67 14.67 8 15.5 8C16.33 8 17 8.67 17 9.5ZM8.5 11C9.33 11 10 10.33 10 9.5C10 8.67 9.33 8 8.5 8C7.67 8 7 8.67 7 9.5C7 10.33 7.67 11 8.5 11ZM6.89 17C7.69 14.96 9.67 13.5 12 13.5C14.33 13.5 16.31 14.96 17.11 17H6.89Z"/>
+        </symbol>
+
+        <symbol id="ic-emoci-3" viewBox="0 0 24 24">
+            <path d="M15.5 11C16.3284 11 17 10.3284 17 9.5C17 8.67157 16.3284 8 15.5 8C14.6716 8 14 8.67157 14 9.5C14 10.3284 14.6716 11 15.5 11Z" fill="black"/>
+			<path d="M8.5 11C9.32843 11 10 10.3284 10 9.5C10 8.67157 9.32843 8 8.5 8C7.67157 8 7 8.67157 7 9.5C7 10.3284 7.67157 11 8.5 11Z"/>
+			<path fill-rule="evenodd" clip-rule="evenodd" d="M11.99 2C6.47 2 2 6.48 2 12C2 17.52 6.47 22 11.99 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 11.99 2ZM12 14C9.67 14 7.68 15.45 6.88 17.5H8.55C9.24 16.31 10.52 15.5 12 15.5C13.48 15.5 14.75 16.31 15.45 17.5H17.12C16.32 15.45 14.33 14 12 14ZM4 12C4 16.42 7.58 20 12 20C16.42 20 20 16.42 20 12C20 7.58 16.42 4 12 4C7.58 4 4 7.58 4 12Z"/>
+        </symbol>
+
+         <symbol id="ic-dislike" viewBox="0 0 24 24">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M15 3H6C5.17 3 4.46 3.5 4.16 4.22L1.14 11.27C1.05 11.5 1 11.74 1 12V14C1 15.1 1.9 16 3 16H9.31L8.36 20.57L8.33 20.89C8.33 21.3 8.5 21.68 8.77 21.95L9.83 23L16.41 16.41C16.78 16.05 17 15.55 17 15V5C17 3.9 16.1 3 15 3ZM15 15L10.66 19.34L11.77 14H3V12L6 5H15V15ZM23 3H19V15H23V3Z"/>
+        </symbol>
+
+		<symbol id="ic-more" viewBox="0 0 18 18">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M4.5 7.5C3.675 7.5 3 8.175 3 9C3 9.825 3.675 10.5 4.5 10.5C5.325 10.5 6 9.825 6 9C6 8.175 5.325 7.5 4.5 7.5ZM13.5 7.5C12.675 7.5 12 8.175 12 9C12 9.825 12.675 10.5 13.5 10.5C14.325 10.5 15 9.825 15 9C15 8.175 14.325 7.5 13.5 7.5ZM7.5 9C7.5 8.175 8.175 7.5 9 7.5C9.825 7.5 10.5 8.175 10.5 9C10.5 9.825 9.825 10.5 9 10.5C8.175 10.5 7.5 9.825 7.5 9Z" fill="black"/>
+        </symbol>
+
+		<symbol id="ic-clock" viewBox="0 0 24 24">
+            <g opacity="0.5">
+			<path fill-rule="evenodd" clip-rule="evenodd" d="M17 8H18C19.1 8 20 8.9 20 10V20C20 21.1 19.1 22 18 22H6C4.9 22 4 21.1 4 20V10C4 8.9 4.9 8 6 8H7V6C7 3.24 9.24 1 12 1C14.76 1 17 3.24 17 6V8ZM12 3C10.34 3 9 4.34 9 6V8H15V6C15 4.34 13.66 3 12 3ZM6 20V10H18V20H6ZM14 15C14 16.1 13.1 17 12 17C10.9 17 10 16.1 10 15C10 13.9 10.9 13 12 13C13.1 13 14 13.9 14 15Z" fill="black"/>
+			</g>
+        </symbol>
+
+		<symbol id="ic-arr-down" viewBox="0 0 18 18">
+            <path d="M5.5575 6.4425L9 9.8775L12.4425 6.4425L13.5 7.5L9 12L4.5 7.5L5.5575 6.4425Z"/>
+        </symbol>
+
+		<symbol id="ic-telegram" viewBox="0 0 18 18">
+            <path d="M15.75 2.25L2.25 7.8975V8.6325L7.38 10.62L9.36 15.75H10.095L15.75 2.25Z" fill="#4A90E2"/>
+        </symbol>
+
+		<symbol id="ic-link" viewBox="0 0 18 18">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M8.25 11.25H5.25C4.0125 11.25 3 10.2375 3 9C3 7.7625 4.0125 6.75 5.25 6.75H8.25V5.25H5.25C3.18 5.25 1.5 6.93 1.5 9C1.5 11.07 3.18 12.75 5.25 12.75H8.25V11.25ZM12.75 5.25H9.75V6.75H12.75C13.9875 6.75 15 7.7625 15 9C15 10.2375 13.9875 11.25 12.75 11.25H9.75V12.75H12.75C14.82 12.75 16.5 11.07 16.5 9C16.5 6.93 14.82 5.25 12.75 5.25ZM12 8.25H6V9.75H12V8.25Z" fill="#4A90E2"/>
+        </symbol>
+
+        <symbol id="ic-img" viewBox="0 0 18 18">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M6 1.5H15C15.825 1.5 16.5 2.175 16.5 3V12C16.5 12.825 15.825 13.5 15 13.5H6C5.175 13.5 4.5 12.825 4.5 12V3C4.5 2.175 5.175 1.5 6 1.5ZM15 12V3H6V12H15ZM8.625 8.7525L9.8925 10.4475L11.7525 8.1225L14.25 11.25H6.75L8.625 8.7525ZM1.5 15V4.5H3V15H13.5V16.5H3C2.175 16.5 1.5 15.825 1.5 15Z" fill="#4A90E2"/>
+        </symbol>       
+	</svg>
+
+	<!-- JavaScript -->
+	<script src="js/jquery-3.4.1.min.js"></script>
+	<script src="js/slick.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

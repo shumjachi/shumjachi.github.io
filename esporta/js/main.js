@@ -40,12 +40,10 @@ $(window).resize(function() {
 });
 
 $(window).scroll(function(){
-	if ($(window).width() < 700) {
-		if ($(this).scrollTop() >= 50) {
-			$('.header .head-line').addClass('fixed');
-		} else {
-			$('.header .head-line').removeClass('fixed');
-		}
+	if ($(this).scrollTop() >= 50) {
+		$('.header .head-line').addClass('fixed');
+	} else {
+		$('.header .head-line').removeClass('fixed');
 	}
 });
 

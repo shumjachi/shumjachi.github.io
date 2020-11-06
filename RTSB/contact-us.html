@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>RTSB - Home</title>
+
+	<link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;700&display=swap" rel="stylesheet">
+
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css" integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ==" crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js" integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew==" crossorigin=""></script>
+</head>
+<body class="page-contact">
+	<div class="wrapper">
+		<!-- HEADER -->
+		<header class="header">
+			<div class="center d-flex">
+				<a href="/" class="logo">
+					<img src="img/logo.svg" alt="">
+				</a>
+
+				<a href="#" class="burger">
+					<span></span>
+					<span></span>
+					<span></span>
+				</a>
+				<nav class="nav hidden-mobile">
+					<a href="#" class="close-nav hidden-desktop visible-mobile">
+						<span></span><span></span>
+					</a>
+					<ul class="d-flex">
+						<li><a href="#">ABOUT US</a></li>
+						<li><a href="#">WHAT WE DO</a></li>
+						<li><a href="#">SERVICES</a></li>
+						<li><a href="#">OUR GAMES</a></li>
+						<li><a href="#">WHO WE ARE</a></li>
+					</ul>
+				</nav>
+			</div>
+		</header>
+		<!-- // HEADER -->
+
+		<div class="content">
+			<aside class="sidebar">
+				<div class="t-center">
+					<img src="img/ic-match-bingo.svg" alt="">
+				</div>
+			</aside>
+			<main class="main">
+				<h1 class="title">CONTACT US</h1>
+
+				<div class="contacts-info d-flex">
+					<div class="map">
+							<span class="title">RTSB Limited, Office 2,<br>
+							5 Queen Street, Norwich,<br>
+							England. NR2 4SG</span>
+							<div id="map"></div>
+					</div>
+					<div class="address">
+						<div class="inner">
+							<div class="item">
+								<i class="ic-tel"></i>
+								<a href="tel:+123 456 789 234">+123 456 789 234</a>
+								<span>Mobile</span>
+							</div>
+							<div class="item">
+								<i class="ic-mail"></i>
+								<a href="mailto:john.doe@mail.com">john.doe@mail.com</a>
+								<span>Home</span>
+							</div>
+							<div class="item">
+								<i class="ic-map"></i>
+								<p>RTSB Limited, Office 2,
+								5 Queen Street, Norwich,
+								England. NR2 4SG</p>
+							</div>
+						</div>
+					</div class="address">
+				</div>
+			</main>
+		</div>
+	</div>
+
+	<!-- FOOTER -->
+	<div class="footer">
+		<div class="center">
+			<div class="item">
+				<div class="inner">
+					<a href="/" class="logo-footer">
+						<img src="img/logo.svg" alt="">
+					</a>
+					<p class="copy">&copy; RTSB LTD 2020</p>
+				</div>
+			</div>
+
+			<div class="item">
+				<ul>
+					<li><a href="#">Terms & Conditions</a></li>
+					<li><a href="#">Contact</a></li>
+					<li><a href="#">Technology</a></li>
+					<li><a href="#">Careers</a></li>
+				</ul>
+			</div>
+
+			<div class="item">
+				<ul class="social-footer">
+					<li><a href="#"><i class="icon ic-facebook"></i><span>Facebook</span></a></li>
+					<li><a href="#"><i class="icon ic-twiter"></i><span>Twitter</span></a></li>
+					<li><a href="#"><i class="icon ic-instagram"></i><span>Instagram</span></a></li>
+				</ul>
+			</div>
+
+			<div class="item">
+				<form action="#" class="form-subscription">
+					<h4>Subscribe for new and product launches</h4>
+					<div class="input-group d-flex">
+						<input type="search" placeholder="Email Address">
+						<input type="submit" value="OK">
+					</div>
+				</form>
+			</div>
+
+			<div class="item">
+				<p>RTSB Limited, Office 2,<br>
+				5 Queen Street, Norwich,<br>
+				England. NR2 4SG</p>
+			</div>
+		</div>
+	</div>
+	<!-- // FOOTER -->
+
+
+
+
+
+
+	    <!-- 4. Пишем скрипт который создаст и отобразит карту Google Maps на странице. -->
+	    <script type="text/javascript">
+					function initMap() {
+							var myLatLng = {lat: 52.630564, lng: 1.298182};
+
+							var styles = [
+								{
+											"featureType": "all",
+											"elementType": "geometry.fill",
+											"stylers": [
+													{
+															"weight": "2.00"
+													}
+											]
+									},
+									{
+											"featureType": "all",
+											"elementType": "geometry.stroke",
+											"stylers": [
+													{
+															"color": "#9c9c9c"
+													}
+											]
+									},
+									{
+											"featureType": "all",
+											"elementType": "labels.text",
+											"stylers": [
+													{
+															"visibility": "on"
+													}
+											]
+									},
+									{
+											"featureType": "landscape",
+											"elementType": "all",
+											"stylers": [
+													{
+															"color": "#f2f2f2"
+													}
+											]
+									},
+									{
+											"featureType": "landscape",
+											"elementType": "geometry.fill",
+											"stylers": [
+													{
+															"color": "#6cd5d5"
+													},
+													{
+															"visibility": "on"
+													}
+											]
+									},
+									{
+											"featureType": "landscape.man_made",
+											"elementType": "geometry.fill",
+											"stylers": [
+													{
+															"color": "#6cd5d5"
+													}
+											]
+									},
+									{
+											"featureType": "poi",
+											"elementType": "all",
+											"stylers": [
+													{
+															"visibility": "off"
+													}
+											]
+									},
+									{
+											"featureType": "road",
+											"elementType": "all",
+											"stylers": [
+													{
+															"saturation": -100
+													},
+													{
+															"lightness": 45
+													}
+											]
+									},
+									{
+											"featureType": "road",
+											"elementType": "geometry.fill",
+											"stylers": [
+													{
+															"color": "#89dddd"
+													}
+											]
+									},
+									{
+											"featureType": "road",
+											"elementType": "geometry.stroke",
+											"stylers": [
+													{
+															"color": "#89dddd"
+													}
+											]
+									},
+									{
+											"featureType": "road",
+											"elementType": "labels.text.fill",
+											"stylers": [
+													{
+															"color": "#7b7b7b"
+													}
+											]
+									},
+									{
+											"featureType": "road",
+											"elementType": "labels.text.stroke",
+											"stylers": [
+													{
+															"color": "#ffffff"
+													}
+											]
+									},
+									{
+											"featureType": "road.highway",
+											"elementType": "all",
+											"stylers": [
+													{
+															"visibility": "simplified"
+													}
+											]
+									},
+									{
+											"featureType": "road.arterial",
+											"elementType": "labels.icon",
+											"stylers": [
+													{
+															"visibility": "off"
+													}
+											]
+									},
+									{
+											"featureType": "transit",
+											"elementType": "all",
+											"stylers": [
+													{
+															"visibility": "off"
+													}
+											]
+									},
+									{
+											"featureType": "water",
+											"elementType": "all",
+											"stylers": [
+													{
+															"color": "#46bcec"
+													},
+													{
+															"visibility": "on"
+													}
+											]
+									},
+									{
+											"featureType": "water",
+											"elementType": "geometry.fill",
+											"stylers": [
+													{
+															"color": "#c8d7d4"
+													}
+											]
+									},
+									{
+											"featureType": "water",
+											"elementType": "labels.text.fill",
+											"stylers": [
+													{
+															"color": "#070707"
+													}
+											]
+									},
+									{
+											"featureType": "water",
+											"elementType": "labels.text.stroke",
+											"stylers": [
+													{
+															"color": "#ffffff"
+													}
+											]
+									}
+							];
+
+							var map = new google.maps.Map(document.getElementById('map'), {
+									zoom: 17,  // определяет масштаб карты, ее "зум"
+									center: myLatLng,
+									styles: styles,
+									keyboardShortcuts: false, // MUST be off, thanks to https://issuetracker.google.com/issues/73644075 breaking all key inputs across Shadow DOM
+							    streetViewControl: false,
+							    mapTypeControl: false,
+									zoomControl : false
+							});
+
+							var marker = new google.maps.Marker({position: myLatLng, map: map, icon: 'img/marker-white.svg'});
+					}
+	    </script>
+
+	    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDjef2YjzmuhB02sLGL12iybWQeNmOfuqY" onload="initMap()"></script>
+
+	<script src="js/jquery-3.5.1.min.js"></script>  
+	<script src="js/slick.js"></script>  
+	<script src="js/main.js"></script>  
+</body>
+</html>
