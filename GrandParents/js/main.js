@@ -70,6 +70,30 @@ $('.product-slider').slick({
 	slidesToScroll: 4,
 	prevArrow: '<span class="slick-arrow slick-prev"><svg width="23" height="26"><use xlink:href="#ic-arrslick"></use></svg></span>',
 	nextArrow: '<span class="slick-arrow slick-next"><svg width="23" height="26"><use xlink:href="#ic-arrslick"></use></svg></span>',
+	responsive: [
+		{
+			breakpoint: 850,
+		    settings: {
+		        slidesToShow: 3,
+		        slidesToScroll: 3
+		    }
+		},
+		{
+			breakpoint: 768,
+		    settings: {
+		        slidesToShow: 2,
+		        slidesToScroll: 2
+		    }
+		},
+		{
+			breakpoint: 500,
+		    settings: {
+		        slidesToShow: 1,
+		        slidesToScroll: 1,
+		        dots: true
+		    }
+		}
+	]
 });
 
 $('.recommended-slider').slick({
@@ -78,6 +102,54 @@ $('.recommended-slider').slick({
 	slidesToScroll: 3,
 	prevArrow: '<span class="slick-arrow slick-prev"><svg width="23" height="26"><use xlink:href="#ic-arrslick"></use></svg></span>',
 	nextArrow: '<span class="slick-arrow slick-next"><svg width="23" height="26"><use xlink:href="#ic-arrslick"></use></svg></span>',
+	responsive: [
+		{
+			breakpoint: 768,
+		    settings: {
+		        slidesToShow: 2,
+		        slidesToScroll: 2
+		    }
+		}
+	]
+});
+
+function slickadd() {
+	if ($(window).width() < 500) {
+		$('.sidebar-product .inner').not('.slick-initialized').slick({
+			infinite: true,
+			slidesToShow: 1,
+			slidesToScroll: 1,
+			prevArrow: '<span class="slick-arrow slick-prev"><svg width="23" height="26"><use xlink:href="#ic-arrslick"></use></svg></span>',
+			nextArrow: '<span class="slick-arrow slick-next"><svg width="23" height="26"><use xlink:href="#ic-arrslick"></use></svg></span>',
+			dots: true
+		});
+	} else {
+		$('.sidebar-product .inner').filter('.slick-initialized').slick('unslick');
+	}
+}
+
+function mobgallery() {
+	if ($(window).width() < 768) {
+		$('.gallery-mob').not('.slick-initialized').slick({
+			infinite: true,
+			slidesToShow: 1,
+			slidesToScroll: 1,
+			prevArrow: '<span class="slick-arrow slick-prev"><svg width="23" height="26"><use xlink:href="#ic-arrslick"></use></svg></span>',
+			nextArrow: '<span class="slick-arrow slick-next"><svg width="23" height="26"><use xlink:href="#ic-arrslick"></use></svg></span>',
+			dots: true,
+			arrows: false
+		});
+	} else {
+		$('.gallery-mob').filter('.slick-initialized').slick('unslick');
+	}
+}
+
+slickadd();
+mobgallery();
+
+
+$(window).resize(function() {
+	slickadd();
 });
 
 /* 04 POPUP
@@ -154,3 +226,33 @@ document.querySelector('.js-top').addEventListener('click', function() {
 	    else window.clearInterval( scrollToTop );
 	}, 0);
 });
+
+/* 07 MOBILE MENU
+---------------------------------------------------- */
+function MobileMenu() {
+	let btnNav = document.querySelector('.btn-nav');
+	let btnNavClose = document.querySelector('.btn-navclose');
+	let nav = document.querySelector('nav');
+	let link = nav.querySelectorAll('a');
+
+	btnNav.addEventListener('click', function() {
+		nav.classList.toggle('active');
+	});
+
+	btnNavClose.addEventListener('click', function() {
+		nav.classList.remove('active');
+	});
+
+	for (var i = 0; i < link.length; i++) {
+		link[i].addEventListener('click', function(e) {
+			let parent = this.parentNode;
+			let drop = parent.querySelector('.drop');
+
+			if (drop != null) {
+				drop.classList.toggle('active');
+			}
+		});
+	}
+}
+
+MobileMenu();
