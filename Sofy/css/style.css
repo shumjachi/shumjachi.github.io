@@ -218,6 +218,14 @@ h2.title svg {
 .home .dots li:last-child {border-radius: 0 1px 1px 0;}
 .home .dots li:last-child:after {display: none;}
 
+/* WHAT SOFY
+---------------------------------------------------- */
+.what-sofy .center {
+	display: flex;
+}
+.what-sofy .content {padding-left: 107px;}
+
+
 /* MAIN
 ---------------------------------------------------- */
 
