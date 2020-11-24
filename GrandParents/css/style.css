@@ -1209,10 +1209,13 @@ h5.title {
 
 /* 13 PRODUCT WRAP
 ---------------------------------------------------- */
-.wrap-products .row-product {
+.wrap-products .row-product,
+.woocommerce-page .products {
     margin-right: -10px;
     margin-left: -10px;
     flex-wrap: wrap;
+    display: flex;
+    justify-content: space-between;
 }
 .wrap-products .card {
     margin-bottom: 85px;
