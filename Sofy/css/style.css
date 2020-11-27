@@ -1441,6 +1441,17 @@ section.get-started img {margin-bottom: -150px;}
 	fill: #000117;
 }
 
+.page-about .integrations {padding: 103px 0 180px 0;}
+.page-about .integrations ul {max-width: 100%;}
+.page-about .integrations ul li {
+	width: 16.66%;
+	text-align: center;
+}
+
+.page-about .wrap-articles {
+	padding: 0 0 130px 0;
+	margin-top: 0;
+}
 
 /* ---------------------------------------------- */
 /*               MEDIA QUERI                      */
