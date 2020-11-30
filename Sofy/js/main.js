@@ -464,3 +464,18 @@ function accordeon() {
 }
 
 accordeon();
+
+/* SWITCH
+---------------------------------------------------- */
+let liSwitchFirst = document.querySelector('.switch li:first-child');
+let liSwitchLast = document.querySelector('.switch li:last-child');
+
+liSwitchFirst.addEventListener('click', function(e) {
+	liSwitchFirst.classList.add('active');
+	liSwitchLast.classList.remove('active');
+});
+
+liSwitchLast.addEventListener('click', function(e) {
+	liSwitchLast.classList.add('active');
+	liSwitchFirst.classList.remove('active');
+});
