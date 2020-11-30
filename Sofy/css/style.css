@@ -2794,14 +2794,12 @@ section.get-started img {margin-bottom: -150px;}
     	height: 130px;
 	}
 
-	.partner-slider {min-width: 100%;}
-	.partner .list-slides {
-	    margin-left: 0;
-	}
 	.partner-slider .slide-item {
-	    min-width: 100%;
-	    width: 100%;
-	    padding: 0;
-	    flex-shrink: 1;
+		min-width: 14%;
+    	width: 14%;
+	}
+
+	.partner-slider .dot-wrap {
+	    max-width: 180px;
 	}
 }

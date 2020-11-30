@@ -225,7 +225,11 @@ function Slider(options) {
 			let itemWidth = slider[i].querySelectorAll('.slide-item')[0].offsetWidth;
 			let procentWidth = Math.round(itemWidth / trackWidth * 100);
 
-			if (procentWidth == 17) {
+			if (procentWidth == 14) {
+				p = 14;
+			} else if (procentWidth == 15) {
+				p = 15;
+			} else if (procentWidth == 17) {
 				p = 16.6;
 			} else if (procentWidth == 20) {
 				p = 20;
