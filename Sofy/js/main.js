@@ -439,21 +439,22 @@ searchForm();
 ---------------------------------------------------- */
 function accordeon() {
 	let accordeon = document.querySelectorAll('.accordeon');
-	let item = null;
 
 	if (accordeon != null) {
 		for (var i = 0; i < accordeon.length; i++) {
 			item = accordeon[i].querySelectorAll('.item-accordeon');
 
-			for (var i = 0; i < item.length; i++) {
-				let btn = item[i].querySelector('.btn-accordeon');
-
+			for (var j = 0; j < item.length; j++) {
+				let btn = item[j].querySelector('.btn-accordeon');
+				
 				btn.addEventListener('click', openAccordeon);
 			}
 		}
 	}
 
 	function openAccordeon(e) {
+		let item = this.closest('.accordeon').querySelectorAll('.item-accordeon');
+
 		for (var i = 0; i < item.length; i++) {
 			item[i].classList.remove('active');
 		}
