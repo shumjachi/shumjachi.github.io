@@ -2707,6 +2707,25 @@ section.get-started img {margin-bottom: -150px;}
 	    max-width: 360px;
 	    margin-left: -65px;
 	}
+
+	/* animation */
+	.what-sofy lottie-player {
+		margin-left: -39px;
+    	min-width: 360px;
+    	width: 360px;
+	}
+
+	.enginers .first-anim {
+		min-width: 735px;
+		width: 735px;
+		margin-left: -55px;
+	}
+
+	.enginers .last-anim {
+		min-width: 735px;
+		width: 735px;
+		margin-left: -50px;
+	}
 }
 
 @media screen and (max-width: 550px) {
