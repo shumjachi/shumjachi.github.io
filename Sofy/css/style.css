@@ -2111,6 +2111,13 @@ section.get-started img {margin-bottom: -150px;}
 	.watch p br {display: none;}
 
 	.enginers .slide {min-width: inherit;}
+	.enginers .content {
+		min-width: 300px;
+		max-width: 300px;
+	}
+	.enginers .content p br {display: none;}
+
+	.presentation-slider {margin-left: 0;}
 }
 
 @media screen and (max-width: 1165px) {	
@@ -2187,6 +2194,7 @@ section.get-started img {margin-bottom: -150px;}
 
 	.enginers .content {
 	    min-width: 100%;
+	    max-width: 100%;
 	    position: relative;
 	}
 	.enginers .content br {display: none;}
@@ -2445,7 +2453,7 @@ section.get-started img {margin-bottom: -150px;}
 		position: static;
 		display: block;
 		margin: 0 auto;
-		min-width: 452px;
+		min-width: 100%;
 	}
 	.home > .center {
 	    position: static;
@@ -2801,11 +2809,8 @@ section.get-started img {margin-bottom: -150px;}
 }
 
 @media screen and (max-width: 500px) {
-	.home .bg img:last-child {
-		position: relative;
-		right: inherit;
-		left: -40px;
-	}
+	.home .bg .center {justify-content: center;}
+	.home .bg img:last-child {min-width: 450px;}
 
 	.what-sofy .slide {min-width: auto;}
 
