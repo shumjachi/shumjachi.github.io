@@ -2066,8 +2066,16 @@ section.get-started img {margin-bottom: -150px;}
 
 @media screen and (max-width: 1300px) {
 	/* home */
+	.home {min-height: 600px;}
+	.home .bg .center {
+		display: flex;
+		justify-content: flex-end;
+	}
 	.home .bg img:first-child {display: none;}
-	.home .bg img:nth-child(2) {right: -410px;}
+	.home .bg img:nth-child(2) {
+		right: 0;
+		max-width: 60%;
+	}
 
 	/* popular */
 	.popular {padding: 0 15px;}
@@ -2100,6 +2108,8 @@ section.get-started img {margin-bottom: -150px;}
 	/* marketing */
 	.page-marketing .popular .center {padding: 20px;}
 	.watch p br {display: none;}
+
+	.enginers .slide {min-width: inherit;}
 }
 
 @media screen and (max-width: 1165px) {	
