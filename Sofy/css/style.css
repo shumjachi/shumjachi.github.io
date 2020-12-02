@@ -70,6 +70,60 @@
     font-display: swap;
 }
 
+@font-face {
+    font-family: 'NotoSansTC';
+    src: url('NotoSansTC-Light-Alphabetic.woff2') format('woff2'),
+        url('NotoSansTC-Light-Alphabetic.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'NotoSansTC';
+    src: url('../fonts/NotoSansTC-Bold-Alphabetic.woff2') format('woff2'),
+        url('../fonts/NotoSansTC-Bold-Alphabetic.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'NotoSansTC';
+    src: url('../fonts/NotoSansTC-Black-Alphabetic.woff2') format('woff2'),
+        url('../fonts/NotoSansTC-Black-Alphabetic.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'NotoSansTC';
+    src: url('../fonts/NotoSansTC-Medium-Alphabetic.woff2') format('woff2'),
+        url('../fonts/NotoSansTC-Medium-Alphabetic.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'NotoSansTC';
+    src: url('../fonts/NotoSansTC-Thin-Alphabetic.woff2') format('woff2'),
+        url('../fonts/NotoSansTC-Thin-Alphabetic.woff') format('woff');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'NotoSansTC';
+    src: url('../fonts/NotoSansTC-Regular-Alphabetic.woff2') format('woff2'),
+        url('../fonts/NotoSansTC-Regular-Alphabetic.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -88,10 +142,13 @@ html, body {height: 100%;}
 
 body {
     background: #fff;
-    font: normal 18px/39px 'Noto Sans', sans-serif;
+    font: normal 18px/39px 'NotoSansTC', sans-serif;
     color: #060C3B;
     background: #FCFAF8;
+    cursor: url(../img/cursor.png), auto;
+    overflow-x: hidden;
 }   
+body.cursor-white {cursor: url(../img/cursor-white.png), auto;}
 
 img {
     max-width: 100%;
@@ -209,12 +266,10 @@ p + p {margin-top: 27px;}
 	min-width: 10px;
 	height: 8px;
 	stroke: #00B975;
-	margin-left: 10px;
+	margin-left: 2px;
 	transition: all 0.3s ease;
 	display: inline-block;
 	vertical-align: middle;
-	position: relative;
-    top: 2px;
 }
 .btn-link:hover svg {margin-left: 15px;}
 .btn-link:hover span:after {opacity: 1;}
@@ -258,6 +313,33 @@ p + p {margin-top: 27px;}
 	background: #fff;
 	border: 2px solid #fff;
 	color: #00B975;
+}
+
+/* cursor */
+.cursor {
+    width: 35px;
+    height: 35px;
+    border: 1px solid #00D184;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    z-index: 9999999;
+    transition: transform 100ms ease-out, 
+    			border 0.3s ease, 
+    			background 0.3s ease;
+}
+.cursor.active {
+	border-color: rgba(0,209,132,.5);
+	background: rgba(0,209,132,.5);
+}
+.cursor.cursor-white {
+	border-color: #fff;
+}
+.cursor.cursor-white.active {
+	border-color: rgba(255,255,255,.5);
+	background: rgba(255,255,255,.5);
 }
 
 /* main */
@@ -460,6 +542,7 @@ p + p {margin-top: 27px;}
 	min-width: 597px;
 	margin-left: -87px;
 }
+.what-sofy .content {max-width: 696px;}
 .what-sofy h2.title {margin-bottom: 11px;}
 .what-sofy ul {
 	display: flex;
@@ -473,7 +556,7 @@ p + p {margin-top: 27px;}
 	align-items: center;
 	justify-content: space-between;
 }
-.what-sofy ul p {
+.what-sofy .content ul p {
 	font-weight: bold;
 	font-size: 12px;
 	line-height: 21px;
@@ -490,8 +573,8 @@ p + p {margin-top: 27px;}
 	position: relative;
 }
 .enginers h2.title {margin-bottom: 19px;}
-.enginers p + p {margin-top: 55px;}
-.enginers ul {margin-top: 60px;}
+.enginers p + p {margin-top: 20px;}
+.enginers ul {margin-top: 20px;}
 .enginers ul li {
 	font-weight: 500;
 	font-size: 14px;
@@ -513,19 +596,27 @@ p + p {margin-top: 27px;}
     margin-right: 40px;
     margin-top: 80px;
 }
+.nav-position.fixed {
+	position: fixed;
+	top: 0;
+	left: 50px;
+	z-index: 999;
+	margin-top: 0;
+}
 .nav-position span {
 	display: block;
-	font-weight: bold;
+	font-weight: normal;
 	font-size: 14px;
 	line-height: 34px;
-	color: #060C3B;
+	color: #82849C;	
 	transition: all 0.3s ease;
 	white-space: nowrap;
 }
 .nav-position span + span {margin-top: 10px;}
 .nav-position span.active {
-	margin-left: 25px;
-	color: #82849C;
+	color: #060C3B;
+	margin-left: -25px;
+	font-weight: bold;
 }
 
 /* PRESENTATION
@@ -2155,6 +2246,7 @@ section.get-started img {margin-bottom: -150px;}
 	h1.title br {display: none;}
 
 	/* what sofy */
+	.what-sofy .content {max-width: 100%;}
 	.what-sofy ul {flex-wrap: wrap;}
 	.what-sofy ul li {
 		margin-bottom: 50px;

@@ -474,12 +474,75 @@ accordeon();
 let liSwitchFirst = document.querySelector('.switch li:first-child');
 let liSwitchLast = document.querySelector('.switch li:last-child');
 
-liSwitchFirst.addEventListener('click', function(e) {
-	liSwitchFirst.classList.add('active');
-	liSwitchLast.classList.remove('active');
-});
+if (liSwitchFirst != null) {
+	liSwitchFirst.addEventListener('click', function(e) {
+		liSwitchFirst.classList.add('active');
+		liSwitchLast.classList.remove('active');
+	});
+}
 
-liSwitchLast.addEventListener('click', function(e) {
-	liSwitchLast.classList.add('active');
-	liSwitchFirst.classList.remove('active');
-});
+if (liSwitchLast != null) {
+	liSwitchLast.addEventListener('click', function(e) {
+		liSwitchLast.classList.add('active');
+		liSwitchFirst.classList.remove('active');
+	});
+}
+
+/* CURSOR
+---------------------------------------------------- */
+function cursor() {
+	const cursor = document.querySelector('.cursor');
+
+	document.addEventListener('mousemove', e => {
+		cursor.setAttribute('style', 'transform: translate(' + (e.pageX - 15) + 'px, ' + (e.pageY - 15) + 'px);');
+
+		if (e.target.closest('a') != null || e.target.closest('button') != null) {
+			cursor.classList.add('active');
+		} else {
+			cursor.classList.remove('active');
+		}
+
+		if (e.target.closest('.bg-green') != null) {
+			cursor.classList.add('cursor-white');
+			document.body.classList.add('cursor-white');
+		} else {
+			cursor.classList.remove('cursor-white');
+			document.body.classList.remove('cursor-white');
+		}
+	});
+}
+
+cursor();
+
+/* NAV POSITION
+---------------------------------------------------- */
+function navPosition() {
+	const nav = document.querySelector('.nav-position');
+	const span = nav.querySelectorAll('span');
+	const enginers = document.querySelector('.enginers + .enginers');
+
+	const boundary = nav.getBoundingClientRect();
+	const boundaryEnginers = enginers.getBoundingClientRect();
+	console.log(enginers.clientHeight);
+	document.addEventListener('scroll', () => {
+		if (window.pageYOffset >= boundary.top + 365) {
+			nav.classList.add('fixed');			
+		} else {
+			nav.classList.remove('fixed');
+		}
+
+		if (window.pageYOffset >= boundaryEnginers.top + 365) {
+			span[0].classList.remove('active');		
+			span[1].classList.add('active');		
+		} else {
+			span[0].classList.add('active');		
+			span[1].classList.remove('active');	
+		}
+
+		if (window.pageYOffset >= boundaryEnginers.top + 300 + enginers.clientHeight) {
+			nav.classList.remove('fixed');		
+		}
+	});
+}
+
+navPosition();
