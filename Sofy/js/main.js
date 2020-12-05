@@ -1,7 +1,6 @@
 /* SLIDER
 ---------------------------------------------------- */
 function Slider(options) {
-
 	let slider = document.querySelectorAll(options.elem);
 	let interval = null;
 
@@ -11,11 +10,14 @@ function Slider(options) {
 		let track = slider[i].querySelector('.track');
 		let slideItem = slider[i].querySelectorAll('.slide-item');
 
-		if (slider[i].querySelector('.next') != null)
+		console.log(slider[i].querySelector('.next'));
+		if (slider[i].querySelector('.next') != null) {
 			next = slider[i].querySelector('.next').addEventListener('click', nextSlid);
+		}
 		
-		if (slider[i].querySelector('.prev') != null)
+		if (slider[i].querySelector('.prev') != null) {
 			prew = slider[i].querySelector('.prev').addEventListener('click', prewSlid);
+		}
 
 		let clone = 4;
 		let countDot = 0;
@@ -402,8 +404,10 @@ function Slider(options) {
 		// autoplay slide
 		function autoplay() {
 			interval = setInterval(function() {
-				if (!slider[i].querySelector('.prev').classList.contains('active'))
-					slider[i].querySelector('.prev').classList.add('active');
+				if (slider[i].querySelector('.prev') != null) {
+					if (!slider[i].querySelector('.prev').classList.contains('active'))
+						slider[i].querySelector('.prev').classList.add('active');
+				}				
 
 				dots[countDot].classList.remove('activ-dot');
 
@@ -432,6 +436,45 @@ function Slider(options) {
 			clearInterval(interval);
 		}		
 
+		// autoplay time slide 
+		let countAutoplayTime = 0;
+		let timeout = null;
+		function autoplayTimeSlide(time) {
+			let innerTime = options.autoplayTimeSlide;
+
+			timeout = setTimeout(function() {
+				dots[countDot].classList.remove('activ-dot');
+
+			  	slideSpeed(0.5);
+			  	btnDisabled(this);
+
+			  	countDot ++;
+			  	count = count + options.slidesToScroll;
+
+			  	setTransform();
+
+			  	if (count >= slideItem.length + clone) {
+			  		countDot = 0;
+			  		count = clone;
+
+			  		controlPosition();
+			  	}
+
+			  	dots[countDot].classList.add('activ-dot');
+
+			  	countAutoplayTime++;
+			  	autoplayTimeSlide(innerTime[countAutoplayTime]);
+
+			  	if (dots[countDot].getAttribute('data-index') >= dots.length - 1) {
+			  		clearInterval(timeout);
+			  	}
+			}, time);
+		}
+
+		if (options.autoplayTimeSlide) {
+			autoplayTimeSlide(options.autoplayTimeSlide[0]);
+		} 
+
 		window.addEventListener('resize', setTransform);
 	}
 }
@@ -441,8 +484,7 @@ let home = new Slider({
 	slidesToScroll: 1,
 	vertical: false,
 	infinite: true,
-	autoplay: true,
-	autoplayTime: 5000
+	autoplayTimeSlide: [6000,6000,6000,6000,5000]
 });
 
 let presentation = new Slider({
