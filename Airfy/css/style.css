@@ -1,0 +1,213 @@
+@font-face {
+	font-family: AvenirNext-Regular;
+	src: url("../fonts/AvenirNext-Regular.woff2") format("woff2"), 
+	url("../fonts/AvenirNext-Regular.woff") format("woff");
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: AvenirNext-DemiBold;
+	src: url("../fonts/AvenirNext-DemiBold.woff2") format("woff2"), 
+	url("../fonts/AvenirNext-DemiBold.woff") format("woff");
+	font-weight: normal;
+	font-style: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    list-style: none;
+    border: none;
+    text-decoration: none;
+
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+
+/* tags */
+html, body {height: 100%;}
+
+body {
+    background: #fff;
+    font-family: 'AvenirNext-Regular', serif;
+    font-size: 16px;
+    line-height: 24px;
+    color: #fff;
+    background: #72BA8A;
+}   
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+h1 {
+	font-weight: normal;
+	font-size: 30px;
+	line-height: 42px;
+	margin-bottom: 20px;
+}
+
+.btn {
+	display: inline-block;
+	min-width: 150px;
+	max-width: 190px;
+	height: 48px;
+	background: #fff;
+	font: 14px 'AvenirNext-DemiBold', serif;
+	border-radius: 4px;
+	padding: 0 38px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: #72BA8A;
+	margin: 0 auto;
+	cursor: pointer;
+	transition: all 0.3s ease;
+}
+.btn:hover {
+	background: #f4f4f4;
+}
+
+p {
+	font-size: 16px;
+	line-height: 24px;
+}
+p a {
+	color: #5B946E;
+	text-decoration: none;
+}
+p a:hover {text-decoration: underline;}
+
+.mt36 {margin-top: 36px;}
+.mb22 {margin-bottom: 22px;}
+.mt44 {margin-top: 44px !important;}
+.mb40 {margin-bottom: 40px;}
+.mb18 {margin-bottom: 18px;}
+.mt39 {margin-top: 39px;}
+.mt20 {margin-top: 20px;}
+.mb36 {margin-bottom: 36px !important;}
+
+/* display */
+.flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.d-none {display: none;}
+.svg-icon {
+    height: 0;
+    overflow: hidden;
+    position: absolute;
+    bottom: 0;
+    z-index: -999999;
+}
+
+/* text */
+.tx-left {text-align: left;}
+.tx-right {text-align: right;}
+.tx-center {text-align: center;}
+
+/* main */
+.center {
+    width: 100%;
+    max-width: 1276px;
+    min-width: 250px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.box {
+	max-width: 670px;
+	margin: 0 auto;
+	padding-bottom: 40px;
+}
+
+.logo {
+	display: inline-block;
+	background: url(../img/logo.svg) no-repeat center;
+	padding: 60px 0 67px 0;
+	width: 100%;
+}
+
+.content {
+	background: #8EC7A1;
+	border-radius: 4px;
+	padding: 43px 20px 36px 20px;
+	color: #fff;
+	box-shadow: 0 5px 20px rgba(0,0,0,.06);
+}
+
+.page-welcome h1 {margin-bottom: 43px;}
+.page-welcome .btn {max-width: 150px;}
+.page-welcome p {
+	font-size: 13px;
+	line-height: 22px;
+}
+
+.fraction {
+	font: 11px 'AvenirNext-DemiBold', serif;
+	color: #5B946E;
+	margin-bottom: 20px;
+}
+
+.checkbox {
+	display: block;
+	border-radius: 4px;
+	background: #8EC7A1;
+	min-height: 50px;
+	padding: 0 20px;
+	display: flex;
+	align-items: center;
+	font-size: 16px;
+	color: #fff;
+	cursor: pointer;
+}
+.checkbox + .checkbox {margin-top: 5px;}
+.checkbox input {display: none;}
+.checkbox .checkbox-input {
+	width: 16px;
+	height: 16px;
+	border-radius: 50%;
+	border: 1px solid #707070;
+	margin-right: 10px;
+}
+.checkbox input:checked + .checkbox-input {background: #707070;}
+
+.page-question h1 {font: 22px/32px 'AvenirNext-DemiBold', serif;}
+
+form.bg {
+	background: #8EC7A1;
+	padding: 37px 20px 20px 20px;
+	border-radius: 4px;
+}
+form input,
+form textarea {
+	display: block;
+	height: 50px;
+	width: 100%;
+	border-radius: 4px;
+	border: 1px solid #5B946E;
+	background: transparent;
+	color: #B8DCC4;
+	padding: 0 20px;
+}
+form input + input {margin-top: 20px;}
+form textarea {
+	height: 138px;
+	resize: none;
+	padding-top: 17px;
+	padding-bottom: 17px;
+}
+form input::placeholder,
+form textarea::placeholder {color: #B8DCC4;}
+
+.page-finish .btn {min-width: 200px;}
+
+@media screen and (max-width: 768px) {
+	.box {padding: 0 15px;}
+}

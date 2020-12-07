@@ -414,22 +414,34 @@ p + p {margin-top: 27px;}
 	position: absolute;
 	top: 0;
 	left: 0;
-	
 }
 .dot-wrap span.activ-dot:before {
 	width: 100%;
 	transition: width 0.8s ease;
 }
-.home-slider .dot-wrap span:nth-child(1).activ-dot:before {transition: width 6s ease;}
-.home-slider .dot-wrap span:nth-child(2).activ-dot:before {transition: width 6s ease;}
-.home-slider .dot-wrap span:nth-child(3).activ-dot:before {transition: width 6s ease;}
-.home-slider .dot-wrap span:nth-child(4).activ-dot:before {transition: width 6s ease;}
-.home-slider .dot-wrap span:nth-child(5).activ-dot:before {transition: width 5s ease;}
+.home-slider .dot-wrap span:first-child:before {width: 0;}
+.home-slider .dot-wrap span:first-child:before {animation: wid 7s linear;}
 
-.presentation-slider .dot-wrap span.activ-dot:before,
+@keyframes wid {
+	0% {width: 0;}
+	100% {width: 100%;}
+}
+
+.home-slider .dot-wrap span:nth-child(2).activ-dot:before {transition: width 5.5s linear;}
+.home-slider .dot-wrap span:nth-child(3).activ-dot:before {transition: width 5.5s linear;}
+.home-slider .dot-wrap span:nth-child(4).activ-dot:before {transition: width 6s linear;}
+.home-slider .dot-wrap span:nth-child(5).activ-dot:before {transition: width 5s linear;}
+
 .partner-slider .dot-wrap span.activ-dot:before {
 	width: 100%;
 	transition: width 5s linear;
+}
+
+.presentation-slider .dot-wrap span:first-child:before {width: 0;}
+.presentation-slider .dot-wrap span:first-child:before {animation: wid 2.550s linear;}
+.presentation-slider .dot-wrap span.activ-dot:before {
+	width: 100%;
+	transition: width 2.550s linear;
 }
 
 .slider-prev {
@@ -513,6 +525,7 @@ p + p {margin-top: 27px;}
 	display: flex;
 	justify-content: space-between;
 	width: 100%;
+	overflow: hidden;
 }
 .home .bg .center {
 	display: flex;
@@ -534,6 +547,11 @@ p + p {margin-top: 27px;}
 .home .home-slider {
 	max-width: 400px;
 	overflow: hidden;
+}
+.home .slide-item {
+	display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
 }
 
 .home h2 {
@@ -2306,13 +2324,22 @@ section.get-started img {margin-bottom: -150px;}
 	.home .bg {padding-top: 50px;}
 	.home .bg .center lottie-player {
 	    min-width: 1200px;
-	    margin-left: -130px;
+	    margin-left: -315px;
 	}
 	.home h2 {
 		font-size: 35px;
 		line-height: 40px;
 	}
 	.dot-wrap span {width: 50px;}
+}
+
+@media screen and (max-width: 1050px) {
+	.home .bg .center lottie-player {margin-left: -185px;}
+	.footer-item p br {display: none;}
+	.footer-item {
+	    min-width: 130px;
+	    margin-right: 60px;
+	}
 }
 
 @media screen and (max-width: 1100px) {
@@ -2335,6 +2362,9 @@ section.get-started img {margin-bottom: -150px;}
 	.partner-slider .slide-item p {margin-top: 0;}
 	.partner-slider .name span {font-weight: normal;}
 	.partner-slider .dot-wrap {max-width: 600px;}
+
+	.presentation-slider {max-width: 500px;}
+	.presentation-slider .quote br {display: none;}
 }
 
 @media screen and (max-width: 1200px) {
@@ -2344,6 +2374,9 @@ section.get-started img {margin-bottom: -150px;}
 @media screen and (max-width: 991px) {
 	h2.title br, 
 	h1.title br {display: none;}
+
+	/* header */
+	.header {margin-top: 30px;}
 
 	/* what sofy */
 	.what-sofy .content {max-width: 100%;}
@@ -2612,12 +2645,17 @@ section.get-started img {margin-bottom: -150px;}
 	.nav .btn {display: none;}
 
 	/* home */
-	.home {flex-direction: column;}
+	.home {
+		display: flex;
+		justify-content: flex-end;
+		flex-direction: column;
+		min-height: 500px;
+	}
 	.home > .center {padding-bottom: 44px;}
 	.home .bg .center lottie-player {
 	    min-width: 800px;
 	    margin-left: 0;
-	    transform: translateX(-21%);
+	    transform: translateX(-19%);
 	}
 	.home > .center {position: static;}
 }
@@ -2636,10 +2674,7 @@ section.get-started img {margin-bottom: -150px;}
 	.header .center {justify-content: space-between;}
 
 	/* home */
-	.home {
-		display: block;
-	    padding-top: 0;
-	}
+	.home {padding-top: 0;}
 	.home h2 {
 		font-size: 32px;
 		line-height: 41px;
@@ -2692,7 +2727,8 @@ section.get-started img {margin-bottom: -150px;}
 	.presentation-slider .quote br {display: none;}
 
 	/* mobile */
-	.mobile {min-width: 1000px;}
+	.mobile {overflow: hidden;}
+	.mobile img {min-width: 1000px;}
 
 	/* footer */
 	.footer-content {flex-wrap: wrap;}

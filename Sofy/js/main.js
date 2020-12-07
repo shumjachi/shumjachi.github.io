@@ -484,7 +484,7 @@ let home = new Slider({
 	slidesToScroll: 1,
 	vertical: false,
 	infinite: true,
-	autoplayTimeSlide: [6000,6000,6000,6000,5000]
+	autoplayTimeSlide: [7000,5500,5500,6000,5000]
 });
 
 let presentation = new Slider({
@@ -493,7 +493,7 @@ let presentation = new Slider({
 	vertical: false,
 	infinite: false,
 	autoplay: true,
-	autoplayTime: 5000
+	autoplayTime: 2500
 });
 
 let partner = new Slider({
