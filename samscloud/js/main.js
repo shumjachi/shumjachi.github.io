@@ -56,61 +56,29 @@ function animationScrollPage() {
  
     document.addEventListener("DOMContentLoaded", scrolling, false);
  
-    let homeH1 = document.querySelector(".home h1");
-    let homeH2 = document.querySelector(".home h2");
-    let homeDescr = document.querySelector(".home p.descr");
-    let homeThumb = document.querySelector(".home .thumb");
-    let h2Title = document.querySelectorAll("h2.title");
-    let subtitle = document.querySelectorAll("p.subtitle");
-
-    let circle1 = document.querySelector(".list-circle li:nth-child(1) .circle");
-    let circle2 = document.querySelector(".list-circle li:nth-child(2) .circle");
-    let circle3 = document.querySelector(".list-circle li:nth-child(3) .circle");
-    let circle4 = document.querySelector(".list-circle li:nth-child(4) .circle");
-
-    let circleTitle1 = document.querySelector(".list-circle li:nth-child(1) .title");
-    let circleTitle2 = document.querySelector(".list-circle li:nth-child(2) .title");
-    let circleTitle3 = document.querySelector(".list-circle li:nth-child(3) .title");
-    let circleTitle4 = document.querySelector(".list-circle li:nth-child(4) .title");
-
-    let number1 = document.querySelector(".result ul li:nth-child(1) div.number");
-    let number2 = document.querySelector(".result ul li:nth-child(2) div.number");
-    let number3 = document.querySelector(".result ul li:nth-child(3) div.number");
-
-    let resultH31 = document.querySelector(".result ul li:nth-child(1) h3");
-    let resultH32 = document.querySelector(".result ul li:nth-child(2) h3");
-    let resultH33 = document.querySelector(".result ul li:nth-child(3) h3");
-
-    let resultThumb1 = document.querySelector(".result ul li:nth-child(1) .thumb span");
-    let resultThumb2 = document.querySelector(".result ul li:nth-child(2) .thumb span");
-    let resultThumb3 = document.querySelector(".result ul li:nth-child(3) .thumb span");
-
-    let deliveryCircle1 = document.querySelector(".delivery ul li:nth-child(1) div.icon");
-    let deliveryCircle2 = document.querySelector(".delivery ul li:nth-child(2) div.icon");
-    let deliveryCircle3 = document.querySelector(".delivery ul li:nth-child(3) div.icon");
-
-    let deliveryP1 = document.querySelector(".delivery ul li:nth-child(1) p");
-    let deliveryP2 = document.querySelector(".delivery ul li:nth-child(2) p");
-    let deliveryP3 = document.querySelector(".delivery ul li:nth-child(3) p");
-
-    let disclaimer = document.querySelector(".disclaimer p");
-
-    let effectsItem1 = document.querySelector(".effects .item:nth-last-child(1)");
-    let effectsItem2 = document.querySelector(".effects .item:nth-last-child(2)");
-
-    let girls = document.querySelector(".effects .descr .girls");
-
-    let li1 = document.querySelector(".home .group li:nth-child(1)");
-    let li2 = document.querySelector(".home .group li:nth-child(2)");
-    let li3 = document.querySelector(".home .group li:nth-child(3)");
-    let li4 = document.querySelector(".home .group li:nth-child(4)");
-    let li5 = document.querySelector(".home .group li:nth-child(5)");
+    let animation = document.querySelectorAll('.set-animation');
+    let text = document.querySelectorAll('.set-animtext');
  
     function scrolling(e) {
- 		
-   		if (isPartiallyVisible(li5)) {
-			li5.classList.add("anim");        	
-   		} 
+    	if (animation.length) {
+			for (var i = 0; i < animation.length; i++) {
+				if (isPartiallyVisible(animation[i])) {
+					animation[i].classList.add("anim"); 
+				} else {
+					animation[i].classList.remove("anim"); 
+				}
+			}
+		}
+    			
+    	if (text.length) {
+			for (var i = 0; i < text.length; i++) {
+				if (isPartiallyVisible(text[i])) {
+					text[i].classList.add("anim"); 
+				} else {
+					text[i].classList.remove("anim"); 
+				}
+			}
+		}
     }
  
     function isPartiallyVisible(el) {
