@@ -1,14 +1,42 @@
+/* HEADER
+---------------------------------------------------- */
 const header = document.querySelector('.header');
+const nav = header.querySelector('.nav');
+const navLi = header.querySelectorAll('.nav > ul > li');
+const overlay = document.querySelector('.overlay');
+var scrollHeight = Math.max(
+	document.body.scrollHeight, document.documentElement.scrollHeight,
+	document.body.offsetHeight, document.documentElement.offsetHeight,
+	document.body.clientHeight, document.documentElement.clientHeight
+)
+
+nav.addEventListener('mouseover', function() {
+	nav.classList.add('active');
+	overlay.classList.add('active');
+});
+
+nav.addEventListener('mouseout', () => {
+	nav.classList.remove('active');
+	overlay.classList.remove('active');
+});
 
 window.addEventListener('scroll', function() {
-	if (window.scrollY > 0) header.classList.add('fixed');
-	else header.classList.remove('fixed');
+	if (window.scrollY > 0) {
+		header.classList.add('fixed');
+	} else {
+		header.classList.remove('fixed');
+	}
+
+	if (window.scrollY > 700) {
+		header.classList.remove('fixed');
+	}
 });
 
 /* ACCORDEON
 ---------------------------------------------------- */
 function accordeon() {
 	let accordeon = document.querySelectorAll('.accordeon');
+	let flag = true;
 
 	if (accordeon != null) {
 		for (var i = 0; i < accordeon.length; i++) {
@@ -24,12 +52,16 @@ function accordeon() {
 
 	function openAccordeon(e) {
 		let item = this.closest('.accordeon').querySelectorAll('.item-accordeon');
+		let inner = this.parentNode.querySelector('.inner');
+		let content = this.parentNode.querySelector('.content-accordeon');
 
 		for (var i = 0; i < item.length; i++) {
 			item[i].classList.remove('active');
+			item[i].querySelector('.content-accordeon').removeAttribute('style');
 		}
 		
-		this.parentNode.classList.toggle('active');
+		this.parentNode.classList.add('active');
+		content.style.height = inner.clientHeight + 'px';		
 	}
 }
 
