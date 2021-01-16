@@ -4,11 +4,7 @@ const header = document.querySelector('.header');
 const nav = header.querySelector('.nav');
 const navLi = header.querySelectorAll('.nav > ul > li');
 const overlay = document.querySelector('.overlay');
-var scrollHeight = Math.max(
-	document.body.scrollHeight, document.documentElement.scrollHeight,
-	document.body.offsetHeight, document.documentElement.offsetHeight,
-	document.body.clientHeight, document.documentElement.clientHeight
-)
+let lastScrollTop = 0;
 
 nav.addEventListener('mouseover', function() {
 	nav.classList.add('active');
@@ -23,13 +19,23 @@ nav.addEventListener('mouseout', () => {
 window.addEventListener('scroll', function() {
 	if (window.scrollY > 0) {
 		header.classList.add('fixed');
-	} else {
-		header.classList.remove('fixed');
 	}
 
 	if (window.scrollY > 700) {
 		header.classList.remove('fixed');
 	}
+
+	let st = window.pageYOffset || document.documentElement.scrollTop; // Credits: "https://github.com/qeremy/so/blob/master/so.dom.js#L426"
+    
+    if (st < lastScrollTop) {
+      	header.classList.add('fixed');
+    }
+
+    if (window.scrollY <= 0) {
+		header.classList.remove('fixed');
+	}
+
+    lastScrollTop = st <= 0 ? 0 : st;
 });
 
 /* ACCORDEON
