@@ -769,7 +769,14 @@ p {
 	line-height: 150%;
 	color: #313131;
 }
-.footer-logo {margin-bottom: 15px;}
+.footer-logo {
+	margin-bottom: 15px;
+    width: 150px;
+    height: 35px;
+    background: url(../img/logo.svg) no-repeat center;
+    background-size: 170px;
+    display: inline-block;
+}
 .footer-main {
 	display: flex;
 	justify-content: space-between;
