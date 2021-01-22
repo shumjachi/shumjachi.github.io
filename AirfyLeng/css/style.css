@@ -30,6 +30,16 @@
     font-display: swap;
 }
 
+@font-face {
+    font-family: 'Avenir Next';
+    src: url('../fonts/AvenirNext-DemiBold.woff2') format('woff2'),
+        url('../fonts/AvenirNext-DemiBold.woff') format('woff'),
+        url('../fonts/AvenirNext-DemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -50,6 +60,7 @@ body {
     background: #fff;
     font: normal 22px/38px 'Avenir Next';
     color: #000;
+    background: #272C2F;
 }   
 
 img {
@@ -93,9 +104,12 @@ h2.title {
     min-width: 250px;
     margin: 0 auto;
     padding: 0 16px;
+    background: #fff;
 }
 
 .box {padding: 96px 0;}
+
+.wrapper {overflow-x: hidden;}
 
 /* button */
 .btn {
@@ -109,7 +123,7 @@ h2.title {
 	background: #609BB7;
 	border: 1px solid #609BB7;
 	border-radius: 4px;
-	font-weight: bold;
+	font-weight: 600;
 	font-size: 14px;
 	text-transform: uppercase;
 	color: #fff;
@@ -132,6 +146,11 @@ h2.title {
 /* HEADER
 ---------------------------------------------------- */
 .header {
+  position: fixed;
+  top: 0;
+  left: 16px;
+  right: 16px;
+  z-index: 999;
 	padding: 16px 74px;
 	background: #fff;
 	border-top: 5px solid #609BB7;
@@ -180,6 +199,7 @@ h2.title {
 	flex-direction: column;
 	align-items: center;
 	padding: 57px 0 24px 0;
+  margin-top: 77px;
 }
 .home h1 {
 	font-weight: normal;
@@ -280,6 +300,7 @@ h2.title {
 
 /* ANIMATION AIFRY
 ---------------------------------------------------- */
+.animation-airfy  {background: #fff;}
 .animation-airfy .btn {
 	display: inline-block;
 	padding-top: 5px;
@@ -909,6 +930,7 @@ h2.title {
 	background: #fff;
 	padding: 30px 0 106px 0;
 }
+.product.box {padding-top: 96px;}
 .product h2.title {
 	color: #609BB7;
 	margin-bottom: 30px;
@@ -926,30 +948,33 @@ h2.title {
 	align-items: center;
 }
 .product .product-slider .left {
-	width: 20%;
+	width: 70px;
 }
 .product .product-slider .left .item {
 	opacity: 0.5;
-	padding-bottom: 10px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
+  height: 80px;
 }
-.product .product-slider .left .item.slick-current + .slick-active {
+.product .product-slider .left .item img {
+  object-fit: contain;
+}
+.product .product-slider .left .item.slick-current {
 	opacity: 1;
 	position: relative;
 }
-.product .product-slider .left .item.slick-current + .slick-active:after {
+.product .product-slider .left .item.slick-current:after {
 	content: '';
 	display: block;
-	width: 70px;
+	width: 100%;
 	height: 3px;
 	background: #609BB7;
-	border-radius: 5px;
+	border-radius: 10px;
 	position: absolute;
-	left: 50%;
+	left: 0;
+  right: 0;
 	bottom: 0;
-	margin-left: -35px;
 }
 .product .product-slider .right {
 	width: 80%;
@@ -1085,6 +1110,80 @@ h2.title {
 	color: #FFFFFF;
 }
 
+/* ANIMATION */
+.anim-textleft {
+  opacity: 0;
+  transform: translateX(-100%);
+  transition: transform 2s cubic-bezier(.19,1,.22,1), opacity 1.9s;
+}
+.anim-textright {
+  opacity: 0;
+  transform: translateX(100%);
+  transition: transform 2s cubic-bezier(.19,1,.22,1), opacity 1.9s;
+}
+.anim-scale {
+  opacity: 0;
+  transform: scale(0.3);
+  transition: transform 2s cubic-bezier(.19,1,.22,1), opacity 1.9s;
+}
+.anim-bottomtop {
+  opacity: 0;
+  transform: translateY(100%);
+  transition: transform 2s 0.5s cubic-bezier(.19,1,.22,1), opacity 1.9s 0.5s;
+}
+
+.list-partner li {
+  opacity: 0;
+  transform: translateY(100%);
+  transition: all 0.3s ease;
+}
+.list-partner li:nth-child(2) {transition: all 0.3s 0.3s ease;}
+.list-partner li:nth-child(3) {transition: all 0.3s 0.6s ease;}
+.list-partner li:nth-child(4) {transition: all 0.3s 0.9s ease;}
+.list-partner li:nth-child(5) {transition: all 0.3s 1s ease;}
+.list-partner li:nth-child(6) {transition: all 0.3s 1.3s ease;}
+
+.umfang .card .item {
+  opacity: 0;
+  transform-style: preserve-3d;
+  transform: rotateX(180deg);
+  transition: all 0.3s ease;
+}
+.umfang .card .item:nth-child(2) {transition: all 0.3s 0.3s ease;}
+.umfang .card .item:nth-child(3) {transition: all 0.3s 0.6s ease;}
+.umfang .card .item:nth-child(4) {transition: all 0.3s 0.9s ease;}
+.umfang .card .item:nth-child(5) {transition: all 0.3s 1.2s ease;}
+.umfang .card .item:nth-child(6) {transition: all 0.3s 1.5s ease;}
+
+.faqs .item-accordeon {
+  opacity: 0;
+  transform: translateX(-100%);
+  transition: all 0.3s ease;
+}
+.faqs .item-accordeon:nth-child(2) {transition: all 0.3s 0.3s ease;}
+.faqs .item-accordeon:nth-child(3) {transition: all 0.3s 0.6s ease;}
+.faqs .item-accordeon:nth-child(4) {transition: all 0.3s 0.9s ease;}
+.faqs .item-accordeon:nth-child(5) {transition: all 0.3s 1.2s ease;}
+
+.instruction .tabs .control-tab li {
+  opacity: 0;
+  transform: translateX(-100%);
+  transition: all 0.3s ease;
+}
+.instruction .tabs .control-tab li:nth-child(2) {transition: all 0.3s 0.3s ease;}
+.instruction .tabs .control-tab li:nth-child(3) {transition: all 0.3s 0.6s ease;}
+.instruction .tabs .control-tab li:nth-child(4) {transition: all 0.3s 0.9s ease;}
+.instruction .tabs .control-tab li:nth-child(5) {transition: all 0.3s 1.2s ease;}
+.instruction .tabs .control-tab li:nth-child(6) {transition: all 0.3s 1.5s ease;}
+.instruction .tabs .control-tab li:nth-child(7) {transition: all 0.3s 1.8s ease;}
+.instruction .tabs .control-tab li:nth-child(8) {transition: all 0.3s 2.1s ease;}
+.instruction .tabs .control-tab li:nth-child(9) {transition: all 0.3s 2.4s ease;}
+
+.animation {
+  opacity: 1 !important;
+  transform: none !important;
+}
+
 /* ---------------------------------------------- */
 /*               MEDIA QUERI                      */
 /* ---------------------------------------------- */
@@ -1143,9 +1242,17 @@ h2.title {
 	.product > .tx-center p br {display: none;}
 
 	/* footer */
+  .footer {
+      background: #2C3235 url(../img/bg-footer.png) no-repeat right 0 top 70px;
+  }
 	.footer-links {padding: 73px 20px 45px 20px;}
-	.footer-item {min-width: 33.33%;}
+	.footer-item {min-width: 200px;}
 	.footer-bottom { padding: 30px 20px 30px 20px;}
+}
+
+@media screen and (max-width: 1024px) {
+  .wlan .slick-slide[aria-hidden="true"] .inner {opacity: 1;}
+  .wlan .slick-active:not(.slick-current) {opacity: 0.25;}
 }
 
 @media screen and (max-width: 991px) {
@@ -1200,7 +1307,7 @@ h2.title {
 	.hide-ipade {display: none !important;}
 	.show-ipade {display: block !important;}
 
-	.overlay {
+	.overlay-main {
 		position: fixed;
 		top: 0;
 		right: 0;
@@ -1221,7 +1328,8 @@ h2.title {
 	    padding: 0;
 	    flex-direction: column;
 	    border-top: none;
-	    position: relative;
+      right: 0;
+      left: 0;
 	    z-index: 9991;
 	} 
 	.top-header {
@@ -1241,20 +1349,38 @@ h2.title {
 	.logo svg {
 	    width: 50px;
 	    height: 25px;
+      opacity: 0;
+      transition: all 1s ease;
 	}
+  .scroll-body .logo svg {opacity: 1;}
 	.btn-menu {
 		display: block;
 		width: 16px;
 		height: 10px;
 		cursor: pointer;
+    position: relative;
+    background: none;
 	}
 	.btn-menu span {
 		display: block;
 		height: 2px;
 		border-radius: 5px;
 		background: #609BB7;
+    transition: transform 0.3s ease;
 	}
 	.btn-menu span + span {margin-top: 2px;}
+  .header-active .btn-menu span {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    margin-top: -1px;
+    transform-origin: center;
+  }
+  .header-active .btn-menu span:nth-child(2) {display: none;}
+  .header-active .btn-menu span:nth-child(1) {transform: rotate(45deg);}
+  .header-active .btn-menu span:nth-child(3) {transform: rotate(-45deg);}
 	.nav {
 	    display: flex;
         width: 100%;
@@ -1311,7 +1437,8 @@ h2.title {
 	/* home */
 	.home {
 		padding-top: 14px;
-		min-height: 550px;
+		min-height: 650px;
+    margin-top: 54px;
 	}
 	.home h1 {flex-direction: column;}
 	.home h1 svg {
@@ -1387,8 +1514,6 @@ h2.title {
 	.wlan > p br {display: none;}
 	.wlan .slide-item {padding: 0 6px;}
 	.wlan .slide-item .inner {padding: 30px 15px;}
-	.wlan .slick-slide[aria-hidden="true"] .inner {opacity: 1;}
-	.wlan .slick-active:not(.slick-current) {opacity: 0.25;}
 
 	/* product */
 	.product {padding: 30px 16px 30px 16px;}
@@ -1409,10 +1534,10 @@ h2.title {
 		max-height: 45px;
 		object-fit: cover;
 	}
-	.product .product-slider .slick-arrow {margin-bottom: -100px;}
+	.product .product-slider .slick-arrow {margin-bottom: -140px;}
 	.product-info {
 	    padding-left: 0;
-	    padding-top: 75px;
+	    padding-top: 110px;
 	}
 	.product-info .info {
 	    padding-top: 24px;
@@ -1633,4 +1758,8 @@ h2.title {
 	}
 	.wlan .slider {margin-top: 24px;}
 	.wlan .slide-item {padding: 0 0;}
+}
+
+@media screen and (max-width: 320px) {
+    .home {min-height: 550px;}
 }

@@ -512,8 +512,99 @@
 <!-- FOOTER -->
 <footer class="footer footer-gray set-animtext">
 	<div class="center">
+		<ul class="accordeon" hidden>
+			<li class="item-accordeon">
+				<button class="btn-accordeon">
+					<span>About</span>
+					<svg><use xlink:href="#ic-down"></use></svg>
+				</button>
+
+				<div class="content-accordeon">
+					<div class="inner">
+						<p>Samscloud is a  security platform designed for schools and organizations 
+						to streamline emergency response plans and support incident management. 
+						We are leading a dramatic transformation in emergency response, providing collaborative tools that increase efficiency, improve visibility, and enhance transparency.</p>
+					</div>							
+				</div>
+			</li>
+
+			<li class="item-accordeon">
+				<button class="btn-accordeon">
+					<span>Products</span>
+					<svg><use xlink:href="#ic-down"></use></svg>
+				</button>
+
+				<div class="content-accordeon">
+					<div class="inner">
+						<ul>
+							<li><a href="#">School Safety</a></li>
+							<li><a href="#">Family Security</a></li>
+							<li><a href="#">Public Safety</a></li>
+							<li><a href="#">Corporate Safety</a></li>
+						</ul>
+					</div>							
+				</div>
+			</li>
+
+			<li class="item-accordeon">
+				<button class="btn-accordeon">
+					<span>Solutions</span>
+					<svg><use xlink:href="#ic-down"></use></svg>
+				</button>
+
+				<div class="content-accordeon">
+					<div class="inner">
+						<ul>
+							<li><a href="#">Active Shooter</a></li>
+							<li><a href="#">Bullying</a></li>
+							<li><a href="#">Citizen Safe</a></li>
+							<li><a href="#">Crime Prediction</a></li>
+							<li><a href="#">Gun Detection</a></li>
+							<li><a href="#">Facial Recognition</a></li>
+						</ul>
+					</div>							
+				</div>
+			</li>
+
+			<li class="item-accordeon">
+				<button class="btn-accordeon">
+					<span>Customers</span>
+					<svg><use xlink:href="#ic-down"></use></svg>
+				</button>
+
+				<div class="content-accordeon">
+					<div class="inner">
+						<ul>
+							<li><a href="#">Login</a></li>
+							<li><a href="#">Support</a></li>
+							<li><a href="#">Sales</a></li>
+							<li><a href="#">Pricing</a></li>
+							<li><a href="#">Feedback</a></li>
+							<li><a href="#">FAQ</a></li>
+						</ul>
+					</div>							
+				</div>
+			</li>
+
+			<li class="item-accordeon">
+				<button class="btn-accordeon">
+					<span>Address</span>
+					<svg><use xlink:href="#ic-down"></use></svg>
+				</button>
+
+				<div class="content-accordeon">
+					<div class="inner">
+						<p>700 Smith St #61070, SMB 2904<br>
+						Houston Texas 77065<br>
+						832-286-5129<br>
+						Info@Samscloud.io</p>
+					</div>							
+				</div>
+			</li>
+		</ul>
+
 		<div class="footer-main">
-			<div class="footer-item">
+			<div class="footer-item hide-ipade">
 				<a href="/" class="footer-logo"></a>
 
 				<p>Samscloud is a  security platform designed for schools and organizations 
@@ -530,7 +621,7 @@
 					<li><a href="#">Corporate Safety</a></li>
 				</ul>
 
-				<form action="#" class="form-letter">
+				<form action="#" class="form-letter hide-ipade">
 					<div class="inner">
 						<h3>Sign Up for Our Newsletter</h3>
 						<div class="group">
@@ -567,13 +658,41 @@
 		</div>
 
 		<div class="footer-address">
+			<div class="footer-item show-ipade" hidden>
+				<a href="/" class="footer-logo"></a>
+
+				<p>Samscloud is a  security platform designed for schools and organizations 
+				to streamline emergency response plans and support incident management. 
+				We are leading a dramatic transformation in emergency response, providing collaborative tools that increase efficiency, improve visibility, and enhance transparency.</p>
+			</div>
+
 			<p>700 Smith St #61070, SMB 2904<br>
 			Houston Texas 77065<br>
 			832-286-5129<br>
 			Info@Samscloud.io</p>
+
+			<form action="#" class="form-letter show-ipade" hidden>
+				<div class="inner">
+					<h3>Sign Up for Our Newsletter</h3>
+					<div class="group">
+						<input type="email" placeholder="Enter Email">
+						<button type="submit">Submit</button>
+					</div>				
+				</div>			
+			</form>
 		</div>		
 
 		<div class="footer-bottom">
+			<form action="#" class="form-letter" hidden>
+				<div class="inner">
+					<h3>Sign Up for Our Newsletter</h3>
+					<div class="group">
+						<input type="email" placeholder="Enter Email">
+						<button type="submit">Submit</button>
+					</div>				
+				</div>			
+			</form>
+
 			<ul>
 				<li><a href="#">Terms & Conditions</a></li>
 				<li><a href="#">Legal</a></li>
@@ -590,6 +709,10 @@
 
 <!-- ICONS -->
 <svg class="svg-icon">
+	<symbol id="ic-down" viewBox="0 0 8 5">
+		<path d="M1.58762 0.277358C1.21327 -0.100905 0.600214 -0.0943818 0.238899 0.309972C-0.103121 0.688365 -0.0708551 1.27543 0.290524 1.63419L3.34289 4.72604C3.52364 4.90868 3.76235 5 4.00112 5C4.23989 5 4.47865 4.90868 4.65934 4.72604L7.71171 1.64071C8.06664 1.28195 8.10542 0.688366 7.76334 0.31656C7.40196 -0.0814013 6.7889 -0.0943822 6.41468 0.283946L4.45936 2.25386C4.20768 2.50825 3.80113 2.50825 3.54939 2.25386L1.58762 0.277358Z"/>
+	</symbol>
+	
 	<symbol id="ic-people" viewBox="0 0 24 56">
 		<path d="M11.9933 9.39899C14.5888 9.39899 16.6928 7.29496 16.6928 4.6995C16.6928 2.10404 14.5888 0 11.9933 0C9.39786 0 7.29382 2.10404 7.29382 4.6995C7.29382 7.29496 9.39786 9.39899 11.9933 9.39899Z"/>
 		<path d="M13.6307 11.6397C12.4597 11.4019 11.1866 11.4124 10.0364 11.6835C2.22341 12.599 -0.313503 21.6424 0.402839 28.5378C0.713567 31.519 5.41306 31.5502 5.09921 28.5378C4.83853 26.0249 4.9501 22.2326 6.28581 19.5372C6.28581 22.8134 6.28581 26.0896 6.28581 29.3647C6.28581 29.4805 6.29728 29.5889 6.3025 29.7005C6.29937 29.7536 6.28686 29.7985 6.28686 29.8527C6.28686 37.6511 6.2733 45.4464 5.9511 53.2386C5.80825 56.7025 11.1793 56.6889 11.3211 53.2386C11.5734 47.1315 11.637 41.0212 11.6516 34.9098C11.906 34.9265 12.1604 34.9265 12.4149 34.9119C12.4305 41.0233 12.492 47.1335 12.7423 53.2386C12.8851 56.6889 18.2561 56.7025 18.1122 53.2386C17.79 45.4464 17.7786 37.6511 17.7786 29.8527C17.7786 29.6108 17.7462 29.3908 17.6972 29.1791C17.6899 25.7934 17.5606 22.4046 17.6003 19.021C19.1998 21.7289 19.3458 25.8591 19.0684 28.5358C18.7535 31.5461 23.454 31.5158 23.7648 28.5358C24.4978 21.4975 21.8389 12.2194 13.6307 11.6397Z"/>

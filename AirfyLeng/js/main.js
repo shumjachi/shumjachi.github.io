@@ -10,6 +10,14 @@ btnMenu.addEventListener('click', function() {
 	overlay.classList.toggle('header-active');
 });
 
+document.addEventListener('scroll', function() {
+	if (window.scrollY > 0) {
+		body.classList.add('scroll-body');
+	} else {
+		body.classList.remove('scroll-body');
+	}
+});
+
 /* ANIMATION
 ---------------------------------------------------- */
 
@@ -58,7 +66,7 @@ $('.slider ul').slick({
 	centerPadding: '50px',
 	responsive: [
 		{
-		    breakpoint: 768,
+		    breakpoint: 1024,
 		    settings: {
 		        slidesToShow: 2,
 		        slidesToScroll: 2,
@@ -94,16 +102,15 @@ $('.slider-horizontal').slick({
 });
 
 $('.slider-vertical').slick({
-	infinite: true,
 	slidesToShow: 4,
 	slidesToScroll: 4,
 	asNavFor: '.slider-horizontal',
 	vertical: true,
+	verticalSwiping: true,
 	arrows: false,
-	focusOnSelect: true,
 	responsive: [
 		{
-		    breakpoint: 768,
+		    breakpoint: 769,
 		    settings: {
 		        vertical: false
 		    }
@@ -210,3 +217,105 @@ function tabs() {
 }
 
 tabs();
+
+/* ANIMATION SCROLL PAGE
+---------------------------------------------------- */
+
+function animationScrollPage() {
+	var isScrolling = false;
+ 
+    window.addEventListener("scroll", throttleScroll, false);
+ 
+    function throttleScroll(e) {
+	    if (isScrolling == false) {
+	        window.requestAnimationFrame(function() {
+		        scrolling(e);
+		        isScrolling = false;
+	        });
+	    }
+
+	    isScrolling = true;
+    }
+ 
+    document.addEventListener("DOMContentLoaded", scrolling, false);
+ 
+    let animTextLeft = document.querySelectorAll('.anim-textleft');
+    let animTextRight = document.querySelectorAll('.anim-textright');
+    let animScale = document.querySelectorAll('.anim-scale');
+    let animBottomTop = document.querySelectorAll('.anim-bottomtop');
+    let listPartner = document.querySelectorAll('.list-partner li');
+    let rotate3d = document.querySelectorAll('.umfang .card .item');
+    let faqs = document.querySelectorAll('.faqs .item-accordeon');
+    let tab = document.querySelectorAll('.instruction .tabs .control-tab li');
+ 
+    function scrolling(e) {
+    	for (var i = 0; i < animTextLeft.length; i++) {
+			if (isPartiallyVisible(animTextLeft[i])) {
+				animTextLeft[i].classList.add("animation"); 
+			}
+		}
+
+		for (var i = 0; i < animTextRight.length; i++) {
+			if (isPartiallyVisible(animTextRight[i])) {
+				animTextRight[i].classList.add("animation"); 
+			}
+		}
+
+		for (var i = 0; i < animBottomTop.length; i++) {
+			if (isPartiallyVisible(animBottomTop[i])) {
+				animBottomTop[i].classList.add("animation"); 
+			}
+		}
+
+		for (var i = 0; i < listPartner.length; i++) {
+			if (isPartiallyVisible(listPartner[i])) {
+				listPartner[i].classList.add("animation"); 
+			}
+		}
+
+		for (var i = 0; i < animScale.length; i++) {
+			if (isPartiallyVisible(animScale[i])) {
+				animScale[i].classList.add("animation"); 
+			}
+		}
+
+		for (var i = 0; i < rotate3d.length; i++) {
+			if (isPartiallyVisible(rotate3d[i])) {
+				rotate3d[i].classList.add("animation"); 
+			}
+		}
+
+		for (var i = 0; i < faqs.length; i++) {
+			if (isPartiallyVisible(faqs[i])) {
+				faqs[i].classList.add("animation"); 
+			}
+		}
+
+		for (var i = 0; i < tab.length; i++) {
+			if (isPartiallyVisible(tab[i])) {
+				tab[i].classList.add("animation"); 
+			}
+		}
+    }
+ 
+    function isPartiallyVisible(el) {
+	    var elementBoundary = el.getBoundingClientRect();
+	 
+	    var top = elementBoundary.top;
+	    var bottom = elementBoundary.bottom;
+	    var height = elementBoundary.height;
+	 
+	    return ((top + height >= 0) && (height + window.innerHeight >= bottom));
+    }
+ 
+    function isFullyVisible(el) {
+	    var elementBoundary = el.getBoundingClientRect();
+	 
+	    var top = elementBoundary.top;
+	    var bottom = elementBoundary.bottom;
+	 
+	    return ((top >= 0) && (bottom <= window.innerHeight));
+    }
+}
+
+animationScrollPage();
