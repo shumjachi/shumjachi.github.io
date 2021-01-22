@@ -771,7 +771,7 @@ h2.title {
 	min-height: 577px;
 	display: flex;
 	justify-content: center;
-	align-items: center;
+	align-items: flex-start;
 	margin-left: 33px;
 	border-radius: 4px;
 	overflow: hidden;
@@ -1193,7 +1193,11 @@ h2.title {
 	.box {padding: 96px 20px;}
 
 	/* header */
-	.header {padding: 16px 20px;}
+	.header {
+    padding: 16px 20px;
+    right: 0;
+    left: 0;
+  }
 	.nav .menu li + li {margin-left: 20px;}
 
 	/* home */
@@ -1756,8 +1760,14 @@ h2.title {
 	    padding-right: 16px;
 	    padding-left: 16px;
 	}
-	.wlan .slider {margin-top: 24px;}
-	.wlan .slide-item {padding: 0 0;}
+	.wlan .slider {
+    margin-top: 24px;
+    margin-right: -250px;
+  }
+	.wlan .slide-item {
+    margin-right: 8px;
+    padding: 0 0;
+  }
 }
 
 @media screen and (max-width: 320px) {
