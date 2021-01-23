@@ -66,7 +66,7 @@ $('.slider ul').slick({
 	centerPadding: '50px',
 	responsive: [
 		{
-		    breakpoint: 1024,
+		    breakpoint: 1025,
 		    settings: {
 		        slidesToShow: 2,
 		        slidesToScroll: 2,
@@ -103,11 +103,14 @@ $('.slider-horizontal').slick({
 
 $('.slider-vertical').slick({
 	slidesToShow: 4,
-	slidesToScroll: 4,
+	slidesToScroll: 1,
 	asNavFor: '.slider-horizontal',
 	vertical: true,
 	verticalSwiping: true,
+	focusOnSelect: true,
 	arrows: false,
+	autoplay: true,
+	autoplaySpeed: 3000,
 	responsive: [
 		{
 		    breakpoint: 769,

@@ -4,16 +4,72 @@ const header = document.querySelector('.header');
 const nav = header.querySelector('.nav');
 const navLi = header.querySelectorAll('.nav > ul > li');
 const overlay = document.querySelector('.overlay');
+const btnMenu = document.querySelector('.btn-menu');
+const body = document.querySelector('body');
 let lastScrollTop = 0;
 
-nav.addEventListener('mouseover', function() {
+function hover() {
 	nav.classList.add('active');
 	overlay.classList.add('active');
-});
+}
 
-nav.addEventListener('mouseout', () => {
+function hoverOut() {
 	nav.classList.remove('active');
 	overlay.classList.remove('active');
+}
+
+btnMenu.addEventListener('click', function(e) {
+	e.preventDefault();
+	body.classList.toggle('menu-active');
+	overlay.classList.toggle('active');
+});
+
+if (window.innerWidth > 991) {
+	nav.addEventListener('mouseover', hover, false);
+	nav.addEventListener('mouseout', hoverOut, false);
+} else {
+	nav.removeEventListener('mouseover', hover, false);
+	nav.removeEventListener('mouseout', hoverOut, false);
+
+	for (var i = navLi.length - 1; i >= 0; i--) {
+		let link = navLi[i].querySelector('a');
+
+		link.addEventListener('click', function(e) {
+			e.preventDefault();
+			let _this = this;
+
+			this.closest('li').classList.add('active');
+
+			this.closest('li').querySelector('.back-menu').onclick = function() {
+				_this.closest('li').classList.remove('active');
+			}
+		});
+	}
+}	
+
+window.addEventListener('resize', function() {
+	if (window.innerWidth > 991) {
+		nav.addEventListener('mouseover', hover, false);
+		nav.addEventListener('mouseout', hoverOut, false);
+	} else {
+		nav.removeEventListener('mouseover', hover, false);
+		nav.removeEventListener('mouseout', hoverOut, false);
+
+		for (var i = navLi.length - 1; i >= 0; i--) {
+			let link = navLi[i].querySelector('a');
+
+			link.addEventListener('click', function(e) {
+				e.preventDefault();
+				let _this = this;
+
+				this.closest('li').classList.add('active');
+
+				this.closest('li').querySelector('.back-menu').onclick = function() {
+					_this.closest('li').classList.remove('active');
+				}
+			});
+		}
+	}	
 });
 
 window.addEventListener('scroll', function() {

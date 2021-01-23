@@ -58,9 +58,8 @@ html, body {height: 100%;}
 
 body {
     background: #fff;
-    font: normal 22px/38px 'Avenir Next';
+    font: normal 20px/32px 'Avenir Next';
     color: #000;
-    background: #272C2F;
 }   
 
 img {
@@ -100,16 +99,13 @@ h2.title {
 /* main */
 .center {
     width: 100%;
-    max-width: 1523px;
     min-width: 250px;
     margin: 0 auto;
-    padding: 0 16px;
+    padding: 0 0;
     background: #fff;
 }
 
 .box {padding: 96px 0;}
-
-.wrapper {overflow-x: hidden;}
 
 /* button */
 .btn {
@@ -146,7 +142,7 @@ h2.title {
 /* HEADER
 ---------------------------------------------------- */
 .header {
-  position: fixed;
+  position: sticky;
   top: 0;
   left: 16px;
   right: 16px;
@@ -199,7 +195,7 @@ h2.title {
 	flex-direction: column;
 	align-items: center;
 	padding: 57px 0 24px 0;
-  margin-top: 77px;
+  overflow: hidden;
 }
 .home h1 {
 	font-weight: normal;
@@ -209,8 +205,8 @@ h2.title {
 }
 .home h1 span {
 	display: block;
-	font-size: 40px;
-	line-height: 55px;
+	font-size: 48px;
+	line-height: 64px;
 	color: #000;
 	padding-left: 46px;
 	margin-left: 37px;
@@ -236,6 +232,7 @@ h2.title {
 .partner {
 	padding: 40px 0;
 	background: #fff;
+  overflow: hidden;
 }
 .partner p {
 	text-align: center;
@@ -268,27 +265,36 @@ h2.title {
 .product-list {
 	padding: 96px 0;
 	background: #FBFBFB;
+  overflow: hidden;
 }
 
 .product-list .card {
 	display: flex;
+  flex-wrap: wrap;
 	justify-content: center;
 	padding: 0 74px;
 	margin-top: 48px;
 }
 .product-list .card .item {
-	width: 33.33%;
-	background: #FFFFFF;
-	box-shadow: 0px 4px 16px 4px rgba(0, 0, 0, 0.04);
-	border-radius: 4px;
-	padding: 73px 27px 54px 27px;
-	margin: 0 12.5px;
-	text-align: center;
+	display: flex;
+  align-items: center;
+  padding: 50px 0;
+  border-bottom: 1px solid #f1f1f1;
 }
 .product-list .card .thumb {
 	line-height: 0;
-	margin-bottom: 40px;
+  min-width: 300px;
 }
+.product-list .card .thumb img {width: 100%;}
+.product-list .card .item:nth-child(1) .thumb,
+.product-list .card .item:nth-child(3) .thumb {
+  margin-right: 100px;
+}
+.product-list .card .item:nth-child(2) .thumb {
+  order: 1;
+  margin-left: 100px;
+}
+.product-list .card .item:last-child {border-bottom: none;}
 .product-list .card p {color: #2C3235;}
 .product-list .card a {
 	display: inline-block;
@@ -297,10 +303,14 @@ h2.title {
 	text-decoration: underline;
 }
 .product-list .card a:hover {text-decoration: none;}
+.product-list .card .descr {max-width: 800px;}
 
 /* ANIMATION AIFRY
 ---------------------------------------------------- */
-.animation-airfy  {background: #fff;}
+.animation-airfy {
+  background: #fff;
+  overflow: hidden;
+}
 .animation-airfy .btn {
 	display: inline-block;
 	padding-top: 5px;
@@ -658,6 +668,7 @@ h2.title {
 .umfang {
 	background: #609BB7;
 	color: #fff;
+  overflow: hidden;
 }
 .umfang h2.title {color: #fff;}
 
@@ -690,6 +701,7 @@ h2.title {
 
 /* FAQS
 ---------------------------------------------------- */
+.faqs {overflow: hidden;}
 .content-accordeon {
 	height: 0;
 	overflow: hidden;
@@ -709,6 +721,7 @@ h2.title {
 .faqs .wrap {
 	display: flex;
 	margin-top: 64px;
+  padding: 0 20px;
 }
 .faqs .wrap .left {
 	width: 50%;
@@ -779,6 +792,7 @@ h2.title {
 .faqs .wrap .thumb img {
 	object-fit: cover;
 	border-radius: 4px;
+  width: 100%;
 }
 
 /* FAQS
@@ -786,6 +800,7 @@ h2.title {
 .business {
 	background: #2C3235;
 	padding: 96px 74px;
+  overflow: hidden;
 }
 .business h2.title {color: #fff;}
 
@@ -861,6 +876,7 @@ h2.title {
 }
 
 .section-image {line-height: 0;}
+.section-image img {width: 100%;}
 
 /* INSTRUCTION
 ---------------------------------------------------- */
@@ -869,10 +885,12 @@ h2.title {
 
 .instruction {
 	background: linear-gradient(0deg, #FBFBFB, #FBFBFB), #FFFFFF;
+  overflow: hidden;
 }
 .instruction .tabs {
 	display: flex;
 	margin-top: 64px;
+  padding: 0 20px;
 }
 .instruction .tabs .control-tab {
 	width: 296px;
@@ -929,6 +947,7 @@ h2.title {
 .product {
 	background: #fff;
 	padding: 30px 0 106px 0;
+  overflow: hidden;
 }
 .product.box {padding-top: 96px;}
 .product h2.title {
@@ -939,6 +958,7 @@ h2.title {
 
 .product .wrap {
 	display: flex;
+  justify-content: center;
 	margin-top: 60px;
 }
 
@@ -1054,7 +1074,10 @@ h2.title {
 	height: 40px;
 	margin-right: 40px;
 }
-.icon-1 {background: url(../img/icon-1.png) no-repeat center;}
+.icon-1 {
+  background: url(../img/box.svg) no-repeat center;
+  background-size: 30px 30px;
+}
 .icon-2 {background: url(../img/icon-2.png) no-repeat center;}
 
 /* FOOTER
@@ -1206,11 +1229,7 @@ h2.title {
 
 	/* product list */
 	.product-list {padding: 96px 20px;}
-	.product-list .card {
-		margin-right: -12.5px;
-		margin-left: -12.5px;
-		padding: 0;
-	}
+	.product-list .card {padding: 0;}
 
 	/* wlan */
 	.wlan {padding: 96px 0;}
@@ -1257,6 +1276,19 @@ h2.title {
 @media screen and (max-width: 1024px) {
   .wlan .slick-slide[aria-hidden="true"] .inner {opacity: 1;}
   .wlan .slick-active:not(.slick-current) {opacity: 0.25;}
+  .wlan .slider {position: relative;}
+  .wlan .slider:before {
+      content: '';
+      display: block;
+      width: 50px;
+      background: #606567;
+      position: absolute;
+      top: 0;
+      left: -26px;
+      bottom: 0;
+      z-index: 2;
+      border-radius: 4px;
+  }
 }
 
 @media screen and (max-width: 991px) {
@@ -1273,6 +1305,15 @@ h2.title {
 		justify-content: center;
 		align-items: center;
 	}
+
+  /* product list */
+  .product-list .card .item:nth-child(1) .thumb, 
+  .product-list .card .item:nth-child(3) .thumb {
+      margin-right: 30px;
+  }
+  .product-list .card .item:nth-child(2) .thumb {
+      margin-left: 30px;
+  }
 
 	/* business */
 	.business .thumb {padding-right: 20px;}
@@ -1441,8 +1482,7 @@ h2.title {
 	/* home */
 	.home {
 		padding-top: 14px;
-		min-height: 650px;
-    margin-top: 54px;
+		min-height: 850px;
 	}
 	.home h1 {flex-direction: column;}
 	.home h1 svg {
@@ -1498,13 +1538,10 @@ h2.title {
 	}
 	.product-list .card .item {
 		width: 100%;
-		margin-bottom: 16px;
 		margin-right: 0;
 		margin-left: 0;
 		padding: 40px 15px 30px 15px;
 	}
-	.product-list .card .item:last-child {margin-bottom: 0;}
-	.product-list .card .thumb {margin-bottom: 30px;}
 	.product-list .card a {margin-bottom: 20px;}
 
 	/* animation airfy */
@@ -1549,7 +1586,7 @@ h2.title {
 	}
 	.icon-1, .icon-2 {margin-right: 15px;}
 	.product-info .info p + p {margin-top: 12px;}
-	.product-info .info p {align-items: flex-start;}
+	.product-info .info p {align-items: center;}
 
 	/* umfang */
 	.umfang .card {margin-top: 24px;}
@@ -1563,6 +1600,7 @@ h2.title {
 	.faqs .wrap {
 	    flex-direction: column;
 	    margin-top: 16px;
+      padding: 0;
 	}
 	.faqs .wrap .left {
 	    margin-right: 0;
@@ -1748,11 +1786,30 @@ h2.title {
 	.footer-bottom li:nth-child(3) {margin-top: 15px;}
 }
 
+@media screen and (max-width: 600px) {
+  /* product list */
+  .product-list .card .item {
+    flex-direction: column;
+    text-align: center;
+  }
+  .product-list .card .thumb {min-width: 100%;}
+  .product-list .card .item:nth-child(1) .thumb, 
+  .product-list .card .item:nth-child(3) .thumb {
+      margin-right: 0;
+  }
+  .product-list .card .item:nth-child(2) .thumb {
+      margin-left: 0;
+      order: -1;
+  }
+  .product-list .card .item .thumb {margin-bottom: 30px;}
+}
+
 @media screen and (max-width: 500px) {
 	/* home */
 	.home {
 		background: url(../img/bg-home-mob.jpg) no-repeat center bottom;
 		background-size: cover;
+    min-height: 650px;
 	}
 
 	/* wlan */
@@ -1768,6 +1825,7 @@ h2.title {
     margin-right: 8px;
     padding: 0 0;
   }
+  .wlan .slider:before {display: none;}
 }
 
 @media screen and (max-width: 320px) {
