@@ -14,4 +14,4 @@
 <a href="Airfy/links.html">Airfy</a><br>
 <a href="shapiro/index.html">Shapiro</a><br>
 <a href="samscloud/links.html">SamsClud</a><br>
-<a href="AirfyLeng/index.html">Airfy Lend</a><br>
+<a href="AirfyLeng/links.html">Airfy Lend</a><br>
