@@ -1,0 +1,686 @@
+.slick-slider{position:relative;display:block;box-sizing:border-box;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;-webkit-touch-callout:none;-khtml-user-select:none;-ms-touch-action:pan-y;touch-action:pan-y;-webkit-tap-highlight-color:transparent}.slick-list{position:relative;display:block;overflow:hidden;margin:0;padding:0}.slick-list:focus{outline:none}.slick-list.dragging{cursor:pointer;cursor:hand}.slick-slider .slick-track,.slick-slider .slick-list{-webkit-transform:translate3d(0,0,0);-moz-transform:translate3d(0,0,0);-ms-transform:translate3d(0,0,0);-o-transform:translate3d(0,0,0);transform:translate3d(0,0,0)}.slick-track{position:relative;top:0;left:0;display:block;margin-left:auto;margin-right:auto}.slick-track:before,.slick-track:after{display:table;content:''}.slick-track:after{clear:both}.slick-loading .slick-track{visibility:hidden}.slick-slide{display:none;float:left;height:100%;min-height:1px}[dir='rtl'] .slick-slide{float:right}.slick-slide img{display:block}.slick-slide.slick-loading img{display:none}.slick-slide.dragging img{pointer-events:none}.slick-initialized .slick-slide{display:block}.slick-loading .slick-slide{visibility:hidden}.slick-vertical .slick-slide{display:block;height:auto;border:1px solid transparent}.slick-arrow.slick-hidden{display:none}
+
+@font-face {
+    font-family: 'Campton';
+    src: url('../fonts/Campton-Bold.woff2') format('woff2'),
+        url('../fonts/Campton-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Campton';
+    src: url('../fonts/Campton-Medium.woff2') format('woff2'),
+        url('../fonts/Campton-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Greycliff CF Extra';
+    src: url('../fonts/GreycliffCF-ExtraLight.woff2') format('woff2'),
+        url('../fonts/GreycliffCF-ExtraLight.woff') format('woff');
+    font-weight: 200;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Greycliff CF Demi';
+    src: url('../fonts/GreycliffCF-DemiBold.woff2') format('woff2'),
+        url('../fonts/GreycliffCF-DemiBold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Greycliff CF';
+    src: url('../fonts/GreycliffCF-Medium.woff2') format('woff2'),
+        url('../fonts/GreycliffCF-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Quincy CF';
+    src: url('../fonts/QuincyCF-Bold.woff2') format('woff2'),
+        url('../fonts/QuincyCF-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Quincy CF Extra';
+    src: url('../fonts/QuincyCF-ExtraBold.woff2') format('woff2'),
+        url('../fonts/QuincyCF-ExtraBold.woff') format('woff');
+    font-weight: 800;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Quincy CF Text';
+    src: url('../fonts/QuincyCF-Text.woff2') format('woff2'),
+        url('../fonts/QuincyCF-Text.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Quincy CF';
+    src: url('../fonts/QuincyCF-Regular.woff2') format('woff2'),
+        url('../fonts/QuincyCF-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    list-style: none;
+    border: none;
+    text-decoration: none;
+
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+
+/* tags */
+html, body {height: 100%;}
+
+body {
+    background: #fff;
+    font-family: 'Greycliff CF', sans-serif;
+    font-size: 17px;
+    color: #000;
+}   
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* display */
+.flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.flex-center {
+	display: flex;
+	justify-content: center;
+}
+.align-start {
+	display: flex;
+	align-items: flex-start;
+}
+.d-none {display: none;}
+.svg-icon {
+    height: 0;
+    overflow: hidden;
+    position: absolute;
+    bottom: 0;
+    z-index: -999999;
+}
+
+/* text */
+.tx-left {text-align: left;}
+.tx-right {text-align: right;}
+.tx-center {text-align: center;}
+
+/* main */
+.center {
+    width: 100%;
+    min-width: 250px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+.wrapper {overflow: hidden;}
+
+/* button */
+.btn-yellow {
+	display: inline-block;
+	background: #ff9a01;
+	color: #fff;
+	text-align: center;
+	font-weight: bold;
+	text-transform: uppercase;
+	padding: 15px 85px;
+	border-radius: 30px;
+	font-size: 25px;
+	border: 2px solid transparent;
+	transition: all 0.3s ease;
+}
+.btn-yellow:hover {
+	border: 2px solid #ff9a01;
+	background: transparent;
+	color: #ff9a01;
+}
+
+/* HEADER
+---------------------------------------------------- */
+.top-line {
+	background: #00a98f;
+	padding: 12px 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.top-line .btn-link {
+	font: bold 18px/25px 'Campton', sans-serif;
+	padding: 5px 60px;
+	border-radius: 10px;
+	background: #2d575b;
+	color: #fff;
+	position: relative;
+}
+.top-line .btn-link:before {
+	content: '';
+	display: block;
+	width: 67px;
+	height: 23px;
+	background: url(../img/arr-link.png) no-repeat;
+	position: absolute;
+	top: 0;
+	left: 0;
+	margin-top: -2px;
+	margin-left: -54px;
+}
+.top-line p {
+	font: 500 16px 'Campton', sans-serif;
+	color: #fff;
+	margin-left: 22px;
+}
+
+/* HOME
+---------------------------------------------------- */
+.home {
+	background: url(../img/bg-home.png) no-repeat right top;
+	background-size: cover;
+	min-height: 785px;
+	padding: 100px 0 50px 5rem;
+}
+.home .center {max-width: 1360px;}
+.home h1 {
+	font-family: 'Quincy CF Text', sans-serif;
+	font-weight: normal;
+	font-size: 71px;
+	line-height: 76px;
+	color: #fff;
+}
+.home h1 span {color: #f0e4b2;}
+.home p {
+	font-size: 25px;
+	line-height: 40px;
+	color: #fff;
+	margin-top: 10px;
+}
+
+.home .wrap {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-end;
+	max-width: 1030px;
+    margin-top: -125px;
+}
+.home .wrap > div {padding-bottom: 40px;}
+.home .images {margin-bottom: 35px;}
+.home .images img:first-child {margin-right: 20px;}
+
+/* REVIEWS
+---------------------------------------------------- */
+.reviews {padding: 100px 0;}
+.reviews .center {max-width: 1530px;}
+.reviews h2 {
+	font-family: 'Quincy CF', sans-serif;
+	font-size: 50px;
+	text-align: center;
+}
+.reviews h2 span {color: #00a98f;}
+.reviews p.subtitle {
+	text-align: center;
+	font-size: 35px;
+	line-height: 40px;
+	color: #00a98f;
+}
+
+.slider-reviews {
+	margin-top: 80px;
+	padding: 0 150px;
+}
+.slider-reviews .item-slider > div {
+	display: flex;
+}
+.slider-reviews .item-slider .group {width: 50%;}
+.slider-reviews .item-slider .group:first-child {padding-right: 70px;}
+.slider-reviews .item-slider .group:last-child {padding-left: 70px;}
+.slider-reviews .item-slider .images {display: flex;}
+.slider-reviews .item-slider .images .item {width: 50%;}
+.slider-reviews .item-slider .images .item img {
+	width: 100%;
+	display: block;
+}
+.slider-reviews .item-slider .images .item span {
+	display: block;
+	text-align: center;
+	font-family: 'Greycliff CF Demi', sans-serif;
+	font-size: 25px;
+	color: #000;
+	margin-top: 10px;
+}
+.slider-reviews .item-slider .images .item:first-child {padding-right: 3px;}
+.slider-reviews .item-slider .images .item:last-child {padding-left: 3px;}
+.slider-reviews .item-slider h3 {
+	margin-top: 35px;
+	text-align: center;
+	color: #005157;
+	font: 800 35px/40px 'Quincy CF Extra', sans-serif;
+}
+
+.reviews-stars {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.reviews-stars span {
+	width: 35px;
+	height: 35px;
+	background: url(../img/start.png) no-repeat;
+	margin-top: 20px;
+} 
+.reviews-stars span + span {margin-left: 10px;}
+.slider-reviews .item-slider p {
+	font-weight: 500;
+	font-size: 25px;
+	margin-top: 20px;
+	text-align: center;
+}
+.slider-reviews .slick-arrow {
+	width: 70px;
+	height: 70px;	
+	border-radius: 50%;
+	position: absolute;
+	top: 50%;
+	margin-top: -35px;
+	background: #e5e5e5 url(../img/arr-slick.png) no-repeat center;
+	transition: background 0.3s ease;
+	overflow: hidden;
+	text-indent: -150px;
+	cursor: pointer;
+}
+.slider-reviews .slick-arrow:hover {
+	background: #f4b221 url(../img/arr-slick.png) no-repeat center;
+}
+.slider-reviews .slick-prev {left: 0;}
+.slider-reviews .slick-next {
+	right: 0;
+	transform-origin: center;
+	transform: rotate(-180deg);
+}
+
+.reviews .tx-center {margin-top: 45px;}
+.reviews .btn-title {
+	font-family: 'Greycliff CF Extra', sans-serif;
+	margin-bottom: 20px;
+}
+.reviews .btn-yellow {
+	min-height: 100px;
+	max-width: 435px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 0 auto;
+}
+
+/* EXAMPLE
+---------------------------------------------------- */
+.example {
+	padding: 45px 0 65px 0;
+	background: #f0e4b2;
+}
+.example .center {max-width: 1475px;}
+.example h2 {
+	text-align: center;
+	font: bold 50px/60px 'Quincy CF', sans-serif;
+	color: #0a5157;
+}
+.example h2 span {
+	position: relative;
+}
+.example h2 span:after {
+	content: '';
+	display: block;
+	background: #00a98f;
+	height: 7px;
+	border-radius: 10px;
+	position: absolute;
+	top: 100%;
+	left: 0;
+	right: 0;
+}
+
+.example .wrap-card {
+	display: flex;
+	margin-top: 50px;
+	margin-right: -15px;
+	margin-left: -15px;
+}
+.example .wrap-card .item {
+	padding: 70px 30px;
+	background: #fff;
+	text-align: center;
+	margin: 0 15px;
+	width: 33.33%;
+}
+.example .wrap-card h3 {
+	font-weight: bold;
+	font-size: 30px;
+	line-height: 35px;
+}
+.example .wrap-card .thumb {
+	margin-top: 40px;
+	display: flex;
+	justify-content: center;
+}
+.example .wrap-card .thumb img {
+	max-height: 209px;
+	min-height: 209px;
+	object-fit: contain;
+}
+.example .wrap-card p {
+	font-size: 17px;
+	line-height: 25px;
+	max-width: 270px;
+	margin: 20px auto 0 auto;
+	padding-top: 20px;
+	position: relative;
+}
+.example .wrap-card p:before {
+	content: '';
+	height: 1px;
+	position: absolute;
+	top: 0;
+	left: 25px;
+	right: 25px;
+	background: #000;
+}
+.example .wrap-card a {
+	margin-top: 40px;
+	background: #ff9a01;
+	text-align: center;
+	display: inline-block;
+	color: #fff;
+	padding: 20px 60px;
+	border-radius: 20px;
+	font-weight: bold;
+	font-size: 20px;
+	text-transform: uppercase;
+	transition: all 0.3s ease;
+	border: 2px solid transparent;
+}
+.example .wrap-card a:hover {
+	border-color: #ff9a01;
+	background: none;
+	color: #ff9a01;
+}
+
+/* GET PRODUCTION
+---------------------------------------------------- */
+.get-production {padding-top: 130px;}
+.get-production .row {display: flex;}
+.get-production .row .left {
+	width: 30%;
+	display: flex;
+	align-items: flex-end;
+}
+.get-production .row .left img {width: 100%;}
+.get-production .row .right {
+	width: 70%;
+	padding: 0 150px 115px 40px;
+}
+
+.get-production h2 {
+	font-size: 70px;
+	line-height: 76px;
+	font-family: 'Quincy CF', sans-serif;
+	font-weight: normal;
+	text-align: center;
+}
+.get-production h2 span {font-weight: bold;}
+
+.get-production .subtitle {
+	padding: 21px 45px;
+    background: #00a98f;
+    border-radius: 30px;
+    text-align: center;
+    font-size: 35px;
+    line-height: 41px;
+    color: #fff;
+    display: inline-block;
+}
+.get-production .subtitle span {
+	font-weight: bold;
+	position: relative;
+}
+.get-production .subtitle span:after {
+	content: '';
+	display: block;
+	height: 1px;
+	position: absolute;
+	top: 100%;
+	left: 0;
+	right: 0;
+	background: #fff;
+	margin-top: 3px;
+}
+.get-production .tx-center {margin-top: 35px;}
+.get-production .wrap {
+	display: flex;
+	margin-top: 100px;
+	margin-right: -4.5px;
+	margin-left: -4.5px;
+}
+.get-production .wrap .item {
+	width: 33.33%;
+	margin: 0 4.5px;
+	background: #0a5157;
+	position: relative;
+	padding: 40px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	color: #fff;
+	min-height: 390px;
+}
+.get-production .wrap .item .tick {
+	width: 88px;
+	height: 88px;
+	border-radius: 50%;
+	background: #00a98f url(../img/tick.png) no-repeat center;
+	display: inline-block;
+	position: absolute;
+	top: 0;
+	left: 50%;
+	margin-top: -44px;
+	margin-left: -44px;
+}
+.get-production .wrap .item h3 {
+	font-size: 30px;
+	line-height: 35px;
+	text-align: center;
+	position: relative;
+}
+.get-production .wrap .item h3:after {
+	content: '';
+	display: block;
+	position: absolute;
+	top: 100%;
+	left: 50%;
+	height: 1px;
+	background: #00a98f;
+	width: 175px;
+	transform: translateX(-50%);
+	margin-top: 10px;
+}
+.get-production .wrap .item p {
+	margin-top: 35px;
+	text-align: center;
+	color: #fff;
+	font-size: 17px;
+	line-height: 25px;
+}
+
+/* AUTHOR
+---------------------------------------------------- */
+.author {
+	background: #0a5157 url(../img/bg-author.png) no-repeat right bottom;
+	padding: 120px 0;
+}
+.author .center {max-width: 1560px;}
+.author h2 {
+	font-size: 71px;
+	line-height: 76px;
+	font-family: 'Quincy CF', sans-serif;
+	font-weight: normal;
+	color: #fff;
+	text-align: center;
+}
+.author h2 > span {position: relative;}
+.author h2 span span {font-weight: bold;}
+.author h2 > span:after {
+	content: '';
+	width: 443px;
+	height: 208px;
+	background: url(../img/arr-bottom.png) no-repeat;
+	display: block;
+	position: absolute;
+	right: 0;
+	top: 0;
+	margin-right: -110px;
+	margin-top: 44px;
+}
+
+.author .row {
+	margin-top: 120px;
+	display: flex;
+}
+.author .thumb {
+	min-width: 650px;
+	display: flex;
+}
+.author .thumb img {object-fit: cover;}
+
+.author .descr {padding-left: 60px;}
+.author .descr h3 {
+	border: 4px dotted #f0e4b2;
+	padding: 35px;
+	text-align: center;
+	font-size: 35px;
+	line-height: 45px;
+	color: #fff;
+}
+.author .descr p {
+	font-size: 25px;
+	line-height: 40px;
+	margin-top: 50px;
+	color: #fff;
+}
+.author .descr p strong {
+	font-weight: bold;
+	text-transform: uppercase;
+	color: #f0e4b2;
+}
+.author .descr .align-start {margin-top: 50px;}
+.author .descr .align-start p {
+	margin-top: 0;
+	padding-right: 45px;
+}
+.author .descr .align-start img {margin-top: 30px;}
+
+.author .descr > div:last-child {margin-top: 35px;}
+.author .descr > div:last-child p {margin-top: 0;}
+.author .descr > div:last-child p strong {
+	display: block;
+	text-transform: none;
+	color: #fff;
+}
+
+/* CLIENTS
+---------------------------------------------------- */
+.clients {padding-bottom: 200px;}
+.clients > img {width: 100%;}
+
+.counsultation {
+	margin: 95px auto 0 auto;
+	max-width: 1200px;
+	padding: 70px 30px;
+	display: flex;
+	align-items: center;
+	background: url(../img/bg-cousultation.png) no-repeat left top, url(../img/bg-cousultation.png) no-repeat left bottom;
+}
+.counsultation > div {padding-left: 80px;}
+.counsultation p:first-child {
+	font-size: 30px;
+	line-height: 45px;
+	color: #0a5157;
+	font-weight: bold;
+}
+.counsultation p:last-child {
+	font-size: 27px;
+	line-height: 45px;
+	color: #55c6c0;
+	font-weight: bold;
+}
+
+/* ANIMATION
+---------------------------------------------------- */
+.anim-left {
+    opacity: 0;
+    transform: translateX(-100%);
+    transition: transform 2s cubic-bezier(.19,1,.22,1), opacity 1.9s;
+}
+.anim-right {
+    opacity: 0;
+    transform: translateX(100%);
+    transition: transform 2s cubic-bezier(.19,1,.22,1), opacity 1.9s;
+}
+.anim-top {
+    opacity: 0;
+    transform: translateY(-100%);
+    transition: transform 2s cubic-bezier(.19,1,.22,1), opacity 1.9s;
+}
+.anim-bottom {
+    opacity: 0;
+    transform: translateY(100%);
+    transition: transform 2s cubic-bezier(.19,1,.22,1), opacity 1.9s;
+}
+
+.anim-scale {
+    opacity: 0;
+    transform: scale(0.3);
+    transition: transform 2s cubic-bezier(.19,1,.22,1), opacity 1.9s;
+}
+.anim-rotate {
+	opacity: 0;
+    transform: rotateY(360deg);
+    transition: transform 2s cubic-bezier(.19,1,.22,1), opacity 1.9s;
+}
+
+.animation-no {
+    opacity: 1;
+    transform: none;
+}
+
+/* ---------------------------------------------- */
+/*               MEDIA QUERI                      */
+/* ---------------------------------------------- */

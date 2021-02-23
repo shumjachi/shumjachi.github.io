@@ -35,8 +35,8 @@ const animationAirfy = document.querySelector('.animation-airfy');
 const waveSpan1 = document.querySelectorAll('.css-animation .wave span.span-1');
 const waveSpan2 = document.querySelectorAll('.css-animation .wave span.span-2');
 const animationText = document.querySelectorAll('.animation-text');
-const animBtn = document.querySelectorAll('.css-animation .btn');
-
+const animBtn = document.querySelectorAll('.animation-text .btn');
+console.log(animBtn);
 rooms.forEach(room => {
     room.addEventListener('click', e => {
         e.preventDefault();
@@ -71,7 +71,9 @@ rooms.forEach(room => {
 });
 
 animBtn.forEach(btn => {
+	console.log(btn);
 	btn.addEventListener('click', e => {
+		console.log('click');
 		e.preventDefault();
 
 		const roomClass = e.target.getAttribute('data-btn');
@@ -107,7 +109,7 @@ if (document.querySelector('.js-room') != null) {
 
 /* SLICK
 ---------------------------------------------------- */
-$('.slider ul').slick({
+$('.slider-wlan ul').slick({
 	infinite: true,
 	slidesToShow: 3,
 	slidesToScroll: 3,
@@ -169,6 +171,8 @@ $('.mobile-app_slider').slick({
 	slidesToScroll: 1,
 	arrows: false,
 	dots: true,
+	autoplay: false,
+	autoplaySpeed: 2000,
 	appendDots: $('.mobile-app_slider .descr'),
 });
 
@@ -184,6 +188,10 @@ $('.mobile-app_slider').on('beforeChange', function(event, slick, currentSlide, 
 	});
 });
 
+$('.mobile-app_slider .btn').click(function(e) {
+	e.preventDefault();	
+	$('.mobile-app_slider').slick('slickNext');
+});
 
 $('.slider-horizontal').slick({
 	slidesToShow: 1,
@@ -212,50 +220,6 @@ $('.slider-vertical').slick({
 	    },
 	]
 });
-
-$('.slider-reviews .slider').slick({
-	slidesToShow: 5,
-	slidesToScroll: 1,
-	arrows: false,
-	dots: false,
-	autoplay: true,
-	autoplaySpeed: 3000,
-	responsive: [
-		{
-		    breakpoint: 1300,
-		    settings: {
-		        slidesToShow: 4,
-		        slidesToScroll: 1
-		    }
-	    },
-	    {
-		    breakpoint: 991,
-		    settings: {
-		        slidesToShow: 3,
-		        slidesToScroll: 1
-		    }
-	    },
-		{
-		    breakpoint: 768,
-		    settings: {
-		        slidesToShow: 2,
-		        slidesToScroll: 1
-		    }
-	    }
-	]
-});
-
-$('.slider-reviews .slider .item.slick-active').eq(0).addClass('eclipse');
-$('.slider-reviews .slider .item.slick-active').eq($('.slider-reviews .slider .item.slick-active').length - 1).addClass('eclipse');
-
-$('.slider-reviews .slider').on('afterChange', function(event, slick, currentSlide, nextSlide){
-	$('.slider-reviews .slider .item').each(function() {
-		$(this).removeClass('eclipse');
-	});
-
-	$('.slider-reviews .slider .item.slick-active').eq(0).addClass('eclipse');
-	$('.slider-reviews .slider .item.slick-active').eq($('.slider-reviews .slider .item.slick-active').length - 1).addClass('eclipse');
-}); 
 
 function initZoomevel(elem) {
 	$(elem).elevateZoom({

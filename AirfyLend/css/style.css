@@ -104,6 +104,10 @@ p.subtitle {
     align-items: center;
     flex-wrap: wrap;
 }
+.flex-center {
+    display: flex;
+    justify-content: center;
+}
 .d-none {display: none;}
 .svg-icon {
     height: 0;
@@ -213,7 +217,7 @@ p.subtitle {
 /* HOME
 ---------------------------------------------------- */
 .home {
-    min-height: 700px;
+    min-height: 850px;
     background: url(../img/bg-home.jpg) no-repeat center bottom;
     background-size: cover;
     padding: 57px 0 24px 0;
@@ -304,6 +308,7 @@ p.subtitle {
 	align-items: center;
 	width: 100%;
 	height: 100%;
+  overflow: hidden;
 }
 .partner ul li:last-child {margin-right: 0;}
 
@@ -325,13 +330,20 @@ p.subtitle {
 	display: flex;
     align-items: center;
     padding: 50px 0;
-    border-bottom: 1px solid #f1f1f1;
 }
 .product-list .card .item h3 {
     font-size: 32px;
     line-height: 48px;
     font-weight: normal;
     color: #2C3235;
+    margin-bottom: 26px;
+}
+.product-list .card .item .descr {max-width: 600px;}
+.product-list .card .item .descr p {
+    text-align: justify;
+    font-size: 20px;
+    line-height: 32px;
+    opacity: 0.6;
 }
 .product-list .card .thumb {
 	line-height: 0;
@@ -761,13 +773,13 @@ p.subtitle {
 }
 .wlan h2.title {color: #fff;}
 
-.wlan .slider {margin-top: 66px;}
-.wlan .slick-track {display: flex;}
-.wlan .slide-item {
+.slider-wlan {margin-top: 66px;}
+.slider-wlan .slick-track {display: flex;}
+.slider-wlan .slide-item {
 	padding: 0 12px;
 	height: auto;
 }
-.wlan .slide-item .inner {	
+.slider-wlan .slide-item .inner {	
 	height: 100%;
 	padding: 40px;
 	text-align: center;
@@ -780,29 +792,29 @@ p.subtitle {
 .slick-active + .slick-slide[aria-hidden="true"] .inner {
 	opacity: 0.2;
 }
-.wlan .slide-item .thumb {
+.slider-wlan .slide-item .thumb {
 	margin-bottom: 32px;
 	display: flex;
 	justify-content: center;
 }
-.wlan .slide-item .thumb img {
+.slider-wlan .slide-item .thumb img {
     height: 63px;
     object-fit: contain;
 }
-.wlan .slide-item h3 {
+.slider-wlan .slide-item h3 {
 	font-weight: 600;
 	font-size: 16px;
 	line-height: 27px;
 	color: #2C3235;
 }
-.wlan .slide-item span {
+.slider-wlan .slide-item span {
 	display: block;
 	margin-top: 8px;
 	font-size: 11px;
 	line-height: 14px;
 	color: #95989A;
 }
-.wlan .slide-item p {
+.slider-wlan .slide-item p {
 	font-size: 15px;
 	line-height: 24px;
 	color: #2C3235;
@@ -1830,11 +1842,51 @@ p.subtitle {
 }
 .section-map h2 {color: #609BB7;}
 
-.section-map .thumb {
+.section-map .tabs {
     margin-top: 48px;
-    display: flex;
-    justify-content: flex-end;
+    padding-left: 385px;
+    padding-right: 20px;
 }
+.section-map .tabs img {
+    display: block;
+}
+.section-map .tabs-wrap {display: flex;}
+.section-map .control-tab {
+    background: #2c3235;
+    padding-bottom: 20px;
+}
+.section-map .control-tab li:first-child {
+    background: #23282A;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 215px;
+    height: 67px;
+    margin-bottom: 20px;
+}
+.section-map .control-tab li:first-child svg {
+    width: 96px;
+    height: 40px;
+    fill: #609BB7;
+}
+.section-map .control-tab li {
+    padding: 10px 35px;
+    width: 215px;
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+    font-size: 14px;
+    color: #95989A;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+.section-map .control-tab li svg {
+    width: 16px;
+    height: 16px;
+    margin-right: 11px;
+}
+.section-map .control-tab li.active {color: #fff;}
+.section-map .content-tab {padding: 30px;}
 
 /* SLIDER REVIEWS
 ---------------------------------------------------- */
@@ -1857,51 +1909,7 @@ p.subtitle {
 
 .slider-reviews .slider {
     margin-top: 64px;
-    margin-right: -20px;
-    margin-left: -20px;
 }
-.slider-reviews .slider .item {padding: 0 20px;}
-.slider-reviews .slider .item.eclipse {opacity: 0.3;}
-.slider-reviews .slider .comment {
-    background: #FFFFFF;
-    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.06);
-    padding: 40px 40px 30px 40px;
-    border-radius: 4px;
-    display: flex;
-    flex-direction: column;
-    min-height: 245px;
-    position: relative;
-}
-.slider-reviews .slider .comment:after {
-    content: '';
-    border-left: 0 solid transparent;
-    border-right: 28px solid transparent;
-    border-top: 20px solid #fff;
-    position: absolute;
-    top: 100%;
-    left: 40px;
-}
-.slider-reviews .slider .comment img {max-width: 120px;}
-.slider-reviews .slider .comment h3 {
-    font-weight: 500;
-    font-size: 20px;
-    line-height: 27px;
-    color: #2C3235;
-}
-.slider-reviews .slider .comment p {
-    font-size: 15px;
-    line-height: 24px;
-    color: #2C3235;
-    margin-top: auto;
-}
-.slider-reviews .slider .comment .author {
-    font-weight: 600;
-    font-size: 11px;
-    line-height: 14px;
-    color: #95989A;
-    margin-top: 10px;
-}
-.slider-reviews .slider .avatar {margin-top: 30px;}
 
 .reverse.product-list {background: #fff;}
 .reverse.product-list .card .item {border-bottom: none;}
@@ -2023,8 +2031,10 @@ p.subtitle {
     font-weight: 600;
 }
 .reverse.product-list .card p {
+    text-align: justify;
     font-size: 20px;
-    line-height: 27px;
+    line-height: 32px;
+    opacity: 0.6;
     color: #2C3235;
     margin-top: 30px;
 }
@@ -2249,6 +2259,7 @@ p.subtitle {
 }
 .steckt .center {
     background: url(../img/bg-steckt.png) no-repeat right top;
+    background-size: auto 100%;
     padding: 98px 20px 105px 20px;
 }
 
@@ -2383,13 +2394,85 @@ p.subtitle {
 .airfy-fragen .content-accordeon {color: #2C3235;}
 .airfy-fragen .item-accordeon.active .inner {padding-bottom: 16px;}
 
+/* PARTNER
+---------------------------------------------------- */
+.home-partner {
+    background: url(../img/bg-partner.jpg) no-repeat center bottom;
+    background-size: cover;
+    min-height: 860px;
+}
+
+/* IT PARTNER
+---------------------------------------------------- */
+.it-partner {
+    background: url(../img/bg-it_partner.jpg) no-repeat center;
+    background-size: cover;
+    padding: 96px 0 110px 0;
+    overflow: hidden;
+}
+.it-partner h2.title {
+    color: #83B0C6;
+    margin-bottom: 64px;
+}
+
+.it-partner .list-ticket:first-child {padding-right: 50px;}
+.it-partner .list-ticket:last-child {padding-left: 50px;}
+.list-ticket li {
+    display: flex;
+    align-items: center;
+}
+.list-ticket li svg {
+    width: 24px;
+    height: 24px;
+    margin-right: 8px;
+}
+.list-ticket li span {
+    font-size: 20px;
+    line-height: 32px;    
+    color: #000000;
+    opacity: 0.64;
+}
+
+/* PARTNERANFRAGE
+---------------------------------------------------- */
+.partneranfrage {
+    background: #2C3235 url(../img/bg-partneranfrage.png) no-repeat center;
+    background-size: 100% 100%;
+    padding: 96px 0;
+}
+.partneranfrage.blue {
+    background: #609BB7 url(../img/bg-partneranfrage_blue.png) no-repeat center;
+    background-size: 100% 100%;
+}
+.partneranfrage h2.title {
+    color: #fff;
+    margin-bottom: 16px;
+}
+.partneranfrage .center > p {
+    color: #B3B5B6;
+    margin-bottom: 32px;
+}
+.partneranfrage.blue p {color: #C6DBE5;}
+.partneranfrage .btn {
+    max-width: 195px;
+    height: 48px;
+    margin: 0 auto;
+    transition: all 0.3s ease;
+}
+.partneranfrage.blue .btn {
+    background: #fff;
+    color: #4C7C92;
+}
+
+.page-partner .product-list {
+    background: #fff;
+    padding: 26px 0;
+}
+.page-partner .product-list .card {margin-top: 0;}
+
 /* ---------------------------------------------- */
 /*               MEDIA QUERI                      */
 /* ---------------------------------------------- */
-@media screen and (max-width: 1700px) {
-    .slider-reviews .slider .comment {min-height: 350px;}
-}
-
 @media screen and (min-width: 1500px) {
     .home {min-height: 900px;}
 }
@@ -2409,8 +2492,13 @@ p.subtitle {
 
     .airfy-product p br {display: none;}
 
+    .section-map .tabs {padding-left: 100px;}
+
     .mobile-app {padding-bottom: 75px;}
-    .mobile-app_slider {margin-top: 50px;}
+    .mobile-app_slider {
+        margin-top: 50px;
+        padding-left: 50px;
+    }
     .mobile-app_slider .item .thumb {margin-right: 0;}
 
     .footer .call {max-width: 350px;}
@@ -2435,6 +2523,8 @@ p.subtitle {
   	/* product list */
   	.product-list {padding: 96px 20px;}
   	.product-list .card {padding: 0;}
+
+    .mobile-app_slider .item .descr {max-width: 300px;}
 
   	/* wlan */
   	.wlan {padding: 96px 0;}
@@ -2526,17 +2616,20 @@ p.subtitle {
     .tehnology,
     .street,
     .airfy-fragen,
-    .mobile-app {
+    .mobile-app,
+    .page-partner .product-list,
+    .it-partner {
         padding-right: 20px;
         padding-left: 20px;
     }
 }
 
 @media screen and (max-width: 1024px) {
-    .wlan .slick-slide[aria-hidden="true"] .inner {opacity: 1;}
-    .wlan .slick-active:not(.slick-current) {opacity: 0.25;}
-    .wlan .slider {position: relative;}
-    .wlan .slider:before {
+    .slider-wlan .slick-slide[aria-hidden="true"] .inner {opacity: 1;}
+    .slider-wlan .slick-active:not(.slick-current) {opacity: 0.25;}
+
+    .slider-wlan {position: relative;}
+    .slider-wlan:before {
         content: '';
         display: block;
         width: 50px;
@@ -2548,11 +2641,54 @@ p.subtitle {
         z-index: 2;
         border-radius: 4px;
     }
+
+    .slider-reviews .slider {position: relative;}
+    .slider-reviews .slider:before {
+        content: '';
+        display: block;
+        width: 50px;
+        background: #87b4c9;
+        position: absolute;
+        top: 0;
+        left: -26px;
+        bottom: 0;
+        z-index: 2;
+        border-radius: 4px;
+    }
+
+    /* airfy fragen */
+    .airfy-fragen {
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+    .airfy-fragen h2.title {margin-bottom: 0;}
+    .airfy-fragen .flex {
+        margin-top: 32px;
+        flex-direction: column;
+    }
+    .airfy-fragen .left {
+        padding-right: 0;
+        width: 100%;
+    }
+    .airfy-fragen .right {
+        padding-left: 0;
+        width: 100%;
+    }
+    .airfy-fragen .btn-accordeon {
+        font-size: 16px;
+        line-height: 24px;
+    }
 }
 
 @media screen and (max-width: 991px) {
   	/* header */
   	.menu-login {margin-left: 20px;}
+
+    /* home */
+    .home-partner {min-height: 500px;}
+
+    /* section map */
+    .section-map .tabs {padding-left: 20px;}
 
   	/* partner */
   	.partner {padding: 40px 20px;}
@@ -2601,18 +2737,11 @@ p.subtitle {
     /* fur firman */
     .home-firman .thumb {min-width: 300px;}
 
-    /* slider reviews */
-    .slider-reviews .slider .comment {min-height: 300px;}
-
     /* tehnology */
     .list-tehnology .field {
         min-width: 100px;
         width: 100px;
     }
-
-    /* aifry fragen */
-    .airfy-fragen .left {padding-right: 20px;}
-    .airfy-fragen .right {padding-left: 20px;}
 
     /* footer */
     .footer-2 .footer-item {min-width: 150px;}
@@ -2633,6 +2762,7 @@ p.subtitle {
   	    line-height: 33px;
   	    margin-bottom: 16px;
   	}
+    h2.title br {display: none;}
 
   	.btn {font-size: 12px;}
 
@@ -2835,6 +2965,26 @@ p.subtitle {
         height: 25px;
     }
 
+    /* section map */
+    .section-map .tabs {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .section-map .control-tab li:first-child {
+        width: 150px;
+        height: 50px;
+    }
+    .section-map .control-tab li:first-child svg {
+        width: 70px;
+        height: 30px;
+    }
+    .section-map .control-tab li {
+        width: 150px;
+        padding: 5px 15px;
+        font-size: 11px;
+    }
+    .section-map .content-tab {padding: 15px;}
+
   	/* product list */
   	.product-list {padding: 23px 16px 32px 16px;}
   	.product-list .card {
@@ -2848,15 +2998,17 @@ p.subtitle {
   		  width: 100%;
   		  margin-right: 0;
   		  margin-left: 0;
-  		  padding: 40px 15px 30px 15px;
+  		  padding: 40px 0 30px 0;
   	}
   	.product-list .card a {margin-bottom: 20px;}
     .product-list h3 br {display: none;}
-    .reverse.product-list .card .item h3 {
+    .product-list .card .item h3 {
         font-size: 20px;
         line-height: 27px;
+        margin-bottom: 0;
     }
-    .reverse.product-list .card p {
+    .product-list .card .item .descr p {
+        text-align: center;
         font-size: 14px;
         line-height: 19px;
         color: #2C3235;
@@ -2871,7 +3023,10 @@ p.subtitle {
         padding-top: 32px;
         padding-bottom: 32px;
     }
-    .mobile-app_slider {margin-top: 20px;}
+    .mobile-app_slider {
+        margin-top: 20px;
+        padding-left: 0;
+    }
     .mobile-app_slider .item h3 {
         font-size: 18px;
         line-height: 25px;
@@ -2907,8 +3062,8 @@ p.subtitle {
   		  padding-left: 0;
   	}
   	.wlan > p br {display: none;}
-  	.wlan .slide-item {padding: 0 6px;}
-  	.wlan .slide-item .inner {padding: 30px 15px;}
+  	.slider-wlan .slide-item {padding: 0 6px;}
+  	.slider-wlan .slide-item .inner {padding: 30px 15px;}
 
   	/* product */
   	.product {padding: 30px 16px 30px 16px;}
@@ -2944,7 +3099,6 @@ p.subtitle {
     .product .product-slider .right {width: 100%;}
     .product .product-slider .right .item  span {display: none;}
     .zoomContainer {display: none !important;}
-
 
   	/* umfang */
   	.umfang .card {
@@ -3320,21 +3474,9 @@ p.subtitle {
     }
 
     /* slider reviews */
-    .slider-reviews {padding: 40px 20px;}
+    .slider-reviews {padding: 40px 0;}
     .slider-reviews h2.title br {display: none;}
     .slider-reviews .slider {margin-top: 32px;}
-    .slider-reviews .slider .comment {
-        min-height: 200px;
-        padding: 24px;
-    }
-    .slider-reviews .slider .comment h3 {
-        font-size: 18px;
-        line-height: 25px;
-    }
-    .slider-reviews .slider .comment p {
-        font-size: 14px;
-        line-height: 19px;
-    }
     .slider-reviews > p {
         font-size: 14px;
         line-height: 19px;
@@ -3428,6 +3570,10 @@ p.subtitle {
     .industrial-wifi img {min-width: 300px;}
 
     /* tehnology */
+    .tehnology {
+        padding-top: 32px;
+        padding-bottom: 32px;
+    }
     .tehnology .tabs {display: block;}
     .tehnology .tabs .control-tab {
         display: flex;
@@ -3458,6 +3604,8 @@ p.subtitle {
         color: #fff;
     }
     .tehnology .tabs .list-tehnology {margin-top: 14px;}
+    .list-tehnology .rating {width: 100%;}
+    .list-tehnology .field {width: 50%;}
 
     /* steckt */
     .steckt .center {
@@ -3509,27 +3657,29 @@ p.subtitle {
     .street .flex .item {width: 50%;}
     .street .flex .item img {max-width: 75%;}
 
-    /* airfy fragen */
-    .airfy-fragen {
+    /* it-partner */
+    .it-partner {
+        background: url(../img/bg-it_partner_mob.png) no-repeat center;
+        background-size: 100% 100%;
         padding-top: 40px;
         padding-bottom: 40px;
     }
-    .airfy-fragen h2.title {margin-bottom: 0;}
-    .airfy-fragen .flex {
-        margin-top: 32px;
-        flex-direction: column;
+    .it-partner h2.title {margin-bottom: 24px;}
+    .it-partner .flex-center {flex-direction: column;}
+    .it-partner .list-ticket:first-child {padding-right: 0;}
+    .it-partner .list-ticket:last-child {padding-left: 0;}
+    .list-ticket li svg {margin-right: 18px;}
+    .list-ticket li span {font-size: 14px;}
+
+    /* partneranfrage */
+    .partneranfrage {
+        background: #2C3235 url(../img/bg-partneranfrage_mob.png) no-repeat center;
+        background-size: 100% 100%;
+        padding: 48px 20px;
     }
-    .airfy-fragen .left {
-        padding-right: 0;
-        width: 100%;
-    }
-    .airfy-fragen .right {
-        padding-left: 0;
-        width: 100%;
-    }
-    .airfy-fragen .btn-accordeon {
-        font-size: 16px;
-        line-height: 24px;
+    .partneranfrage.blue {
+        background: #609BB7 url(../img/bg-partneranfrage_blue_mob.png) no-repeat center;
+        background-size: 100% 100%;
     }
 }
 
@@ -3562,17 +3712,6 @@ p.subtitle {
 
     /* home office */
     .home-office .btn-download {width: 100%;}
-
-    /* slider reviews */
-    .slider-reviews .slider {
-        margin-right: -250px;
-        margin-left: 0;
-    }
-    .slider-reviews .slider .item {
-        padding: 0;
-        margin-right: 8px;
-    }
-    .slider-reviews .slider .item.eclipse {opacity: 1;}
 }
 
 @media screen and (max-width: 500px) {
@@ -3586,6 +3725,16 @@ p.subtitle {
         font-size: 18px;
         line-height: 25px;
     }
+    .home-partner {
+        background: url(../img/bg-partner.jpg) no-repeat right bottom;
+        background-size: 496px;
+        min-height: 220px;
+    }
+
+    /* section map */
+    .section-map .control-tab li {width: 100% !important;}
+    .section-map .tabs-wrap {flex-direction: column;}
+    .section-map .content-tab {padding: 15px 0 0 0;}
 
     /* animation */
     .animation-airfy .btn {min-width: 120px;}
@@ -3595,15 +3744,19 @@ p.subtitle {
   	    padding-right: 16px;
   	    padding-left: 16px;
   	}
-  	.wlan .slider {
+  	.slider-wlan {
         margin-top: 24px;
         margin-right: -250px;
     }
-	  .wlan .slide-item {
+	  .slider-wlan .slide-item {
         margin-right: 8px;
         padding: 0 0;
     }
-    .wlan .slider:before {display: none;} 
+    .slider-wlan:before {display: none !important;} 
+    .slider-reviews {
+        padding-right: 20px;
+        padding-left: 20px;
+    }
 
     /* contact */
     #map {margin-top: -130%;} 
@@ -3617,16 +3770,7 @@ p.subtitle {
     }
     .list-tehnology .title-left li + li {margin-top: 43px;}
     .list-tehnology .title-left li:nth-child(2) {margin-top: 25px;}
-    .list-tehnology .field {
-        min-width: 88px;
-        width: 88px;
-    }
-
 
     /* steckt */
     .steckt .text .btn {width: 100%;}
-}
-
-@media screen and (max-width: 320px) {
-    .home {min-height: 550px;}
 }
