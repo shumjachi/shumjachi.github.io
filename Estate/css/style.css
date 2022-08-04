@@ -86,7 +86,7 @@ body {
 }
 
 .main-screen {
-    background: #000 url('../img/About_Background.png') no-repeat fixed center top;
+    background: #000 url('../img/About_Background.jpeg') no-repeat fixed center top;
     background-size: cover;
     height: 100vh;
     scroll-behavior: smooth;
