@@ -1,3 +1,17 @@
+/* MENU
+------------------------------ */
+function menu() {
+    const body = document.body;
+    const btnMenu = document.querySelector('.btn-menu');
+
+    btnMenu.addEventListener('click', (e) => {
+        e.preventDefault();
+        body.classList.toggle('menu-open');
+    });
+}
+
+menu();
+
 /* SCROLL BOTTLE
 ------------------------------ */
 function scrollBottle() {
@@ -106,21 +120,35 @@ function tab() {
 
 tab();
 
-/* SLIDER
+/* PAIN SLIDER
 ------------------------------ */
 new Splide('.pain-slide', {
     type : 'loop',
     perPage : 3,
     autoplay: true,
-    arrows: false
+    arrows: false,
+    breakpoints: {
+        750: {
+            perPage : 1,
+        }
+    }
 }).mount();
 
-/* ORDER
+/* ORDER SLIDER
 ------------------------------ */
 new Splide('.order-slider .splide', {
     type : 'loop',
     autoplay: true,
     arrows: false
+}).mount();
+
+/* RESULT SLIDER
+------------------------------ */
+new Splide('.results-list .splide', {
+    type : 'loop',
+    autoplay: true,
+    arrows: false,
+    padding: '5rem',
 }).mount();
 
 /* FORM ORDER
