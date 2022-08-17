@@ -52,7 +52,7 @@ body {
 .nav {
 	position: fixed;
 	top: 0;
-	left: 12%;
+	left: 13%;
 	bottom: 0;
 	z-index: 10;
 	display: flex;
@@ -86,8 +86,8 @@ body {
 }
 
 .main-screen {
-    background: #000 url('../img/About_Background.jpeg') no-repeat fixed center top;
-    background-size: 100% 100%;
+    background: #000 url('../img/About_Background_Board.jpg') no-repeat fixed center top;
+    background-size: cover;
     height: 100vh;
     scroll-behavior: smooth;
     overflow: auto;
@@ -99,6 +99,39 @@ body {
 	bottom: 0;
 	right: 0;
 	max-width: 70%;
+}
+
+.main-screen .fixed-left {
+	position: absolute;
+	top: -225px;
+	left: 111px;
+	width: 300px;
+	transform: rotate(20deg);
+}
+
+.main-screen .fixed-right {
+	position: absolute;
+	top: -75px;
+	right: -75px;
+}
+.main-screen .fixed-right img:nth-child(1) {
+	position: absolute;
+	top: -40px;
+	right: 100%;
+	width: 270px;
+	margin-right: -95px;
+}
+.main-screen .fixed-right img:nth-child(2) {
+	width: 300px;
+	position: relative;
+	z-index: 2;
+}
+.main-screen .fixed-right img:last-child {
+	position: absolute;
+	top: 84px;
+	z-index: 3;
+	right: 168px;
+	width: 220px;
 }
 
 .section {
@@ -188,6 +221,23 @@ body {
 	font-size: 10px;
 }
 
+@media screen and (max-width: 1600px) {
+	.main-screen .fixed-left {
+	    top: -165px;
+	    left: 85px;
+	    width: 220px;
+	}
+	.main-screen .fixed-right img:nth-child(2) {width: 250px;}
+	.main-screen .fixed-right img:last-child {
+	    position: absolute;
+	    top: 70px;
+	    right: 140px;
+	    width: 180px;
+	}
+
+	.nav {left: 11%;}
+}
+
 @media screen and (max-width: 1200px) {
 	.nav {left: 30px;}
 
@@ -202,6 +252,34 @@ body {
 }
 
 @media screen and (max-width: 768px) {
+	.main-screen .fixed-left {
+	    top: -135px;
+	    left: 10px;
+	    width: 180px;
+	}
+	
+	.main-screen .fixed-right {
+	    position: absolute;
+	    top: -45px;
+	    right: -39px;
+	}
+	.main-screen .fixed-right img:nth-child(1) {
+	    position: absolute;
+	    top: -18px;
+	    right: 100%;
+	    width: 270px;
+	    margin-right: -50px;
+	}
+	.main-screen .fixed-right img:nth-child(2) {
+	    width: 150px;
+	}
+	.main-screen .fixed-right img:last-child {
+	    position: absolute;
+	    top: 45px;
+	    right: 85px;
+	    width: 110px;
+	}
+
 	.nav {
 		flex-direction: row;
 	    bottom: inherit;
