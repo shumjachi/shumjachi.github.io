@@ -87,8 +87,7 @@ body {
 }
 
 .main-screen {
-    background: #000 url('../img/About_Background_Board.jpg') no-repeat fixed center top;
-    background-size: 100% 100%;
+    background: #000 url('../img/About_Background_Board.jpg') no-repeat fixed;
     height: 100vh;
     scroll-behavior: smooth;
     overflow: auto;
