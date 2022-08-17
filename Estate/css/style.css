@@ -87,7 +87,7 @@ body {
 }
 
 .main-screen {
-    background: #000 url('../img/About_Background_Board.jpg') no-repeat fixed;
+    background: #000 url('../img/About_Background_Board.jpg') no-repeat center;
     background-size: cover;
     height: 100vh;
     scroll-behavior: smooth;
@@ -95,11 +95,25 @@ body {
     scroll-snap-type: y mandatory;
 }
 
-.main-screen .bg-bottom {
-	position: fixed;
+.main-screen .line {
+	width: 50px;
+	position: absolute;
+	top: 0;
+	left: 15%;
 	bottom: 0;
+	z-index: 2;
+	background: url(../img/v-line.png) no-repeat center top;
+	background-size: 25px 100%;
+}
+.main-screen .bg-line {
+	position: absolute;
+	top: 0;
+	left: 15%;
 	right: 0;
-	max-width: 70%;
+	bottom: 0;
+	z-index: 2;
+	background: url(../img/bg-line.png) no-repeat;
+	background-size: cover;
 }
 
 .main-screen .fixed-left {
@@ -114,6 +128,7 @@ body {
 	position: absolute;
 	top: -75px;
 	right: -75px;
+	z-index: 3;
 }
 .main-screen .fixed-right img:nth-child(1) {
 	position: absolute;
@@ -135,6 +150,14 @@ body {
 	width: 220px;
 }
 
+.main-screen .bg-bottom {
+	position: fixed;
+	bottom: 0;
+	right: 0;
+	max-width: 70%;
+	z-index: 4;
+}
+
 .section {
 	display: flex;
     flex-direction: column;
@@ -143,6 +166,7 @@ body {
     height: 100vh;
     position: relative;
     scroll-snap-align: start;
+    z-index: 3;
 }
 
 .text-paper {
@@ -223,6 +247,8 @@ body {
 }
 
 @media screen and (max-width: 1600px) {
+	.main-screen .line {left: 13.5%;}
+
 	.main-screen .fixed-left {
 	    top: -165px;
 	    left: 85px;
@@ -240,6 +266,10 @@ body {
 }
 
 @media screen and (max-width: 1200px) {
+	.main-screen .fixed-left {left: -56px;}
+	.main-screen .line {left: 70px;}
+	.main-screen .bg-line {left: 70px;}
+
 	.nav {left: 30px;}
 
 	.text-paper {max-width: 800px;}
