@@ -265,7 +265,7 @@ body {
 	.nav {left: 11%;}
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1280px) {
 	.main-screen .fixed-left {left: -56px;}
 	.main-screen .line {left: 70px;}
 	.main-screen .bg-line {left: 70px;}
